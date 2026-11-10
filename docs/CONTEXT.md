@@ -2,7 +2,7 @@
 
 Updated November 10, 2026; repository owner Tommiec21, project n5e-module, visibility private.
 
-Current milestone: Batch08 skills/proficiency/Mastery published privately as v0.1.0-alpha.8; planned stop after Batch10.
+Current milestone: Batch09 condition lifecycle published privately as v0.1.0-alpha.9; next10 is the user’s planned stop.
 
 Current scope: reusable prompts, private repository, version history and bounded future implementation batches for ranked conditions, HP/Chakra damage, graded saves and dual concentration.
 
@@ -227,3 +227,19 @@ User plans to stop at10; next requested batch09, and do not proceed beyond10 wit
 ## Batch09 active scope
 
 Codex, branch batch/09-condition-lifecycle; slice started18:08UTC, completing condition movement/rest/decay/expiry without opening Batch10 early.
+
+## Batch09 completed checkpoint
+
+Slice18:08–18:18UTC, under ten minutes; runtime73afb00194973c9bddfe30b4a4cd53f59f63045f, branch batch/09-condition-lifecycle.
+
+Goal: complete source-preserving condition movement, rest, decay and expiry, connecting persistent effects to native lifecycle without per-jutsu scripts.
+
+User rulings: oldest-first removal, discard excess ranks and end Chilled outside combat; native movement prompts if willingness is unspecified.
+
+CI42873575130 passed5 selected checks once with0 failures/skips; release42873766853 reused the40-file artifact.
+
+Private v0.1.0-alpha.9: module.json875bytes, ZIP171433bytes; no live verification or local installation.
+
+Condition-specific rest behavior is complete for this batch; broader HP/Chakra/Hit-Die short/long/full rest resource conversion belongs13, and derived behavioral flags are owned by10/11.
+
+Next requested batch10 completes general casting/concentration integration, then stop as requested.

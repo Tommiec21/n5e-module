@@ -24,7 +24,7 @@ Number07 is the published interim milestone, and number20 is the pending full su
 | 10 | Gameplay System | **Complete casting and concentration integration** — Implement general rank/DC/cost/components/eligibility/upcast choices, native payment and automatic maintained-cast registration. | 06,08,09 |
 | 11 | Gameplay System | **Conditional effects and exceptional jutsu** — Implement shared conditional bonus/suppression, graded outcome riders, aura targeting, resource-linked modes and source-based effect cleanup. | 09,10 |
 | 12 | Gameplay System | **Martial sequences and simple Clash** — Integrate weapon/unarmed expressions, Chain, Combo/Finisher eligibility and opposed-skill Clash. | 08,10,11 |
-| 13 | Data Conversion System | **Character options, progression and resources** — Convert classes, clan-as-species, backgrounds and their approved features/choices/advancements, including automatic Chakra maxima and DR contributions. | 08,09,10 |
+| 13 | Data Conversion System | **Character options, progression and resources** — Convert classes, clan-as-species, backgrounds and their approved features/choices/advancements, including automatic Chakra maxima, DR contributions and source HP/Chakra/Hit-Die short/long/full rest recovery. | 08,09,10 |
 | 14 | Data Conversion System | **Full Jutsu compendium conversion** — Convert the existing968 source entries into native module content with preserved identities, expressions, variants and Discipline/Group/Rank folders. | 10,11,12,13 |
 | 15 | Data Conversion System | **Remaining approved content conversion** — Convert approved equipment, consumables, stances and non-excluded feats/features, including temporary jutsu-created consumables and ordinary NPC summon/clone profiles. | 11,12,13 |
 | 16 | Front End User System | **Player-facing sheets and controls** — Integrate resources, ranked status controls, casting modes, concentration and damage outcomes into practical native sheets/chat/token controls. | 09,10,12,13,14,15 |
@@ -34,12 +34,6 @@ Number07 is the published interim milestone, and number20 is the pending full su
 | 20 | Front End User System | **Final supported release and handoff** — Publish the supported release/profile documentation, user-led acceptance checklist, migration instructions and remaining explicit limitations. | 19 |
 
 ## Completion criteria
-
-### 09: Complete condition lifecycle
-
-Category: **Gameplay System**.
-
-All condition lifecycle cases now described as manual are resolved, implemented and checked; ask about ambiguous allocation before coding it.
 
 ### 10: Complete casting and concentration integration
 

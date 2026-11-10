@@ -198,6 +198,24 @@
       ],
       "status": "passed",
       "affectedBehavior": []
+    },
+    {
+      "scenarioId": "complete-condition-movement-rest-decay-expiry",
+      "batch": "09",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "73afb00194973c9bddfe30b4a4cd53f59f63045f",
+          "result": "passed",
+          "tests": 5,
+          "failed": 0,
+          "skipped": 0,
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42873575130"
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": []
     }
   ],
   "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests."
