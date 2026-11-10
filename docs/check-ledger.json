@@ -95,7 +95,28 @@
       "status": "passed",
       "affectedBehavior": [],
       "nextAction": "No repeat without affected changes; live acceptance remains user-led."
+    },
+    {
+      "scenarioId": "graded-save-outcomes-and-consequences",
+      "batch": "04",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "193ea0e9f4afbd6bc9a8208418fd2529ef721503",
+          "startedAt": "2026-11-10T16:50:26Z",
+          "endedAt": "2026-11-10T16:50:27Z",
+          "result": "passed",
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42858609483",
+          "tests": 6,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": [],
+      "nextAction": "No repeat without affected changes; native live acceptance remains user-led."
     }
   ],
-  "history": "Batches00–03 each ran their selected gate once in CI; no local or live test runs."
+  "history": "Batches00–04 each ran their selected gate once in CI; no local or live test runs."
 }

@@ -2,7 +2,7 @@
 
 Updated November 10, 2026; repository owner Tommiec21, project n5e-module, visibility private.
 
-Current milestone: Batch03 HP/Chakra damage services published privately as v0.1.0-alpha.3; full native/third-party casting-card integration remains deferred.
+Current milestone: Batch04 graded-save services published privately as v0.1.0-alpha.4; full item/activity integration remains for Batch06.
 
 Current scope: reusable prompts, private repository, version history and bounded future implementation batches for ranked conditions, HP/Chakra damage, graded saves and dual concentration.
 
@@ -15,7 +15,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | 01 Contracts | Published | v0.1.0-alpha.1; 4 first-attempt contract checks passed; pending rulings remain explicit |
 | 02 Conditions | Published with disclosed manual paths | v0.1.0-alpha.2; 5 checks passed once, no live verification |
 | 03 Damage | Published | v0.1.0-alpha.3; 6 first-attempt checks passed; user live acceptance outstanding |
-| 04 Saves | In progress | Codex, batch/04-graded-saves; slice started16:46UTC |
+| 04 Saves | Published | v0.1.0-alpha.4; 6 first-attempt checks passed; manual exceptional clauses disclosed |
 | 05 Concentration | Not started | Two casts, upkeep and damage checks |
 | 06 Integration | Not started | Representative jutsu only |
 | 07 Packaging | Not started | Verified or explicitly limited prerelease |
@@ -111,3 +111,19 @@ Private v0.1.0-alpha.3 includes module.json888bytes and n5e-module.zip62753bytes
 Scope boundaries: ordinary host/third-party cards remain native, resource maxima/DR need explicit configuration until progression/UI integration, and unsupported type-to-pool conversion fails rather than guessing.
 
 Next: Batch04 graded saves; do not start it automatically.
+
+## Batch04 completed checkpoint
+
+Codex slice16:46–16:53UTC, under ten minutes; runtime193ea0e9f4afbd6bc9a8208418fd2529ef721503, branch batch/04-graded-saves.
+
+Reused the approved degree resolver, added explicit activity/mode/rank tables, native kept-d20 save cards, per-target consequences and bounded local duplicate protection.
+
+Shared damage/condition services apply selected consequences, retaining the original unscaled damage roll; binary saves delegate to the native method.
+
+Bane demonstrates local S-rank outcome remapping only, with bonus/suppression effects manual; no full compendium conversion or native/third-party card interception is claimed.
+
+CI42858609483 passed6 selected checks on first attempt with0 failures/skips; release42858863302 reused the24-file artifact without repeating tests.
+
+Private v0.1.0-alpha.4 assets: module.json872bytes, n5e-module.zip74291bytes; no local installation, live verification or bypasses.
+
+Next: Batch05 dual concentration and upkeep using the confirmed single-check/non-Stable failure and combined-final-damage policies; do not start automatically.
