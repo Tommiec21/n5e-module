@@ -17,7 +17,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | 03 Damage | Published | v0.1.0-alpha.3; 6 first-attempt checks passed; user live acceptance outstanding |
 | 04 Saves | Published | v0.1.0-alpha.4; 6 first-attempt checks passed; manual exceptional clauses disclosed |
 | 05 Concentration | Published | v0.1.0-alpha.5; 6 first-attempt checks, explicit manual skill/permission boundaries |
-| 06 Integration | Not started | Representative jutsu only |
+| 06 Integration | In progress | Codex, batch/06-integration; slice started17:12UTC |
 | 07 Packaging | Not started | Verified or explicitly limited prerelease |
 
 ## Expanded remaining schedule

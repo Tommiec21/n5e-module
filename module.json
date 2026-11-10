@@ -1,8 +1,8 @@
 {
   "id": "n5e-module",
   "title": "N5e for dnd5e — Development",
-  "description": "N5e ranked conditions, graded saves, HP/Chakra damage and dual concentration services for dnd5e.",
-  "version": "0.1.0-alpha.5",
+  "description": "Six native trial jutsu join N5e casting, saves, damage, healing and concentration services.",
+  "version": "0.1.0-alpha.6",
   "authors": [
     {
       "name": "King"
@@ -28,6 +28,6 @@
     "scripts/module.mjs"
   ],
   "url": "https://github.com/Tommiec21/n5e-module",
-  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.5/module.json",
-  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.5/n5e-module.zip"
+  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.6/module.json",
+  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.6/n5e-module.zip"
 }

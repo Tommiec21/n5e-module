@@ -1,11 +1,11 @@
-# Batch05 dual concentration
+# Batch06 representative integration
 
-Two source-linked maintained casts, player-selected replacement, actual-paid-cost upkeep and single damage checks are implemented through module APIs and native effects.
+Goal: connect shared services through a source-reviewed native Item/activity trial set, proving the module workflow before full content conversion.
 
-Upkeep uses the host attribute-consumption handler; insufficient Chakra produces a player-choice card, while Stable and Efficient remain separate rules.
+Trial Items are Chakra Bolt, Adept Healing, Butterfly Kick, Bane, Arms of Buddha and Fracturing Splinter; the import API is opt-in and native embedded IDs are generated safely.
 
-Concentration check cards use a native Chakra Control skill when configured, otherwise request the player’s full modifier and roll native dice; full skill/progression conversion remains outstanding.
+Native actor data/stat automation, full component/range/eligibility checks and general activity coverage remain in Batches08/10/12/14/16; source requirements must be confirmed explicitly in the trial dialog.
 
-Item casting must call replacement preflight before initial payment and register the already-paid cast afterward; this connection follows in Batch06.
+Butterfly Kick is D-rank only in this trial; Bane suppression, higher-rank exceptional clauses and attack-hit confirmation remain source-directed follow-ups, not hidden permanent omissions.
 
-Linked effects require owner/GM cleanup permission, and source cleanup/payment is not a distributed transaction; no live testing or local installation occurred.
+No live verification or local installation; use the acceptance checklist before relying on the trial in play.

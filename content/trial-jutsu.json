@@ -1,0 +1,617 @@
+[
+  {
+    "_id": "50b3c560292b3188",
+    "name": "Chakra Bolt",
+    "type": "spell",
+    "img": "icons/svg/book.svg",
+    "system": {
+      "identifier": "chakra-bolt",
+      "description": {
+        "value": "<p>You manifest a sphere of pure chakra which is fired at a creature you can see within range. Make a ranged ninjutsu attack. On a hit, the target takes 4d6 force damage.</p><p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and the damage by 1d6. If this jutsu is cast at B-Rank or higher, you can select +1 additional creature to target with this jutsu’s attack.</p>"
+      },
+      "level": 0,
+      "activities": {
+        "e83915bb3947319b": {
+          "_id": "e83915bb3947319b",
+          "type": "attack",
+          "name": "normal",
+          "activation": {
+            "type": "action",
+            "value": 1
+          },
+          "consumption": {
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "attack": {
+            "ability": "none",
+            "bonus": "0",
+            "flat": true,
+            "type": {
+              "value": "ranged",
+              "classification": "spell"
+            }
+          },
+          "damage": {
+            "includeBase": false,
+            "parts": [
+              {
+                "number": 0,
+                "denomination": 0,
+                "bonus": "",
+                "types": [
+                  "force"
+                ],
+                "custom": {
+                  "enabled": true,
+                  "formula": "4d6"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "method": "innate"
+    },
+    "flags": {
+      "n5e-module": {
+        "trial": {
+          "sourceId": "50b3c560292b3188",
+          "sourceLine": 814,
+          "sourceHash": "f53662918261ca32366c51f46474f1f52749dd7f7c9e833a9a702c03da73d1de",
+          "source": {
+            "name": "Chakra Bolt",
+            "line": 814,
+            "discipline": "Ninjutsu",
+            "section": "Non-Elemental",
+            "raw": "Rank: D-Rank Casting Time: 1 Action Range: 60 Feet Duration: Instant\nComponents:  HS, CM Cost: 4 Chakra Keywords: Ninjutsu, Clash Description: You manifest a sphere of pure chakra which is fired at a creature you can see within range. Make a ranged ninjutsu attack. On a hit, the target takes 4d6 force damage.\nAt Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and the damage by 1d6. If this jutsu is cast at B-Rank or higher, you can select +1 additional creature to target with this jutsu’s attack.",
+            "sourceHash": "f53662918261ca32366c51f46474f1f52749dd7f7c9e833a9a702c03da73d1de",
+            "rank": "D",
+            "time": "1 Action",
+            "range": "60 Feet",
+            "duration": "Instant",
+            "components": "HS, CM",
+            "cost": "4 Chakra",
+            "keywords": "Ninjutsu, Clash",
+            "description": "You manifest a sphere of pure chakra which is fired at a creature you can see within range. Make a ranged ninjutsu attack. On a hit, the target takes 4d6 force damage.\nAt Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and the damage by 1d6. If this jutsu is cast at B-Rank or higher, you can select +1 additional creature to target with this jutsu’s attack."
+          },
+          "roles": {
+            "e83915bb3947319b": "normal"
+          },
+          "baseCost": 4,
+          "baseRank": "D",
+          "concentration": false
+        }
+      }
+    }
+  },
+  {
+    "_id": "a945026dabcb97d8",
+    "name": "Medical Release: Adept Healing",
+    "type": "spell",
+    "img": "icons/svg/book.svg",
+    "system": {
+      "identifier": "medical-release-adept-healing",
+      "description": {
+        "value": "<p>You cover your hands in chakra that glows with a warm green hue, reactivating a creature's cells reproductive process closing their wounds. This jutsu is unique unto itself in that it can be cast in one of three variations with each taking more time to cast than the last. This jutsu has no effect on Undead or constructs.</p><p>1 Action: When cast, this Jutsu's range becomes Touch and an affected creature regains a number of hit points equal to 3d8.</p><p>1 Bonus Action: When cast, this jutsu range becomes Self (15-f00t radius) and all creatures of your choice in range regains 8 hit points.</p><p>1 Full-Turn Action: When cast, this jutsu’s range becomes Self (30-f00t radius) and all creatures of your choice in range regains 3d8+4 hit points</p><p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and healing by +1 dice. If you do not roll dice for healing when casting this jutsu, you instead increase the healing by +4.</p>"
+      },
+      "level": 0,
+      "activities": {
+        "1398aacbd6f786b3": {
+          "_id": "1398aacbd6f786b3",
+          "type": "heal",
+          "name": "action",
+          "activation": {
+            "type": "action",
+            "value": 1
+          },
+          "consumption": {
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "healing": {
+            "number": 0,
+            "denomination": 0,
+            "bonus": "",
+            "types": [
+              "healing"
+            ],
+            "custom": {
+              "enabled": true,
+              "formula": "3d8"
+            }
+          }
+        },
+        "3f5b18e8048d644a": {
+          "_id": "3f5b18e8048d644a",
+          "type": "heal",
+          "name": "bonus",
+          "activation": {
+            "type": "bonus",
+            "value": 1
+          },
+          "consumption": {
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "healing": {
+            "number": 0,
+            "denomination": 0,
+            "bonus": "",
+            "types": [
+              "healing"
+            ],
+            "custom": {
+              "enabled": true,
+              "formula": "8"
+            }
+          }
+        },
+        "821d1e39eca01fcf": {
+          "_id": "821d1e39eca01fcf",
+          "type": "heal",
+          "name": "fullTurn",
+          "activation": {
+            "type": "action",
+            "value": 1
+          },
+          "consumption": {
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "healing": {
+            "number": 0,
+            "denomination": 0,
+            "bonus": "",
+            "types": [
+              "healing"
+            ],
+            "custom": {
+              "enabled": true,
+              "formula": "3d8+4"
+            }
+          }
+        }
+      },
+      "method": "innate"
+    },
+    "flags": {
+      "n5e-module": {
+        "trial": {
+          "sourceId": "a945026dabcb97d8",
+          "sourceLine": 1257,
+          "sourceHash": "be58b118871cf2fbe3685aa786e9b965bf107f27bdeab84452f74906f3b6ce0e",
+          "source": {
+            "name": "Medical Release: Adept Healing",
+            "line": 1257,
+            "discipline": "Ninjutsu",
+            "section": "Medical Release",
+            "raw": "Rank: D-Rank Casting Time: Special Range: Special Duration: Instant\nComponents: HS, CM Cost: 5 Chakra Keywords: Ninjutsu, Medical Description: You cover your hands in chakra that glows with a warm green hue, reactivating a creature's cells reproductive process closing their wounds. This jutsu is unique unto itself in that it can be cast in one of three variations with each taking more time to cast than the last. This jutsu has no effect on Undead or constructs.\n1 Action: When cast, this Jutsu's range becomes Touch and an affected creature regains a number of hit points equal to 3d8.\n1 Bonus Action: When cast, this jutsu range becomes Self (15-f00t radius) and all creatures of your choice in range regains 8 hit points.\n1 Full-Turn Action: When cast, this jutsu’s range becomes Self (30-f00t radius) and all creatures of your choice in range regains 3d8+4 hit points\nAt Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and healing by +1 dice. If you do not roll dice for healing when casting this jutsu, you instead increase the healing by +4.",
+            "sourceHash": "be58b118871cf2fbe3685aa786e9b965bf107f27bdeab84452f74906f3b6ce0e",
+            "rank": "D",
+            "time": "Special",
+            "range": "Special",
+            "duration": "Instant",
+            "components": "HS, CM",
+            "cost": "5 Chakra",
+            "keywords": "Ninjutsu, Medical",
+            "description": "You cover your hands in chakra that glows with a warm green hue, reactivating a creature's cells reproductive process closing their wounds. This jutsu is unique unto itself in that it can be cast in one of three variations with each taking more time to cast than the last. This jutsu has no effect on Undead or constructs.\n1 Action: When cast, this Jutsu's range becomes Touch and an affected creature regains a number of hit points equal to 3d8.\n1 Bonus Action: When cast, this jutsu range becomes Self (15-f00t radius) and all creatures of your choice in range regains 8 hit points.\n1 Full-Turn Action: When cast, this jutsu’s range becomes Self (30-f00t radius) and all creatures of your choice in range regains 3d8+4 hit points\nAt Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and healing by +1 dice. If you do not roll dice for healing when casting this jutsu, you instead increase the healing by +4."
+          },
+          "roles": {
+            "1398aacbd6f786b3": "action",
+            "3f5b18e8048d644a": "bonus",
+            "821d1e39eca01fcf": "fullTurn"
+          },
+          "baseCost": 5,
+          "baseRank": "D",
+          "concentration": false
+        }
+      }
+    }
+  },
+  {
+    "_id": "n5eFPqa78TQTu7oV",
+    "name": "Butterfly Kick",
+    "type": "spell",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "identifier": "butterfly-kick",
+      "description": {
+        "value": "<p>You jump and perform a series of kicks that keep you suspended in the air. While performing these kicks, you create an image of a butterfly’s wings.</p><p>Make a melee Taijutsu attack against all creatures of your choice who are adjacent to you, comparing your result vs their AC. On a hit, you deal your [Unarmed damage] + 2d6 and forcing all creatures you hit to make a Strength saving throw gaining 1 rank of Concussed on a failed save.</p><p>Finisher: all creatures in a 15-foot cube originating from you make a Strength saving throw. On a failure save they take your [Unarmed damage] + 4d6, gain 1 rank of Concussed, and are knocked Prone. On a successful save they take half damage and no further effects. After targets make their saving throws, select an unoccupied space up to 15 feet away that can hold you as you move into this space without triggering attacks of opportunity.</p><p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3. If this jutsu is cast at C-Rank or higher, increase the damage dealt by 2d4 or 1d8. If this jutsu is cast at B-Rank or higher, increase the number of attacks or ranks of Concussed by +1. If this jutsu is cast at A-Rank or higher increase the damage dealt by 2d4 or 1d8. If this jutsu is cast at S-Rank, creatures cannot benefit from Jutsu based bonuses to their AC or Strength saving throw.</p>"
+      },
+      "level": 0,
+      "activities": {
+        "edda9e490874b463": {
+          "_id": "edda9e490874b463",
+          "type": "attack",
+          "name": "normal",
+          "activation": {
+            "type": "action",
+            "value": 1
+          },
+          "consumption": {
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "attack": {
+            "ability": "none",
+            "bonus": "0",
+            "flat": true,
+            "type": {
+              "value": "melee",
+              "classification": "spell"
+            }
+          },
+          "damage": {
+            "includeBase": false,
+            "parts": [
+              {
+                "number": 0,
+                "denomination": 0,
+                "bonus": "",
+                "types": [
+                  "bludgeoning"
+                ],
+                "custom": {
+                  "enabled": true,
+                  "formula": "1 + 2d6"
+                }
+              }
+            ]
+          }
+        },
+        "b7459017e36ba998": {
+          "_id": "b7459017e36ba998",
+          "type": "save",
+          "name": "finisher",
+          "activation": {
+            "type": "action",
+            "value": 1
+          },
+          "consumption": {
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "save": {
+            "ability": [
+              "str"
+            ],
+            "dc": {
+              "calculation": "",
+              "formula": "0"
+            }
+          },
+          "damage": {
+            "onSave": "none",
+            "parts": [
+              {
+                "number": 0,
+                "denomination": 0,
+                "bonus": "",
+                "types": [
+                  "bludgeoning"
+                ],
+                "custom": {
+                  "enabled": true,
+                  "formula": "1 + 4d6"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "method": "innate"
+    },
+    "flags": {
+      "n5e-module": {
+        "trial": {
+          "sourceId": "n5eFPqa78TQTu7oV",
+          "sourceLine": 4248,
+          "sourceHash": "3ddf996eb98758aa11abcf85a859e4c800b90c7c7998279d806cd26bd5c5e738",
+          "source": {
+            "name": "Butterfly Kick",
+            "line": 4248,
+            "discipline": "Taijutsu",
+            "section": "Taijutsu",
+            "raw": "Rank: D-Rank Casting Time: 1 Action Range: 5 feet Duration: Instant\nComponents: M Cost: 4 Chakra Keywords: Taijutsu, Finisher, Clash Description: You jump and perform a series of kicks that keep you suspended in the air. While performing these kicks, you create an image of a butterfly’s wings.\nMake a melee Taijutsu attack against all creatures of your choice who are adjacent to you, comparing your result vs their AC. On a hit, you deal your [Unarmed damage] + 2d6 and forcing all creatures you hit to make a Strength saving throw gaining 1 rank of Concussed on a failed save.\nFinisher: all creatures in a 15-foot cube originating from you make a Strength saving throw. On a failure save they take your [Unarmed damage] + 4d6, gain 1 rank of Concussed, and are knocked Prone. On a successful save they take half damage and no further effects. After targets make their saving throws, select an unoccupied space up to 15 feet away that can hold you as you move into this space without triggering attacks of opportunity.\nAt Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3. If this jutsu is cast at C-Rank or higher, increase the damage dealt by 2d4 or 1d8. If this jutsu is cast at B-Rank or higher, increase the number of attacks or ranks of Concussed by +1. If this jutsu is cast at A-Rank or higher increase the damage dealt by 2d4 or 1d8. If this jutsu is cast at S-Rank, creatures cannot benefit from Jutsu based bonuses to their AC or Strength saving throw.",
+            "sourceHash": "3ddf996eb98758aa11abcf85a859e4c800b90c7c7998279d806cd26bd5c5e738",
+            "rank": "D",
+            "time": "1 Action",
+            "range": "5 feet",
+            "duration": "Instant",
+            "components": "M",
+            "cost": "4 Chakra",
+            "keywords": "Taijutsu, Finisher, Clash",
+            "description": "You jump and perform a series of kicks that keep you suspended in the air. While performing these kicks, you create an image of a butterfly’s wings.\nMake a melee Taijutsu attack against all creatures of your choice who are adjacent to you, comparing your result vs their AC. On a hit, you deal your [Unarmed damage] + 2d6 and forcing all creatures you hit to make a Strength saving throw gaining 1 rank of Concussed on a failed save.\nFinisher: all creatures in a 15-foot cube originating from you make a Strength saving throw. On a failure save they take your [Unarmed damage] + 4d6, gain 1 rank of Concussed, and are knocked Prone. On a successful save they take half damage and no further effects. After targets make their saving throws, select an unoccupied space up to 15 feet away that can hold you as you move into this space without triggering attacks of opportunity.\nAt Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3. If this jutsu is cast at C-Rank or higher, increase the damage dealt by 2d4 or 1d8. If this jutsu is cast at B-Rank or higher, increase the number of attacks or ranks of Concussed by +1. If this jutsu is cast at A-Rank or higher increase the damage dealt by 2d4 or 1d8. If this jutsu is cast at S-Rank, creatures cannot benefit from Jutsu based bonuses to their AC or Strength saving throw."
+          },
+          "roles": {
+            "edda9e490874b463": "normal",
+            "b7459017e36ba998": "finisher"
+          },
+          "baseCost": 4,
+          "baseRank": "D",
+          "concentration": false
+        }
+      }
+    }
+  },
+  {
+    "_id": "d247c6d72a89200f",
+    "name": "Bane",
+    "type": "spell",
+    "img": "icons/svg/book.svg",
+    "system": {
+      "identifier": "bane",
+      "description": {
+        "value": "<p>You release a pulse of chakra targeting all hostile creatures within 30 feet of you causing them feel deep seeded regret or dread. All hostile creature of your choice within 30 feet of you must make a Charisma saving throw as their mind is wrought with negative thoughts.</p><p>Success: No further effects.</p><p>Failure: Affected creatures suffers a 1d4 penalty to all attack roll and saving throws it makes for the duration.</p><p>Critical Failure: Same as failure and it cannot gain the benefit of jutsu that provide bonuses to it of the same rank or lower for the duration.</p><p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and the radius by 10-feet. If this jutsu is cast at B-Rank or higher on a critical Failure, creatures treats rolls of 2 and lower as critical misses/failures.</p><p>If this jutsu is cast at S-Rank, the Success effect becomes a Critical Success effect. The Failure Effect becomes a Success effect. The Critical Failure effect becomes a Failure effect and this jutsu loses the Critical failure state.</p>"
+      },
+      "level": 0,
+      "activities": {
+        "18273fa2a3ecbe10": {
+          "_id": "18273fa2a3ecbe10",
+          "type": "save",
+          "name": "normal",
+          "activation": {
+            "type": "action",
+            "value": 1
+          },
+          "consumption": {
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "save": {
+            "ability": [
+              "cha"
+            ],
+            "dc": {
+              "calculation": "",
+              "formula": "0"
+            }
+          },
+          "damage": {
+            "onSave": "none",
+            "parts": []
+          }
+        }
+      },
+      "method": "innate"
+    },
+    "flags": {
+      "n5e-module": {
+        "trial": {
+          "sourceId": "d247c6d72a89200f",
+          "sourceLine": 3053,
+          "sourceHash": "e33a643d0705fb41945e8f4c22cf2527cd4028dded9a26a1c219bbf76a7bfdac",
+          "source": {
+            "name": "Bane",
+            "line": 3053,
+            "discipline": "Genjutsu",
+            "section": "Phantasm",
+            "raw": "Rank: D-Rank Casting Time: 1 Action Range: Self (30-Feet) Duration: Concentration, up to 1 Minute\nComponents: HS, CM Cost: 5 Chakra Keywords: Genjutsu (Auditory) Description: You release a pulse of chakra targeting all hostile creatures within 30 feet of you causing them feel deep seeded regret or dread. All hostile creature of your choice within 30 feet of you must make a Charisma saving throw as their mind is wrought with negative thoughts.\nSuccess: No further effects.\nFailure: Affected creatures suffers a 1d4 penalty to all attack roll and saving throws it makes for the duration.\nCritical Failure: Same as failure and it cannot gain the benefit of jutsu that provide bonuses to it of the same rank or lower for the duration.\nAt Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and the radius by 10-feet. If this jutsu is cast at B-Rank or higher on a critical Failure, creatures treats rolls of 2 and lower as critical misses/failures.\nIf this jutsu is cast at S-Rank, the Success effect becomes a Critical Success effect. The Failure Effect becomes a Success effect. The Critical Failure effect becomes a Failure effect and this jutsu loses the Critical failure state.",
+            "sourceHash": "e33a643d0705fb41945e8f4c22cf2527cd4028dded9a26a1c219bbf76a7bfdac",
+            "rank": "D",
+            "time": "1 Action",
+            "range": "Self (30-Feet)",
+            "duration": "Concentration, up to 1 Minute",
+            "components": "HS, CM",
+            "cost": "5 Chakra",
+            "keywords": "Genjutsu (Auditory)",
+            "description": "You release a pulse of chakra targeting all hostile creatures within 30 feet of you causing them feel deep seeded regret or dread. All hostile creature of your choice within 30 feet of you must make a Charisma saving throw as their mind is wrought with negative thoughts.\nSuccess: No further effects.\nFailure: Affected creatures suffers a 1d4 penalty to all attack roll and saving throws it makes for the duration.\nCritical Failure: Same as failure and it cannot gain the benefit of jutsu that provide bonuses to it of the same rank or lower for the duration.\nAt Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and the radius by 10-feet. If this jutsu is cast at B-Rank or higher on a critical Failure, creatures treats rolls of 2 and lower as critical misses/failures.\nIf this jutsu is cast at S-Rank, the Success effect becomes a Critical Success effect. The Failure Effect becomes a Success effect. The Critical Failure effect becomes a Failure effect and this jutsu loses the Critical failure state."
+          },
+          "roles": {
+            "18273fa2a3ecbe10": "normal"
+          },
+          "baseCost": 5,
+          "baseRank": "D",
+          "concentration": true
+        }
+      }
+    }
+  },
+  {
+    "_id": "0916d5d348b3eb3b",
+    "name": "Arms of Buddha",
+    "type": "spell",
+    "img": "icons/svg/book.svg",
+    "system": {
+      "identifier": "arms-of-buddha",
+      "description": {
+        "value": "<p>You focus your chakra throughout your body, culminating in a golden buddha forming around you and making multiple strikes with its 100 arms. As an Action, on each of your turns, you can make a melee ninjutsu Attack against a creature no more than 10 feet away from you that you can seem dealing 4d8 bludgeoning damage on a hit.</p><p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3. If this jutsu is cast at C-Rank or higher, increase the damage of this jutsu by 1d8. If this jutsu is cast at B-Rank or higher, increase the number of attacks you can make with this jutsu by +1. If this jutsu is cast at A-Rank or higher, you gain a special reaction called Fists of Peace, which you can take when you take damage, reducing the damage taken by 5d8. If this jutsu is cast at S-Rank, increase the damage this jutsu deals and the damage reduction of Fists of Peace by 1d8.</p>"
+      },
+      "level": 0,
+      "activities": {
+        "e25b12e19bdb50f8": {
+          "_id": "e25b12e19bdb50f8",
+          "type": "utility",
+          "name": "start",
+          "activation": {
+            "type": "action",
+            "value": 1
+          },
+          "consumption": {
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          }
+        },
+        "c323adca4f0d8ff8": {
+          "_id": "c323adca4f0d8ff8",
+          "type": "attack",
+          "name": "strike",
+          "activation": {
+            "type": "action",
+            "value": 1
+          },
+          "consumption": {
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "attack": {
+            "ability": "none",
+            "bonus": "0",
+            "flat": true,
+            "type": {
+              "value": "melee",
+              "classification": "spell"
+            }
+          },
+          "damage": {
+            "includeBase": false,
+            "parts": [
+              {
+                "number": 0,
+                "denomination": 0,
+                "bonus": "",
+                "types": [
+                  "bludgeoning"
+                ],
+                "custom": {
+                  "enabled": true,
+                  "formula": "4d8"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "method": "innate"
+    },
+    "flags": {
+      "n5e-module": {
+        "trial": {
+          "sourceId": "0916d5d348b3eb3b",
+          "sourceLine": 764,
+          "sourceHash": "55aad2117ea79964d629c79b9da9a880fc363548b4944291f6b43121aef9fe65",
+          "source": {
+            "name": "Arms of Buddha",
+            "line": 764,
+            "discipline": "Ninjutsu",
+            "section": "Non-Elemental",
+            "raw": "Rank: D-Rank Casting Time: 1 Bonus Action Range: Self Duration: Concentration, up to 1 minute\nComponents: HS, CM Cost: 4 Chakra Keywords: Ninjutsu Description: You focus your chakra throughout your body, culminating in a golden buddha forming around you and making multiple strikes with its 100 arms. As an Action, on each of your turns, you can make a melee ninjutsu Attack against a creature no more than 10 feet away from you that you can seem dealing 4d8 bludgeoning damage on a hit.\nAt Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3. If this jutsu is cast at C-Rank or higher, increase the damage of this jutsu by 1d8. If this jutsu is cast at B-Rank or higher, increase the number of attacks you can make with this jutsu by +1. If this jutsu is cast at A-Rank or higher, you gain a special reaction called Fists of Peace, which you can take when you take damage, reducing the damage taken by 5d8. If this jutsu is cast at S-Rank, increase the damage this jutsu deals and the damage reduction of Fists of Peace by 1d8.",
+            "sourceHash": "55aad2117ea79964d629c79b9da9a880fc363548b4944291f6b43121aef9fe65",
+            "rank": "D",
+            "time": "1 Bonus Action",
+            "range": "Self",
+            "duration": "Concentration, up to 1 minute",
+            "components": "HS, CM",
+            "cost": "4 Chakra",
+            "keywords": "Ninjutsu",
+            "description": "You focus your chakra throughout your body, culminating in a golden buddha forming around you and making multiple strikes with its 100 arms. As an Action, on each of your turns, you can make a melee ninjutsu Attack against a creature no more than 10 feet away from you that you can seem dealing 4d8 bludgeoning damage on a hit.\nAt Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3. If this jutsu is cast at C-Rank or higher, increase the damage of this jutsu by 1d8. If this jutsu is cast at B-Rank or higher, increase the number of attacks you can make with this jutsu by +1. If this jutsu is cast at A-Rank or higher, you gain a special reaction called Fists of Peace, which you can take when you take damage, reducing the damage taken by 5d8. If this jutsu is cast at S-Rank, increase the damage this jutsu deals and the damage reduction of Fists of Peace by 1d8."
+          },
+          "roles": {
+            "e25b12e19bdb50f8": "start",
+            "c323adca4f0d8ff8": "strike"
+          },
+          "baseCost": 4,
+          "baseRank": "D",
+          "concentration": true
+        }
+      }
+    }
+  },
+  {
+    "_id": "45d1d25c214c786a",
+    "name": "Sealing Art: Fracturing Splinter",
+    "type": "spell",
+    "img": "icons/svg/book.svg",
+    "system": {
+      "identifier": "sealing-art-fracturing-splinter",
+      "description": {
+        "value": "<p>You infuse chakra into a chakra seal as you attempt to mark a person with the seal of descension and then shatter it causing a fracture in their internal balance of Yin and Yang. A creature you can see within range, must make a Charisma saving throw. On a failed save the target creature takes 2d8 Force damage and 2d8 Chakra damage.</p><p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and both damage types by 1d8. If this jutsu is cast at C-Rank or higher, on a failed save, affected creature gains 1 rank of Sealed. If this jutsu is cast at B-Rank or higher, increase the number of creatures you can target by +1. If this jutsu is cast at A-Rank or higher, on a failed save, an affected creature becomes unable to make Hand Seals (HS) until the beginning of their next turn.</p>"
+      },
+      "level": 0,
+      "activities": {
+        "f8c316446189f1fe": {
+          "_id": "f8c316446189f1fe",
+          "type": "save",
+          "name": "normal",
+          "activation": {
+            "type": "action",
+            "value": 1
+          },
+          "consumption": {
+            "targets": [],
+            "scaling": {
+              "allowed": false
+            }
+          },
+          "save": {
+            "ability": [
+              "cha"
+            ],
+            "dc": {
+              "calculation": "",
+              "formula": "0"
+            }
+          },
+          "damage": {
+            "onSave": "none",
+            "parts": [
+              {
+                "number": 0,
+                "denomination": 0,
+                "bonus": "",
+                "types": [
+                  "force"
+                ],
+                "custom": {
+                  "enabled": true,
+                  "formula": "2d8"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "method": "innate"
+    },
+    "flags": {
+      "n5e-module": {
+        "trial": {
+          "sourceId": "45d1d25c214c786a",
+          "sourceLine": 876,
+          "sourceHash": "daa016190c77ef8d96683fd3cfeda4334519eda16d89221fed0dd06b96f45ff5",
+          "source": {
+            "name": "Sealing Art: Fracturing Splinter",
+            "line": 876,
+            "discipline": "Ninjutsu",
+            "section": "Non-Elemental",
+            "raw": "Rank: D-Rank Casting Time: 1 Action Range: 60 feet Duration: Instant\nComponents:  HS, CM, CS Cost: 4 Chakra Keywords: Ninjutsu, Fuinjutsu Description: You infuse chakra into a chakra seal as you attempt to mark a person with the seal of descension and then shatter it causing a fracture in their internal balance of Yin and Yang. A creature you can see within range, must make a Charisma saving throw. On a failed save the target creature takes 2d8 Force damage and 2d8 Chakra damage.\nAt Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and both damage types by 1d8. If this jutsu is cast at C-Rank or higher, on a failed save, affected creature gains 1 rank of Sealed. If this jutsu is cast at B-Rank or higher, increase the number of creatures you can target by +1. If this jutsu is cast at A-Rank or higher, on a failed save, an affected creature becomes unable to make Hand Seals (HS) until the beginning of their next turn.",
+            "sourceHash": "daa016190c77ef8d96683fd3cfeda4334519eda16d89221fed0dd06b96f45ff5",
+            "rank": "D",
+            "time": "1 Action",
+            "range": "60 feet",
+            "duration": "Instant",
+            "components": "HS, CM, CS",
+            "cost": "4 Chakra",
+            "keywords": "Ninjutsu, Fuinjutsu",
+            "description": "You infuse chakra into a chakra seal as you attempt to mark a person with the seal of descension and then shatter it causing a fracture in their internal balance of Yin and Yang. A creature you can see within range, must make a Charisma saving throw. On a failed save the target creature takes 2d8 Force damage and 2d8 Chakra damage.\nAt Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and both damage types by 1d8. If this jutsu is cast at C-Rank or higher, on a failed save, affected creature gains 1 rank of Sealed. If this jutsu is cast at B-Rank or higher, increase the number of creatures you can target by +1. If this jutsu is cast at A-Rank or higher, on a failed save, an affected creature becomes unable to make Hand Seals (HS) until the beginning of their next turn."
+          },
+          "roles": {
+            "f8c316446189f1fe": "normal"
+          },
+          "baseCost": 4,
+          "baseRank": "D",
+          "concentration": false
+        }
+      }
+    }
+  }
+]

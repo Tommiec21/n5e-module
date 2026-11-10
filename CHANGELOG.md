@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.6
+
+- Add six opt-in native trial jutsu Items and a scoped activity-use bridge.
+- Join native payment/rolls with shared saves, conditions, damage/healing and maintained-cast registration.
+- Preserve source IDs/text and explicit mode/rank choices, with named follow-up batches for broader rule coverage.
+
 ## 0.1.0-alpha.5
 
 - Add two source-linked maintained casts with player-selected replacement and upkeep choices.

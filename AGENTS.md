@@ -39,3 +39,7 @@ Use the native dnd5e type race for Clan identity and native spell/activity infra
 ## Outstanding work ownership
 
 Read docs/REMAINING_BATCHES.md for the06–20 completion schedule; every omission must have a named batch/sub-batch and must not be treated as a user exclusion merely because an earlier agent left it manual.
+
+## Batch completion reporting
+
+At each completion, repeat the specific batch goal and explain its role in the overall module, alongside implementation/check results and named follow-up batches.

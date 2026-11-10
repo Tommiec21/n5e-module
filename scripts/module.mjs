@@ -1,3 +1,5 @@
+import { importTrialItems } from "./integration/content.mjs";
+import { castTrial, registerTrialBridge } from "./integration/bridge.mjs";
 import { beginCast, endCast, payUpkeep, cleanup, applyCheck } from "./concentration/service.mjs";
 import { maintainedCasts, damageCheckPlan, upkeepPlan } from "./concentration/planner.mjs";
 import { chooseReplacement, chooseUpkeep, rollCheck, registerConcentrationCards } from "./concentration/controls.mjs";
@@ -28,6 +30,7 @@ function initialize() {
     registerDamageFields(CONFIG, foundry.data.fields);
     registerDamageCards();
     registerSaveCards();
+    registerTrialBridge();
     registerConcentrationCards();
     registerConcentrationLifecycle();
     registerConditionDamage();
@@ -39,6 +42,7 @@ function initialize() {
     version: module.version,
     supported: supportsHost(game.system, game.version),
     gameplayEnabled: false,
+    trial: Object.freeze({ importItems: importTrialItems, cast: castTrial }),
     concentration: Object.freeze({ begin: beginCast, end: endCast, payUpkeep, cleanup, applyCheck, list: maintainedCasts, damageCheckPlan, upkeepPlan, chooseReplacement, chooseUpkeep, rollCheck }),
     saves: Object.freeze({ resolve: resolveSave, apply: applySaveOutcome, roll: rollSave }),
     damage: Object.freeze({ plan: planDamage, apply: applyDamage, applyWithChoice, post: postDamage, recover, planRecovery, retarget }),
