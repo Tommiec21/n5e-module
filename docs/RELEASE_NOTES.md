@@ -8,7 +8,7 @@ Use Configure Settings > N5e class library > Import three classes, then drag a c
 
 Explicitly deferred by the user:extensive maneuvers/moldings, stance/conditional/reaction automation, custom resource recovery and Chakra maximum rolls. Source text and original rules remain in the portable snapshot; class flags preserve Chakra die and source progression. ASI/global advancement and campaign multiclass rulings remain later progression work.
 
-Focused class conversion gate pending; no live verification, installed package changes or resumed jutsu automation. The12/100 jutsu/clan-feature tally remains paused.
+CI42885781239 passed6 focused conversion/progression checks on attempt1,0 failures/skips; no live verification, installed package changes or resumed jutsu automation. The12/100 jutsu/clan-feature tally remains paused.
 
 # S04b — Source-linked buffs
 

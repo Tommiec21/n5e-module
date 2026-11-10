@@ -307,3 +307,5 @@ PAUSED by explicit user instruction after current jutsu/buff work; do not begin 
 November10,slice19:21UTC,branch content/classes-01. User requests Scout-Nin/Ninjutsu Specialist/Taijutsu Specialist conversion with simple automation; extensive automation is explicitly deferred. The jutsu100 target remains paused and this class conversion must not inflate its tally or resume jutsu development.
 
 Reuse the native-content importer and native advancement types; portable dependency closure contains402 records (3 classes,20 subclasses,355 features/options,24 stances), with no missing structural references. This slice owns native HP/proficiencies/feature grants/choices/scales, stage-aware Mastery/affinity and Focus uses; all complex source mechanics are preserved and deferred.
+
+Classes slice checkpoint19:31UTC: conversion implementation19:21–19:31 saved under ten minutes; runtime8511ecaf753292a663a987f26d7d60219d78e938, CI42885781239 succeeded. A separate bounded publication/documentation checkpoint will finish the class task; no further feature engines or jutsu work.
