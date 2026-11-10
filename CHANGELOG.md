@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.3
+
+- Reuse N5e damage/healing planners against native HP and inherited Chakra fields.
+- Add per-pool DR allocation, manual damage cards/retargeting, owner-checked application and bounded local receipts.
+- Connect condition damage to native roll cards and emit combined final-damage events for later concentration handling.
+
 ## 0.1.0-alpha.2
 
 - Reuse N5e condition definitions and modifiers with native source-aware ActiveEffects.

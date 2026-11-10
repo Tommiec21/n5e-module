@@ -1,11 +1,9 @@
-# Batch02 ranked conditions
+# Batch03 HP and Chakra damage
 
-Native ActiveEffect source storage, capped additive ranks, inherited derived modifiers, owner-checked controls, removal checks and active-GM turn lifecycle are implemented.
+Native HP and inherited Chakra fields feed the reused N5e damage/healing planners; module-owned cards apply through one owner-checked path with capped receipts.
 
-Condition damage is a labelled request only until Batch03; multi-source rank-decay allocation, movement damage and automated rest/complex behavioral flags remain manual.
+Condition damage rolls once into a native card with manual Apply/Retarget, and combined final HP/Chakra damage emits an event for Batch05 concentration.
 
-Open controls through game.modules.get("n5e-module").api.conditions.open(actor), or use native token statuses; API-managed conditions contain the ranked source records.
+Unmodified dnd5e and third-party cards remain native until their later casting/integration adapters; they do not automatically acquire N5e rules from this release.
 
-Casting-specific cost/DC/DR modifiers are exposed through the condition aggregate for later adapters, not claimed integrated into absent casting/damage handlers.
-
-No live verification or local installation; private release download requires authentication.
+No live verification or local installation; Chakra maxima and DR must be configured explicitly until character progression/UI integration.

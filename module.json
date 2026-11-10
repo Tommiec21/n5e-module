@@ -1,8 +1,8 @@
 {
   "id": "n5e-module",
   "title": "N5e for dnd5e — Development",
-  "description": "Ranked condition services for N5e on dnd5e; casting and damage integration remain disabled.",
-  "version": "0.1.0-alpha.2",
+  "description": "N5e ranked conditions and HP/Chakra damage services for dnd5e; casting integration is deferred.",
+  "version": "0.1.0-alpha.3",
   "authors": [
     {
       "name": "King"
@@ -28,6 +28,6 @@
     "scripts/module.mjs"
   ],
   "url": "https://github.com/Tommiec21/n5e-module",
-  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.2/module.json",
-  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.2/n5e-module.zip"
+  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.3/module.json",
+  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.3/n5e-module.zip"
 }

@@ -1,3 +1,7 @@
+import { registerDamageFields } from "./damage/schema.mjs";
+import { planDamage, planRecovery } from "./damage/planner.mjs";
+import { applyDamage, recover, retarget } from "./damage/service.mjs";
+import { applyWithChoice, postDamage, registerDamageCards, registerConditionDamage } from "./damage/controls.mjs";
 import { conditions } from "./conditions/registry.mjs";
 import { conditionActorClass } from "./conditions/actor.mjs";
 import { modifiers, turnStartRequests } from "./conditions/planner.mjs";
@@ -14,6 +18,9 @@ function initialize() {
   if (!module) return;
   const supported = supportsHost(game.system, game.version);
   if (supported) {
+    registerDamageFields(CONFIG, foundry.data.fields);
+    registerDamageCards();
+    registerConditionDamage();
     CONFIG.Actor.documentClass = conditionActorClass(CONFIG.Actor.documentClass);
     for (const [key, def] of Object.entries(conditions)) if (!CONFIG.statusEffects.some(e => e.id === `n5e.${key}`)) CONFIG.statusEffects.push({ id: `n5e.${key}`, name: def.label, img: def.icon });
     registerConditionLifecycle();
@@ -22,6 +29,7 @@ function initialize() {
     version: module.version,
     supported: supportsHost(game.system, game.version),
     gameplayEnabled: false,
+    damage: Object.freeze({ plan: planDamage, apply: applyDamage, applyWithChoice, post: postDamage, recover, planRecovery, retarget }),
     conditions: Object.freeze({ definitions: conditions, modifiers, add: addRanks, set: setCondition, remove: removeCondition, resolveRemoval, processTurnEnd, turnStartRequests, open: openConditions })
   });
 }
