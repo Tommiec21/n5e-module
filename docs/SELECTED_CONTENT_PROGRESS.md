@@ -21,3 +21,5 @@ Next: final selected-content coverage report and user testing guide, focused bou
 ## Agent rules
 
 Use this source snapshot and converter rather than reimporting the full books. Preserve source IDs; do not reinstate Clan Feats, expand scope, or label text-only content automated; retain cumulative test attempts and separate ten-minute slices.
+
+S01 result: five checks passed once; CI42878742579, private alpha11 release42878910177. Structural checkpoint only; S02 pending.

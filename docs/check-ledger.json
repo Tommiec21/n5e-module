@@ -234,6 +234,24 @@
       ],
       "status": "passed",
       "affectedBehavior": []
+    },
+    {
+      "scenarioId": "selected-content-native-shape-scope-and-import",
+      "batch": "selected-01",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "80bf587acc5b45d16cea19d2faa4c601512c6b59",
+          "result": "passed",
+          "tests": 5,
+          "failed": 0,
+          "skipped": 0,
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42878742579"
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": []
     }
   ],
   "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08–10:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."
