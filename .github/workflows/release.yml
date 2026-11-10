@@ -1,0 +1,36 @@
+name: Publish existing artifact
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Successful validation run whose artifact should be published
+        required: true
+permissions:
+  contents: write
+  actions: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      SOURCE_RUN: ${{ inputs.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate artifact origin and download without rerunning tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$SOURCE_RUN" =~ ^[0-9]+$ ]]
+          gh api "repos/$GH_REPO/actions/runs/$SOURCE_RUN" > run.json
+          node -e 'const r=require("./run.json"); if(r.conclusion!=="success" || r.path!==".github/workflows/validate.yml" || r.head_repository.full_name!==process.env.GH_REPO) process.exit(1)'
+          gh run download "$SOURCE_RUN" --name foundation-release --dir artifact
+          node -e 'const fs=require("fs"),r=require("./run.json"),a=require("./artifact/source.json");if(a.commit!==r.head_sha)process.exit(1)'
+      - name: Publish a development prerelease from its checked source commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION=$(node -p 'require("./artifact/module.json").version')
+          SHA=$(node -p 'require("./artifact/source.json").commit')
+          gh release create "v$VERSION" artifact/module.json artifact/n5e-module.zip --target "$SHA" --prerelease --title "N5e module $VERSION — foundation only" --notes-file docs/RELEASE_NOTES.md

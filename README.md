@@ -2,7 +2,7 @@
 
 Private, staged adaptation of Naruto 5e to dnd5e, guided by SW5e's extension approach and existing N5e rules code.
 
-Status: planning baseline only; no gameplay implementation or installable package exists yet.
+Status: Batch00 foundation module; gameplay automation is disabled and live Foundry acceptance has not been performed.
 
 ## Starting a batch
 
@@ -31,3 +31,11 @@ The runtime validation workflow must execute checks once per selected gate and r
 - Inspected host: dnd5e 5.3.3; this is an inspection baseline, not a compatibility certification.
 
 No original campaign migration, full content conversion, removed Clan Feats or optional automation integrations are authorized by the initial batches.
+
+## Foundation commands
+
+Use npm run check for the selected cumulative gate and npm run package for an allowlisted archive without repeating checks.
+
+Every executable launched by the runner has a deadline of at most590seconds plus at most5seconds of cleanup; CI jobs stop at10minutes.
+
+The package contains only module.json, runtime scripts, README, LICENSE and CHANGELOG; source installations, planning documents and campaign data stay outside it.

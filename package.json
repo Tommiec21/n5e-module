@@ -1,10 +1,17 @@
 {
   "name": "n5e-module",
-  "version": "0.0.0-plan.1",
+  "version": "0.1.0-alpha.0",
   "private": true,
-  "description": "Planning baseline for the N5e dnd5e adaptation module",
+  "description": "Native dnd5e module foundation for Naruto 5e",
   "repository": {
     "type": "git",
     "url": "https://github.com/Tommiec21/n5e-module.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node tools/check.mjs",
+    "package": "node tools/bounded.mjs 60000 node tools/package.mjs"
   }
 }

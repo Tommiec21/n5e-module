@@ -11,7 +11,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | Batch | Status | Checkpoint |
 | --- | --- | --- |
 | Planning baseline | Published | 88e8193, annotated tag v0.0.0-plan.1 |
-| 00 Foundation | Not started | Native package and time-bounded tooling |
+| 00 Foundation | In progress | Codex, branch batch/00-foundation; slice started 2026-11-10 13:55 UTC |
 | 01 Contracts | Not started | Pending rule questions and canonical data contracts |
 | 02 Conditions | Not started | Registry/state/lifecycle adapter |
 | 03 Damage | Not started | HP/CP planning and application |
