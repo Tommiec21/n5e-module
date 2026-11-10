@@ -23,3 +23,15 @@ Next: final selected-content coverage report and user testing guide, focused bou
 Use this source snapshot and converter rather than reimporting the full books. Preserve source IDs; do not reinstate Clan Feats, expand scope, or label text-only content automated; retain cumulative test attempts and separate ten-minute slices.
 
 S01 result: five checks passed once; CI42878742579, private alpha11 release42878910177. Structural checkpoint only; S02 pending.
+
+## S02 delivery checkpoint
+
+CI42879782786 passed5 focused checks once,0 failed/skipped; private alpha12 release42880022703 reused the44-file checked artifact.242 source-cost profiles connect eligibility/payment/concentration;12 reviewed combat/heal modes use shared rolls/outcomes; counts are4 base-rank-core,238 partial,135 manual (126 clan identity/feature/option/stance records plus9 unresolved-cost jutsu).
+
+S02 delivered the shared metadata and first reviewed mappings, not every selected effect. Additional S04 owns the remaining source-reviewed mappings;11/12/13 own the needed conditional/martial/progression implementations. No live Foundry or local installation occurred.
+
+S03 handoff documentation: SELECTED_CONTENT_COVERAGE.md lists every record; SELECTED_CONTENT_TESTING.md describes explicit import, test setup and focused user-led checks. No passed gate is rerun for documentation.
+
+## Next requested work
+
+S04 is an additional Gameplay/Data Conversion batch: extend the source-reviewed mappings across the remaining selected records using existing services, and keep exact per-record reasons for mechanics dependent on11/12/13. The current delivery is a usable partial testing library, not a declaration that every selected jutsu or clan feature is automated.

@@ -273,3 +273,9 @@ This is an early selected subset of Batches13–15, not a resumption of all pend
 S01 checkpoint18:49UTC:377 native records converted, five selected checks passed once in CI42878742579; private alpha11 release42878910177 published the44-file artifact without retesting. All mechanics remain explicitly manual at this structural checkpoint; next S02 maps supported mechanics, no new gameplay engines.
 
 S02 active18:49UTC, branch content/selected-02: connect reviewed source cost/components/duration to shared casting, author a conservative direct-effect subset, provide explicit test-actor resources, and retain exact manual effect reasons. No new reaction/conditional engines.
+
+S02 checkpoint18:57UTC: runtimebce0827705accec08af131b10cbff545b7dd2468;5 focused checks passed once, CI42879782786; alpha12 release42880022703 reused the44-file checked artifact.242 cost/component/concentration profiles,12 reviewed direct/save/heal modes,4 base-rank-core records,238 partial and135 manual; manual includes126 clan identities/features/options/stances and9 unresolved-cost jutsu. No live verification or local installation.
+
+The data subset is imported and source-preserved; full automation is not complete. Additional source-review batch S04 owns remaining mappings possible with existing services, alongside11 conditional effects,12 martial sequences and13 native feature/progression grants; none are user exclusions. S03 is documentation/coverage handoff only and must not rerun passed gates.
+
+S03 documentation handoff18:58UTC: selected coverage lists all377 records, a user-led testing guide covers imports/resources/core services, and source snapshot plus converter prevent duplicate rework. S04 remains an explicit additional mapping batch; no existing passed checks were rerun.

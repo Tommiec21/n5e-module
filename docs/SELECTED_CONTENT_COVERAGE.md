@@ -1,0 +1,411 @@
+# Selected-content coverage
+
+Snapshot:377 native records;242 casting profiles;12 reviewed combat/healing modes. Four records have their base-rank core connected,238 are partial and135 are manual; no live acceptance is claimed.
+
+Source descriptions, keywords, expressions and provenance are preserved. General selections are D-rank; clan packages retain their associated jutsu at all source ranks. Higher-rank casting branches are not automated.
+
+## Reviewed combat/healing modes
+
+- Bane
+- Fire Release: Devastating Blaze
+- Fire Release: Erupting Flame
+- Fire Release: Fireball
+- Fire Release: Hellfire Rejection
+- Fire Release: White Flame Strike
+- Chakra Bolt
+- Sealing Art: Fracturing Splinter
+- Thunderous Screech
+- Wind Release: Raging Gale
+- Wind Release: Second Wind
+- Wind Release: Violent Whirlwind
+
+## Additional batches
+
+- S04: review remaining selected damage/save/heal and utility mappings that can reuse existing services; include unresolved costs and target-specific expressions as individual review tasks.
+- 11: conditional effects, triggered riders, longer-casting interruptions and source-based cleanup.
+- 12: weapon/unarmed expression integration, martial sequencing and Clash.
+- 13: automatic clan feature choices, grants, native advancement and progression.
+- 16: final resource/sheet controls.
+- 19: integrated regression; user performs live verification.
+
+## Every selected record
+
+| Record | Kind | Status | Connected | Manual / next work | Source ID |
+| --- | --- | --- | --- | --- | --- |
+| Breath of Beasts: Fang | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.393d749ccec2dad6 |
+| Breath of Earth: Smash | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.a51e4c756457e5e6 |
+| Breath of Flame: Unknowing | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.edcadf9b6ec37a82 |
+| Breath of Roses: Plum | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.19f95f1f7183d9a8 |
+| Breath of Sound: Roar | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.f379e5915940d699 |
+| Breath of Thunder: Flash | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.180b0db36f5c48b6 |
+| Breath of Water: Surface | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.68a11006d3b6582f |
+| Breath of Wind: Cutter | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.01d73f322b3945b7 |
+| Crippling Strike | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.df3aa81a91fa548a |
+| Devils Gambit | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.cf656e4b4827aa0e |
+| Dragon Fly Dash | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.a880c26024a10bbb |
+| Flying Swallow: Cross | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.cbc076c7168ae3ec |
+| Flying Swallow: Spinning Top | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.c1dd6fbb379782d7 |
+| Flying Swallow: Straight Line | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.0dbf58bb683f89cc |
+| Manipulated Tools: Binding Meteor | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.21da676a6aa62ca9 |
+| Manipulated Tools: Blade Kick | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.72fc56a99f1812b0 |
+| Manipulated Tools: Blade Rain | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.096473d2d498498c |
+| Manipulated Tools: Blade Wall | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.e14f52a29566afd6 |
+| Paper Bomb Barrage | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.ea74b3399549d07c |
+| Still Pond, Racing River | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.1e7459676cbfbea0 |
+| Weapon Deflect | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.e7e8004aaa6f5c0d |
+| Bane | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep, native rolls, graded save outcomes | Penalty and bonus suppression remain manual; the graded save is automated. | n5e.jutsu.d247c6d72a89200f |
+| Bless | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.12448fb134f8f2bf |
+| Cause Fear | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.fece21bf5f70af41 |
+| Compelled Duel | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.c4c9e71d2f8c29bd |
+| Confidence | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.f5d40537718cbca6 |
+| Corruption: Animus | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.11eb1bc2b9f400cd |
+| Corruption: Asperity | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.4aaf51e73627f5f5 |
+| Corruption: Audacity | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.772364e3a270f3cf |
+| Corruption: Charming Dissonance | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.77c86aab9c213f20 |
+| Corruption: Gall | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.9055b80609a37167 |
+| Corruption: Hatred | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.7c3d5f3bf06b5a3f |
+| Corruption: Mind Mist | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.f50d93f922942acc |
+| Corruption: Vitriol | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.7583a866a7268c7f |
+| Frenzy: Black | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.e2dc6ca9c49b58a6 |
+| Frenzy: Blue | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.f32c0c7145234d0f |
+| Frenzy: Red | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.f152166381bbd579 |
+| Frenzy: Yellow | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.a314a615647c5d70 |
+| Heavenly Worded Song | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.3ff3f9f0a3244186 |
+| Heroism | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.70726b1a14318d0e |
+| Sanctuary | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.073fc820cd139394 |
+| Semblance of Dread | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.2d9ae92b6d6f8b17 |
+| Soft Spoken Song | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.5bcc1dc3234e5bed |
+| Fire Release: Blazing Ash Cloud | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.8c61ae53441c7f55 |
+| Fire Release: Blue Flame Dance | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.9942671ecb2c6856 |
+| Fire Release: Crimson Spider | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.00a87e99af10642b |
+| Fire Release: Demons Lantern | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.a38d059c42fa4031 |
+| Fire Release: Devastating Blaze | spell | base-rank-core | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage |  | n5e.jutsu.c33c4ad32eb7ca55 |
+| Fire Release: Dragon Flame Bolt | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.ad55f77a439c276b |
+| Fire Release: Ember | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.624ed870caad9edf |
+| Fire Release: Erupting Flame | spell | partial | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage | Apply native Dazed manually. | n5e.jutsu.5cd5e0d4c206f6f6 |
+| Fire Release: Fireball | spell | base-rank-core | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage |  | n5e.jutsu.851eb7678d7df6a0 |
+| Fire Release: Flame Coat | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.debb8c610f3b7fe9 |
+| Fire Release: Flame Whip | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.n5eGBuBPx5BSU05q |
+| Fire Release: Fox Fire | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.n5e4jOjEbKwD1Rs2 |
+| Fire Release: Green Fire | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.d5a9fda22def8ee0 |
+| Fire Release: Hellfire Rejection | spell | partial | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage | Confirm the reaction trigger and eligible creatures. | n5e.jutsu.071af4c41ac1df2f |
+| Fire Release: Passionate Flames | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.3b920450469f9202 |
+| Fire Release: Phoenix Fire | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.9b416882e3eced44 |
+| Fire Release: Sanguine Weapon | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.ea16ca6dc0831d8b |
+| Fire Release: White Flame Strike | spell | partial | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage | Flying targets save at disadvantage and take vulnerable damage; adjust these manually. | n5e.jutsu.66f0037083044536 |
+| Fire Release: Wildfire | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.f61749a52fd37a9e |
+| Advanced Transformation | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.e5460a803c40f616 |
+| Alarming Technique | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.c56971d07188ef19 |
+| Arms of Buddha | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.0916d5d348b3eb3b |
+| Beast Imitating Art: Bat/Snake | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.790c98d7d775e942 |
+| Beast Imitating Art: Pidgeon | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.a75d3a150318a2db |
+| Beast Imitating Art: Rats | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.d2d362cb91681162 |
+| Beast Imitating Art: Reptile | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.01b42f787848841a |
+| Beast Imitating Art: Retrieval Hawk | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.8062fbf67d71676c |
+| Body Camouflage | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.31212616b1843ae0 |
+| Body Flicker | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.d015ec34d8460b30 |
+| Chakra Bolt | spell | base-rank-core | base-rank eligibility, Chakra cost, native rolls, typed damage |  | n5e.jutsu.50b3c560292b3188 |
+| Chakra Leaping | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.ddc2f5291c57c77a |
+| Chakra Shield | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.n5eBNdg8qjsq07DE |
+| Chakra Skin | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.2d13eb70f0680b59 |
+| Darkvision | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.bc4d86de442de304 |
+| Ink Clone | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.n5eDdX1LrQKdZ6HR |
+| Lock/Release | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.b2b1860f6393ab4e |
+| Oppressive Aura | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.065755920698f67d |
+| Sealing Art: Block | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.d5df8ad211b3868c |
+| Sealing Art: Chakra Mark | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.a87369455cbe0a9a |
+| Sealing Art: Crown of Shining Stars | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.a71252c275cc539e |
+| Sealing Art: Fracturing Splinter | spell | base-rank-core | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage |  | n5e.jutsu.45d1d25c214c786a |
+| Sealing Art: Mobility Bind | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.b5a954718b2e657f |
+| Sealing Art: Reject | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.4c1dfa6fb746090d |
+| Sensing Technique | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.5899b1568611577c |
+| Shadow Shuriken Technique | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.b4e7b1b0d5a42b44 |
+| Striking Shadow Snake | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.59895cc3a8c72ed9 |
+| Substitution Technique | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.68611399507cd4a2 |
+| Summoning Technique | spell | manual |  | Source-defined cost requires manual resolution; automatic casting is disabled. | n5e.jutsu.5644f7d85cb1b7e7 |
+| Thunderous Screech | spell | partial | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage | Construct/structure disadvantage, Deafened and trap triggering remain manual. | n5e.jutsu.5d46a5a18db50713 |
+| Wind Release: Air Current Dance | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.628d2c82b276ba50 |
+| Wind Release: Blades of the Wind | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.6b7695fbbe1503c5 |
+| Wind Release: Blurring Wind | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.0109ebac82f7661a |
+| Wind Release: Collective Gale | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.bb06418dc79b4515 |
+| Wind Release: Counter breeze | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.6535d8f823641aee |
+| Wind Release: Dust Wind | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.8c852f2271d6e769 |
+| Wind Release: Feather Fall | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.b41efefaee4de759 |
+| Wind Release: Gale Bomb | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.48244ec32727e66b |
+| Wind Release: Gale Fists | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.678adbea63eec218 |
+| Wind Release: Gryphons Surge | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.62284afab0e81d63 |
+| Wind Release: Lions Roar | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.e9b0be090310f836 |
+| Wind Release: Palm Vortex | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.197557ce4542b0c9 |
+| Wind Release: Passing Typhoon | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.177ba7d85e2fbe5e |
+| Wind Release: Raging Gale | spell | partial | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage | Movement and Prone remain manual. | n5e.jutsu.54b1dc117daae70f |
+| Wind Release: Raging Vortex | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.ddb2c8af2c2dc7ac |
+| Wind Release: Second Wind | spell | partial | base-rank eligibility, Chakra cost, native rolls, HP healing | Select the caster as the healing recipient. | n5e.jutsu.13ed114a43f698b8 |
+| Wind Release: Slicing Wind Bullet | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.bb5a8023ad379bab |
+| Wind Release: Supporting Gale | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.982278b6d03fc74d |
+| Wind Release: Vacuum Rain | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.8d89d1c190549db8 |
+| Wind Release: Violent Whirlwind | spell | partial | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage | Prone and dispersing environmental effects remain manual. | n5e.jutsu.ece9c2e33cb05452 |
+| Wind Release: Zephyr Strike | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.5a2cf1beac8dd0c0 |
+| Avalanche Dance | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.e5a240b5482c1ea1 |
+| Beast Fist: Forceful Bull | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.n5eai9VaP0Lk68H8 |
+| Beast Fist: Graceful Cat | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.d478cf8ea8ed9f52 |
+| Beast Fist: Rushing Lion | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.ad9b287b5b62f6de |
+| Beast Fist: Wise Turtle | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.d2a9dee436117990 |
+| Bolting Blossom | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.9e1e753e074d5d58 |
+| Brace | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.0777fdbd4c293365 |
+| Butterfly Kick | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.n5eFPqa78TQTu7oV |
+| Cerberus Strike | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.a73fe60b6d0dc6e8 |
+| Clawing Swift Fang | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.e10d1c2e4af12ec7 |
+| Crane Wing Formation | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.39d0ce8918b6365c |
+| Cyclone Surge | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.294751fe126525e7 |
+| Deep Dive | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.7f5a553823f46d88 |
+| Demon Fist | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.0ee1506fe9315324 |
+| Dempsey Roll | spell | manual |  | Source-defined cost requires manual resolution; automatic casting is disabled. | n5e.jutsu.7f2a83486c21eab8 |
+| Dragging Full Rotation | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.f56ff5d3ced624bd |
+| Dragon Palm Strike | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.2f7de77e3e7c780a |
+| Draw! | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.06c172bff0516d84 |
+| Dynamic Entry | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.n5eDynamicEntry1 |
+| Erratic Combo | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.2f94932ec16577e3 |
+| Exorcism | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.1bcd23927041a588 |
+| Falling Dragon | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.b5b0a430af536a9b |
+| Feather Combo | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.3c431c323b04ef6b |
+| Fury Kick | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.32aff4b14be9d0ee |
+| Hammer | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.f38532958e3eba67 |
+| Heat Up | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.dfbebf79b2b703ed |
+| High Monk | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.57657a90aa92b393 |
+| Howling Knuckle | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.0c3d3e4954a18dbf |
+| Iron Knuckle | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.88c8298ecd942d45 |
+| Iron Strike | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.64b7658f5a9f38ee |
+| Leaf Gale | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.8161304fad024ce3 |
+| Leaf Kick | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.a365cb9bcd74b60b |
+| Leaf Uppercut | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.3b9c513488a4d70c |
+| Leaping Strike | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.ee235bae8b9be95a |
+| Mirage Blitz | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.6da75e1fcd1afcae |
+| Moonlight High | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.55334540c3a752d7 |
+| Neck Chop | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.d834e2d07b97a2d1 |
+| Noble Impact | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.dc4f7d9afa6d4353 |
+| Ostrich Whirlwind | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.04125d193d44b12c |
+| Praying Strike | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.b748e2cd007a7852 |
+| Prideful Assault | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.390ad4672d0b6955 |
+| Rabbit Fury | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.c6978b7a684fdeda |
+| Rising Dragon | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.54982032f8c3fb99 |
+| Royal Guard | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.4c069f46f1e3b3c9 |
+| Serpent Fang Double | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.4130ace7ee97773b |
+| Silent Movement | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.1b9310a9dff75c6c |
+| Snake Constricting Grip | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.n5ecsQLONsiBml3c |
+| Straight Impact | spell | manual |  | Source-defined cost requires manual resolution; automatic casting is disabled. | n5e.jutsu.521694672d9a4f01 |
+| Swallow Dance | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.6fdfa48f7b185957 |
+| Switch Kick | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.392b2988cdef7bf7 |
+| Wild Dance | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.1b24f8b59d6aaa9f |
+| Aburame | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.57e91a27b77ca724 |
+| Deceptive Swarm | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.f65894539a962fbd |
+| Festering Brood | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.530c64111a661bb2 |
+| Grand Veil | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.50ed5d5a90f9bd05 |
+| Kikaichu Swarm | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.b8903f29cc7389e4 |
+| Symbiotic Hive | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.2b4ab65482e30cf5 |
+| Parasitic Giant Insect | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.66a22ce48a27388b |
+| Parasitic Insect Cloud | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.d9797e759b51adc6 |
+| Gentle Maggots | spell | manual |  | Source-defined cost requires manual resolution; automatic casting is disabled. | n5e.clans.8d9942148b7bd340 |
+| Insect Jamming | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.9444ee04fc311f67 |
+| Insect Jar Technique | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.8956f84d7189c2d5 |
+| Hive Dispersal | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.0172949a1483ae2a |
+| Insect Amp | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.ebb08ad6f5da51ba |
+| Insect Deception | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.8d7739c134dd1593 |
+| Insect Sphere | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.7f39aec4402380a1 |
+| Parasitic Destruction | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.98192a358089cf17 |
+| Spindle Formation | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.b40dc288009312b5 |
+| Symbiotic Hive: Ants | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.954aa5623cb324c5 |
+| Symbiotic Hive: Beetles | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.5c6adceee8ff5b6e |
+| Symbiotic Hive: Flies | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c5a7be013189d3c7 |
+| Symbiotic Hive: Larva | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.302275a55482e58c |
+| Symbiotic Hive: Mosquitoes | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.62222c1d98f27cf2 |
+| Symbiotic Hive: Moths | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.9b170555816a79fe |
+| Symbiotic Hive: Parasites | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.a94d006ddf1fcc81 |
+| Symbiotic Hive: Worms | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.338e042d49d9dbaa |
+| Swarm Chakra | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.6f4e0cef146908d0 |
+| Hyūga | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.11cc0206f8ef3e90 |
+| Bloodline of the Elite | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.9c2d7031b1557e4a |
+| Byakugan | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.90b2edba7d2f2aba |
+| Eight Trigrams – Gentle End | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.1249a688f58fd0ce |
+| Eight Trigrams – Internal Assault | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.24715cd1006b41fc |
+| Eight Trigrams – Palm Bottom | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.59b63ea879810996 |
+| Eight Trigrams – Sealing Technique | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.47ec133148d37d05 |
+| Gentle Fist | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.a65cf2255ab053ba |
+| Heavenly Technique | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.ed9869c7c058bd1c |
+| 8-Trigrams 128 Palms | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.d504e809f2db9b2b |
+| Lion Palm | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.b86ad25678b6b79a |
+| 8-Trigrams 64 Palms Defense | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.dee13bc8719f5a68 |
+| Gentle Palm Flux | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.4dda79e47e73eb4c |
+| Mountain Crusher | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.a5ae1d7ff9dc7fe7 |
+| 8-Trigrams 64 Palms | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.79641e4459f196f0 |
+| 8-Trigrams Grid Palm | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.e332c26a5913bdae |
+| Giant Palm Rotation | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.423d9a9eb24f7a46 |
+| One-Body Blow | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.87f028eecc17dd32 |
+| Gentle Counter | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.887869bccc862c46 |
+| Gentle Reprieve | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.adf2ba5cd9dd6633 |
+| Palm Rotation | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.a8c7ed1fe7357b8e |
+| Palm Strike | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.b52f11b773db2c9e |
+| Vacuum Palm | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.0806570ce0997a8a |
+| Bloodline of the Elite: Cold Calculations | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.39142f6095b6bc3a |
+| Bloodline of the Elite: Combat Insight | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.d3dd6edf9f2ee2b0 |
+| Bloodline of the Elite: Illusion Fist | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.567a30ec4c8b973b |
+| Bloodline of the Elite: Predictive Perception | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.eccb3e02b98ea5ac |
+| Bloodline of the Elite: Sensory Type | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.e8644535e1f9c423 |
+| Bloodline of the Elite: Tenketsu Needle | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c98017247e99733c |
+| Bloodline of the Elite: Wisdom of the Court | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.815a0bc23087f4fa |
+| Gentle Fist | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c528f0bfa0cc799a |
+| Senju | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.52983e4ff678512a |
+| Blood of the leaf | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.475dbeff3111ea16 |
+| Built Different | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.6d7a04d9acc8a3a2 |
+| Mokuton Infusion | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.4fa51212fe7fc92e |
+| Verdant Bloodline | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.49f9cbb369170a1a |
+| Verdant Domain | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.2766a68be5fb82fe |
+| Wood Release | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.b8b68fa4243df262 |
+| Wood Release: Tree Bind Flourishing Burial | spell | manual |  | Source-defined cost requires manual resolution; automatic casting is disabled. | n5e.clans.4f8de5c034f486da |
+| Wood Release: Wood Clone | spell | manual |  | Source-defined cost requires manual resolution; automatic casting is disabled. | n5e.clans.b193ced2fc1891ea |
+| Wood Release: Wood Dragon Summoning | spell | manual |  | Source-defined cost requires manual resolution; automatic casting is disabled. | n5e.clans.8941bff034b15e7a |
+| Wood Release: Hōbi Technique | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.4c13d49958d632e1 |
+| Wood Release: Hotei Technique | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.8d0c55ee499ac784 |
+| Wood Release: Foo Dog heads | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.8caeb49770951ff8 |
+| Wood Release: Great Forest Technique | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.03afb2506c1b97a0 |
+| Wood Release: Piercing Bark | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.b9f6450fc99b40bf |
+| Wood Release: Severe Thousand Hands | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.3143f52deadd5b3e |
+| Wood Release: World Of Trees | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.35fdc9ded6ad7530 |
+| Elite Bloodline | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.54320c4bdfb88493 |
+| History of The Elite | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.324cffa1256f2b1f |
+| Prime Nature Release | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.7168d1172cf9388c |
+| Quickened Regeneration | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.84ee5524396e1c78 |
+| The Strongest Bloodline | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.d4cc4553a498ba5c |
+| Mokuton Infusion | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.6e2bca54dfcb307e |
+| Advanced Adaptation | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.f22fef40027a621a |
+| Blood of the Fan | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.f1e6e7a0e84aa12b |
+| Crimson Sovereign | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.6c2cfe39af755248 |
+| Fanning The Flame | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.432a5d28f54a9851 |
+| Sharingan | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.4a7ddf4025a91ef7 |
+| Uchiha Flame Spiral | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.7dadb7729adc72bb |
+| Blazing Rose Chariot | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.b351944c0ccdffbc |
+| Genjutsu: Ephemera | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.2d0f96635f135c7b |
+| Genjutsu: Deflect! | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.ad5d4cdf86cc4d2c |
+| Genjutsu: Red Star | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.4cb4601f8846807c |
+| Surging Fire Flower Dance | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.3e2552472c18d1fd |
+| Uchiha Flame Ball | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.bfa9cf278d7aba15 |
+| Barrier Pass Technique | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.753d29e6f36b5e83 |
+| Mirage Crow | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.16346ccaee7a5303 |
+| Uchiha Ember Bullet | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.ec10f33ea9c1ad3d |
+| Uchiha Moonlight | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.9cd9a3b3401e4baa |
+| Uchiha Scarlet Claw | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.eb58a0e6477a34b6 |
+| Divergent Techniques | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.befa0d5ccd4c54ec |
+| Heightened Battle Sense | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.7666247b553db16a |
+| Advanced Adaptation: Agile Fist | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.5a534654c52dcac6 |
+| Advanced Adaptation: Amplified Defense | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.42289aed19656750 |
+| Advanced Adaptation: Amplified Flames | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.2900abcd3c1365f1 |
+| Advanced Adaptation: Amplified Retaliation | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.b148a2e05bb55d96 |
+| Advanced Adaptation: Shurikenjutsu | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.8209f7874ea46187 |
+| Sharingan: Genjutsu Counter | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.f8bdc6070a5a4f0e |
+| Sharingan: Hypnotic Eye | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.67b7311738fb2478 |
+| Sharingan: Ocular Jutsu Augmentation | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.967032e9ee24f04a |
+| Sharingan: Rewrite History | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.b9860670780e5c64 |
+| Sharingan: Sharingan Copy | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.6c07b966f9e4bc11 |
+| Sharingan: Sharingan Dodge | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.4451c79f459882ae |
+| Agile Fist | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.1429da04470921b8 |
+| Uzumaki | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.ce66fbf61320860d |
+| Binding Chains | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.e3ed133f96ad1cd2 |
+| Gut Feeling | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.3d6da26bae158d6c |
+| Spiraling Chains | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.6fc50891179d4f5a |
+| Swirling Seals | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.4efad75b161a3636 |
+| Warding Network | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.94df3fd4230f704f |
+| Wellspring of Chakra | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.f0a27a70ae07bb5c |
+| Uzumaki Art:  River Dam Seal | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.18ad7b72a6c66d98 |
+| Uzumaki Break | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.6da5bdc91913e33c |
+| Adamantine Barrier | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.425716773a48a7ac |
+| Uzumaki Art: 5-Pronged Seal | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.ab4096c5936e4fd0 |
+| Uzumaki Art: Red Hot-Blooded Vitality | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.d58c0b6cca06fcc7 |
+| Uzumaki Art: Ablative Seal | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.ed31944d2dc4bc52 |
+| Uzumaki Art: Basic Seal | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.04434bb5370da2a0 |
+| Uzumaki Art: Chakra Suppression | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.d2bbab2c8ea7e76d |
+| Uzumaki Art: Flash Anchor | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.4ce0f5f12133bf47 |
+| Uzumaki Art: Font of Life | spell | manual |  | Source-defined cost requires manual resolution; automatic casting is disabled. | n5e.clans.24283377cd7cd563 |
+| Dattebayo | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.3038ad6da735a03b |
+| Fundamental Technique | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.d34e9f11f3fba096 |
+| Original Technique | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.969cd84a4b7d787c |
+| Resilience | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.e85401b1c6cb1fd0 |
+| Spiral Power0 | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.5e2791f477a5d99f |
+| Stubborn | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.18f9a5b2c303c5f2 |
+| Tenacious Chakra | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.3c7e9a8392dbf3e0 |
+| Unbreakable Will | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.d734245fadb0f595 |
+| Binding Chain | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c2ef13b94209c2f2 |
+| Hebi | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c929017cb2dbb862 |
+| Blood of the Basilisk | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.ab8f310e58180c17 |
+| Ouroboros | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c4c8c76a48d1a9b5 |
+| Serpents Blood | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.3a7824548f52d87f |
+| Serpent’s Coil | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.b2e300cade72c95c |
+| Serpents Guile | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.dab0cdf2c88d5829 |
+| Venomous Technique | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.7bf6b80f3a4e993e |
+| Basilisk Art: Mark of the Basilisk | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.5295eae102b4c7c7 |
+| Basilisk Art: Dokufu | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.4a278240db3955be |
+| Basilisk Art: Pythons Gaze | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.cf68dc200d3192c0 |
+| Basilisk Art: Hardened Scales | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.9ddaab980027b2f5 |
+| Basilisk Art: Ouroboros Circle | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.6fc03dc42734cdd8 |
+| Basilisk Art: Viper Leash | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.1b3a2cec8d2d6bb7 |
+| Basilisk Art: Adaptive Camouflage | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.987b54bf09141f3f |
+| Basilisk Art: Formation of One Thousand Snakes | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.0b0734492439cd89 |
+| Basilisk Art: Poison Cobra Dance | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.f8a6f2ee2796ee04 |
+| Basilisk Art: Venomous Stinger | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.d973d94a74e1f2dc |
+| Venomous Technique: Coiling – Black Mamba | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.a01a93241d0c9c39 |
+| Venomous Technique: Coiling – Emerald Basilisk | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.60cad12a098d42fb |
+| Venomous Technique: Coiling – Silver Cobra | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.8390ba5dcf1808fa |
+| Venomous Technique: Serpents Bite | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c146fc28770cfaa0 |
+| Venomous Technique: Serpents Cloud | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.f11a6edead9674a6 |
+| Venomous Technique: Venomous Augmentation | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.55b72fc6b6aea9ff |
+| Venomous Technique: Venomous Refresh | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.33ae757481d0fff7 |
+| Venomous Technique: Venomous Regeneration | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.75edc86991b4ca72 |
+| Venomous Technique: Virulent Blood | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.93244059049965f4 |
+| Venomous Technique: Virulent Infusion | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.5b2b4acdcad1d9d3 |
+| Serpents Coil | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.3f8640f86ba3b82e |
+| Serpent’s Coil | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.f297a7f3d0a8df84 |
+| Kuru | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.a3aa204ccbac0880 |
+| Black Fang | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.cd4b2359de2e5dfa |
+| Eye of Prophecy | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.d1385b121f04a4a1 |
+| Miraigan | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c70ae477c5f9baa9 |
+| Okami of Midnight | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.524d7709d03b8c2a |
+| Visions of what will be | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.6cc1a65c83c3eec7 |
+| Yin Release Adept | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.b1958b335dd484ff |
+| Black Art:  Thousand Futures On Borrowed Time | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.2ec1137c4c644e69 |
+| Black Art:  Dark Displacement | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.d7d3a915f6d4cdc9 |
+| Black Art: Thought Suppression | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.5f1a823a3dbc3fbe |
+| Black Art: Dark Divergence Wave | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.5183849094356105 |
+| Black Art: Dark Drain | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.1d0052ca3c0bf005 |
+| Black Art: Umbral Theft | spell | manual |  | Source-defined cost requires manual resolution; automatic casting is disabled. | n5e.clans.e0aedf97ffa960a7 |
+| Black Art: Broken Clock | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.6436bb5ea980af8b |
+| Black Art: Devotion Fist | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.347aaf61e2a45cea |
+| Black Art: False Release | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.d247204a556017c4 |
+| Black Art: Spiraling Dark wall | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.6f6a1af803abec18 |
+| Yin Release Adept: Black Fang – Future Denial | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.be983883a43b9987 |
+| Yin Release Adept: Black Fang – Theft of Time | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.7c3bf0014eba4502 |
+| Yin Release Adept: Black Fang – Yin Palm Strike | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.e4037cde722d06e2 |
+| Yin Release Adept: Dual Sight | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.ecfe4d8ca1947632 |
+| Yin Release Adept: Prophetic Counter | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.031ab0aa7caa4272 |
+| Yin Release Adept: Prophetic Teamwork | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.fae55ec3db5a68ff |
+| Yin Release Adept: Prophetic Weakness | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.d3373af47f5ab7b6 |
+| Yin Release Adept: Yin Release – Chains of Causality | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.4387887009e40802 |
+| Yin Release Adept: Yin Release – Uncertain Future | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.b4d9874f428fb108 |
+| Yin Release Adept: Yin Release – Veil of mystery | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.dc2a07a483e8ec54 |
+| Black Fang | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.bc9519c12b17e429 |
+| Ryu | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.bfc5e2f9a9bc67b1 |
+| Defiance of Fate | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.a26e1832b73a91ee |
+| Dragon Kings Legacy | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.ad407c04194d52b8 |
+| Ryūken | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c534552db70462f7 |
+| Tyrants Dominion | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.bfa2262811f5ed2d |
+| Wrath of the Dragon | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.ff6ebff187eab62a |
+| Wyrm Lords Ambition | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.d195228065d7779c |
+| Conqueror’s Art: Sovereign Verdict | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.c63f3b145a416b84 |
+| Conqueror’s Art: Dragon Cloak | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.5e56ba6d3cb107e2 |
+| Conqueror’s Art: Fanged Interjection | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.b20f9eeb2efd572b |
+| Conqueror’s Art: Tyrants Impact | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.f4eeaa705105ffc6 |
+| Conqueror’s Art: Tyrant’s Warcry | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.2e05ce045e220776 |
+| Conqueror’s Art: Wyrmcaller’s Pulse | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.6c3a3190f3b52bcd |
+| Conqueror’s Art: Dragon Aegis | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.b18d93ec0286d95b |
+| Conqueror’s Art: Emperors Claw | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.16f739f5784070ba |
+| Conqueror’s Art: Fang of Ruin | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.a1de6a37bd100f14 |
+| Conqueror’s Art: Monarchs Roar | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.022252bc5b862c2d |
+| Ryūken | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.33cc60cbfcf1b9bd |
+| Uchiha | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.n5eUchihaClan001 |
