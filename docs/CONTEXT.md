@@ -2,7 +2,7 @@
 
 Updated November 10, 2026; repository owner Tommiec21, project n5e-module, visibility private.
 
-Current milestone: Batch00 published privately as v0.1.0-alpha.0; native module foundation exists and gameplay automation is disabled.
+Current milestone: Batch01 published privately as v0.1.0-alpha.1; shared contracts and native adapter declarations exist, gameplay remains disabled.
 
 Current scope: reusable prompts, private repository, version history and bounded future implementation batches for ranked conditions, HP/Chakra damage, graded saves and dual concentration.
 
@@ -12,7 +12,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | --- | --- | --- |
 | Planning baseline | Published | 88e8193, annotated tag v0.0.0-plan.1 |
 | 00 Foundation | Published | v0.1.0-alpha.0; first CI attempt, 4 passed; no live verification |
-| 01 Contracts | In progress | Codex, batch/01-contracts; slice started 2026-11-10 14:20 UTC |
+| 01 Contracts | Published | v0.1.0-alpha.1; 4 first-attempt contract checks passed; pending rulings remain explicit |
 | 02 Conditions | Not started | Registry/state/lifecycle adapter |
 | 03 Damage | Not started | HP/CP planning and application |
 | 04 Saves | Not started | Native rolls and graded outcomes |
@@ -53,3 +53,17 @@ Private development prerelease v0.1.0-alpha.0 contains module.json (755 bytes) a
 No live instance, campaign migration, installed package changes or gameplay automation; no bypassed checks.
 
 Next: Batch01 contracts and pending rule questions only when requested; do not begin another batch automatically.
+
+## Batch01 completed checkpoint
+
+Codex slice: 2026-11-10 14:20–14:26 UTC, under ten minutes; runtime commit18abc0aa1375ac73d1b2326d85412dd66c5d2731, branch batch/01-contracts.
+
+Defined version1 condition/save/damage/maintained-cast/resource-spend/actor-snapshot contracts, pure structural validators and native adapter method declarations; no native gameplay adapter or rule planner is activated.
+
+Documented exact function reuse and mutation ownership in docs/CONTRACTS.md; unanswered save-tier and concentration failure/damage-amount questions are tracked in docs/DECISIONS.md.
+
+CI42833821694 passed4 contract checks on first attempt with0 failures/skips; unaffected foundation checks were not repeated.
+
+Release42833951034 published v0.1.0-alpha.1 using the same artifact: module.json879bytes, n5e-module.zip12918bytes; no bypassed checks or live verification.
+
+Next: Batch02 ranked conditions, limited to source-settled behaviors; ask about condition-specific stacking only where source and existing rulings do not settle it.

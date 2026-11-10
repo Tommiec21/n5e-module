@@ -32,7 +32,28 @@
       "status": "passed",
       "affectedBehavior": [],
       "nextAction": "Do not rerun unless affected code changes; two attempts remain under the existing policy."
+    },
+    {
+      "scenarioId": "shared-contract-identity-and-boundaries",
+      "batch": "01",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "18abc0aa1375ac73d1b2326d85412dd66c5d2731",
+          "startedAt": "2026-11-10T14:25:05Z",
+          "endedAt": "2026-11-10T14:25:06Z",
+          "result": "passed",
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42833821694",
+          "tests": 4,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": [],
+      "nextAction": "Do not repeat without affected changes; pending gameplay rulings are not implemented."
     }
   ],
-  "history": "Batch00 selected gate executed once in CI; no local or live test runs."
+  "history": "Batch00 and Batch01 each executed their selected gate once in CI; no local or live test runs."
 }
