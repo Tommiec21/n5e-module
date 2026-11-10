@@ -13,7 +13,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | Planning baseline | Published | 88e8193, annotated tag v0.0.0-plan.1 |
 | 00 Foundation | Published | v0.1.0-alpha.0; first CI attempt, 4 passed; no live verification |
 | 01 Contracts | Published | v0.1.0-alpha.1; 4 first-attempt contract checks passed; pending rulings remain explicit |
-| 02 Conditions | Not started | Registry/state/lifecycle adapter |
+| 02 Conditions | In progress | Codex, batch/02-conditions, slice started16:23UTC |
 | 03 Damage | Not started | HP/CP planning and application |
 | 04 Saves | Not started | Native rolls and graded outcomes |
 | 05 Concentration | Not started | Two casts, upkeep and damage checks |

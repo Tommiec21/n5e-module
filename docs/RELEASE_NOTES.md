@@ -1,9 +1,11 @@
-# Batch01 development prerelease
+# Batch02 ranked conditions
 
-Versioned shared data contracts, structural validation and a host-independent NativeAdapter interface are implemented; no gameplay adapter or rules resolution is enabled.
+Native ActiveEffect source storage, capped additive ranks, inherited derived modifiers, owner-checked controls, removal checks and active-GM turn lifecycle are implemented.
 
-The selected contracts gate is executed once, and packaging reuses its artifact without repeating unaffected foundation checks.
+Condition damage is a labelled request only until Batch03; multi-source rank-decay allocation, movement damage and automated rest/complex behavioral flags remain manual.
 
-Pending gameplay decisions are tracked in docs/DECISIONS.md; the interface declarations do not choose those rules.
+Open controls through game.modules.get("n5e-module").api.conditions.open(actor), or use native token statuses; API-managed conditions contain the ranked source records.
 
-No live verification or local installation was performed; private release assets need authenticated download.
+Casting-specific cost/DC/DR modifiers are exposed through the condition aggregate for later adapters, not claimed integrated into absent casting/damage handlers.
+
+No live verification or local installation; private release download requires authentication.

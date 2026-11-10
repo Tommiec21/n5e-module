@@ -3,8 +3,8 @@ import { runBounded } from "./bounded.mjs";
 
 const file = "docs/check-ledger.json";
 const ledger = JSON.parse(await readFile(file, "utf8"));
-const selected = process.argv[2] ?? "contracts";
-const gates = { foundation: { id: "foundation-contract-and-process-lifecycle", batch: "00", file: "tests/foundation.test.mjs" }, contracts: { id: "shared-contract-identity-and-boundaries", batch: "01", file: "tests/contracts.test.mjs" } };
+const selected = process.argv[2] ?? "conditions";
+const gates = { conditions: { id: "ranked-condition-source-and-lifecycle", batch: "02", file: "tests/conditions.test.mjs" }, foundation: { id: "foundation-contract-and-process-lifecycle", batch: "00", file: "tests/foundation.test.mjs" }, contracts: { id: "shared-contract-identity-and-boundaries", batch: "01", file: "tests/contracts.test.mjs" } };
 if (!Object.hasOwn(gates, selected)) throw new Error("Unknown selected gate.");
 const gate = gates[selected];
 const id = gate.id;
@@ -22,6 +22,6 @@ await writeFile(file, JSON.stringify(ledger, null, 2) + "\n");
 const result = await runBounded(process.execPath, ["--test", "--test-timeout=15000", gate.file], { timeoutMs: 120000, record: "work/check-result.json" });
 Object.assign(attempt, { result: result.status, endedAt: result.endedAt });
 scenario.status = result.status === "passed" ? "passed" : scenario.attempts.length >= 3 ? "bypassed-unverified" : "pending";
-scenario.affectedBehavior = result.status === "passed" ? [] : ["Foundation acceptance unverified; gameplay is disabled."];
+scenario.affectedBehavior = result.status === "passed" ? [] : ["Selected batch acceptance unverified; gameplay is disabled."];
 await writeFile(file, JSON.stringify(ledger, null, 2) + "\n");
 process.exitCode = result.status === "passed" ? 0 : 1;

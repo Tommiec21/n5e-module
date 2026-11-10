@@ -19,3 +19,5 @@ Confirmed concentration: one failed check ends both non-Stable jutsu; use combin
 Confirm third-cast replacement and insufficient-upkeep selection; preserve actual cast rank and actual paid cost in the eventual state contract.
 
 Confirm condition-specific source stacking and approved progression tables where reference text conflicts with prior user directions.
+
+Confirmed Batch02: ranks of the same condition from different sources add together up to the condition cap.

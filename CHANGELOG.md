@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.2
+
+- Reuse N5e condition definitions and modifiers with native source-aware ActiveEffects.
+- Add owner-checked rank/removal controls, inherited derived preparation and bounded combat lifecycle processing.
+- Emit condition damage requests for Batch03; disclose manual decay allocation and deferred behavioral integrations.
+
 ## 0.1.0-alpha.1
 
 - Define versioned source-aware condition, save, damage, resource and maintained-cast contracts.
