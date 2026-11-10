@@ -28,7 +28,7 @@ test("conversion is reproducible and native IDs, types, descriptions and provena
     assert.ok(item.system.description.value.includes(source.data.system.description));
     assert.equal(item.flags["n5e-module"].selected.sourceHash, source.hash);
     assert.deepEqual(item.effects, []);
-    assert.equal(item.flags["n5e-module"].selected.automation.status, "manual");
+    assert.ok(["manual", "partial", "base-rank-core"].includes(item.flags["n5e-module"].selected.automation.status));
     assert.ok(item.flags["n5e-module"].selected.folderPath.length <= 4);
   }
 });

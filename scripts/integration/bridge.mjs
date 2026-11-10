@@ -90,6 +90,7 @@ export async function castTrial(activity, options, targets = []) {
       if (["attack", "attackSave"].includes(plan.kind) && packet) await postDamage(target, { ...packet, targetUuid: target.uuid });
       if (plan.saveAbility) await requestSave(target, saveDefinition(plan, source, castId, options.dc, packet));
     }
+    if (!rolls.length && plan.kind === "maintain") await ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor }), flavor: activity.item.name, content: "Cast — resolve source effects manually." });
     return { castId, cost: plan.cost, attack, packet, plan };
   } finally { busy.delete(actor); }
 }
@@ -105,12 +106,12 @@ export async function applyTrialHealing(actor, amount, excludedTypes = ["undead"
 export async function useTrial(activity) {
   const profile = castingProfile(activity);
   const base = profile?.baseRank ?? activity.item.flags["n5e-module"].trial.baseRank;
-  const allowed = ranks.filter(r => ranks.indexOf(r) >= ranks.indexOf(base) && ranks.indexOf(r) <= ranks.indexOf(maximumRank(activity.actor)));
+  const allowed = ranks.filter(r => (profile?.upcast !== false || r === base) && ranks.indexOf(r) >= ranks.indexOf(base) && ranks.indexOf(r) <= ranks.indexOf(maximumRank(activity.actor)));
   const choices = profile?.costChoices?.filter(c => !c.automatic) ?? [];
   const rankOptions = allowed.map(r => '<option>' + r + '</option>').join('');
   const costOptions = choices.map((_c, i) => '<label><input name="cost" type="checkbox" value="' + i + '">Cost option ' + (i + 1) + '</label>').join('');
-  const content = '<label>Rank<select name="rank">' + rankOptions + '</select></label><label>Full unarmed formula<input name="unarmed"></label>' + costOptions + '<label><input name="confirmed" type="checkbox">Confirm free hands, seals, required equipment, prerequisites, range and targets</label>';
-  const options = await foundry.applications.api.DialogV2.prompt({ window: { title: activity.item.name }, content, ok: { label: "Cast", callback: (_e, _b, dialog) => { const get = n => dialog.element.querySelector('[name="' + n + '"]'); return { rank: get("rank").value, unarmedFormula: get("unarmed").value, requirementsConfirmed: get("confirmed").checked, costChoices: Array.from(dialog.element.querySelectorAll('[name="cost"]:checked')).map(input => choices[Number(input.value)].id) }; } } });
+  const content = '<label>Rank<select name="rank">' + rankOptions + '</select></label><label>Full unarmed formula<input name="unarmed"></label>' + costOptions + (profile?.requiresCompletedCasting ? '<label><input name="complete" type="checkbox">The source casting time has been completed</label>' : '') + '<label><input name="confirmed" type="checkbox">Confirm free hands, seals, required equipment, prerequisites, range and targets</label>';
+  const options = await foundry.applications.api.DialogV2.prompt({ window: { title: activity.item.name }, content, ok: { label: "Cast", callback: (_e, _b, dialog) => { const get = n => dialog.element.querySelector('[name="' + n + '"]'); return { rank: get("rank").value, unarmedFormula: get("unarmed").value, requirementsConfirmed: get("confirmed").checked, castingCompleted: get("complete")?.checked ?? false, costChoices: Array.from(dialog.element.querySelectorAll('[name="cost"]:checked')).map(input => choices[Number(input.value)].id) }; } } });
   if (options === null || options === undefined) return { cancelled: true };
   return castTrial(activity, options, Array.from(game.user.targets).map(token => token.actor).filter(Boolean));
 }

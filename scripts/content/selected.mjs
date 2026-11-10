@@ -25,7 +25,7 @@ async function ensureFolder(path, folders) {
 }
 
 /** Import an idempotent world library without changing existing actors or campaign content. */
-export async function importSelectedWorld({ clans = null, general = true } = {}) {
+export async function importSelectedWorld({ clans = null, general = true, updateExisting = false } = {}) {
   if (!game.user.isGM) throw new Error("Only a GM can import the world library.");
   if (importing) throw new Error("A selected-content import is already running.");
   importing = true;
@@ -35,17 +35,24 @@ export async function importSelectedWorld({ clans = null, general = true } = {})
     const chosen = items.filter(i => { const c = i.flags["n5e-module"].selected.clan; return c ? clans === null || clans.includes(c) : general; });
     const existing = new Map(Array.from(game.items).filter(i => i.flags?.["n5e-module"]?.selected).map(i => [i.flags["n5e-module"].selected.sourceId, i]));
     const folders = new Map(Array.from(game.folders).filter(f => f.type === "Item" && f.flags?.["n5e-module"]?.selectedFolder).map(f => [f.flags["n5e-module"].selectedFolder, f]));
-    let created = 0, skipped = 0;
+    let created = 0, skipped = 0, updated = 0;
     for (const data of chosen) {
       if (Date.now() >= deadline) throw new Error("Import paused at its five-minute limit; run again to continue without duplicates.");
       const meta = data.flags["n5e-module"].selected;
-      if (existing.has(meta.sourceId)) { skipped++; continue; }
+      if (existing.has(meta.sourceId)) {
+        if (updateExisting) {
+          const copy = structuredClone(data); delete copy._id;
+          await existing.get(meta.sourceId).update(copy);
+          updated++;
+        } else skipped++;
+        continue;
+      }
       if (game.items.get(data._id)) throw new Error(`An unrelated Item occupies the reserved ID for ${data.name}.`);
       const folder = await ensureFolder(meta.folderPath, folders);
       const item = await Item.create({ ...structuredClone(data), folder }, { keepId: true });
       existing.set(meta.sourceId, item); created++;
     }
-    return { created, skipped };
+    return updateExisting ? { created, skipped, updated } : { created, skipped };
   } finally { importing = false; }
 }
 
@@ -60,17 +67,39 @@ export async function importSelectedActor(actor, sourceIds) {
   return create.length ? actor.createEmbeddedDocuments("Item", create) : [];
 }
 
+/** Set only explicit testing resources; native ability scores and existing class records remain editable on the sheet. */
+export async function prepareTestActor(actor, { level, chakra, maximum }) {
+  if (!actor?.isOwner) throw new Error("Actor ownership is required.");
+  if (!Number.isInteger(level) || level < 1 || level > 20 || ![chakra, maximum].every(Number.isSafeInteger) || chakra < 0 || maximum < chakra) throw new Error("Choose level1–20 and valid nonnegative Chakra values.");
+  return actor.update({ "system.n5e.level": level, "system.n5e.chakra.value": chakra, "system.n5e.chakra.max": maximum });
+}
+
+/** Provide resource setup for a chosen test actor without requiring a console command. */
+async function openTestActor() {
+  const actors = Array.from(game.actors).filter(a => a.isOwner && ["character", "npc"].includes(a.type));
+  const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll('"', "&quot;");
+  const content = '<label>Test actor<select name="actor">' + actors.map((a, i) => `<option value="${i}">${esc(a.name)}</option>`).join("") + '</select></label><label>N5e level<input name="level" type="number" min="1" max="20" value="1"></label><label>Current Chakra<input name="chakra" type="number" min="0" value="100"></label><label>Maximum Chakra<input name="max" type="number" min="0" value="100"></label>';
+  const values = await foundry.applications.api.DialogV2.prompt({ window: { title: "Prepare N5e test actor" }, content, ok: { label: "Set testing values", callback: (_e, _b, dialog) => { const value = name => Number(dialog.element.querySelector(`[name="${name}"]`).value); return { actor: actors[value("actor")], level: value("level"), chakra: value("chakra"), maximum: value("max") }; } } });
+  if (!values) return;
+  await prepareTestActor(values.actor, values);
+  ui.notifications.info("N5e test level and Chakra saved.");
+}
+
 /** Provide a GM settings entry for explicit world-library import; activation alone creates no documents. */
 export function registerSelectedContent() {
+  class TestActorMenu extends foundry.applications.api.ApplicationV2 {
+    render() { void openTestActor().catch(error => ui.notifications.error(error.message)); return this; }
+  }
   class SelectedContentMenu extends foundry.applications.api.ApplicationV2 {
     render() {
-      void foundry.applications.api.DialogV2.confirm({ window: { title: "Import selected N5e test content" }, content: "<p>Import the selected D-rank general jutsu and eight clan packages into organized Item folders? Existing imported records and actors are unchanged.</p>" }).then(async accepted => {
-        if (!accepted) return;
-        const result = await importSelectedWorld();
-        ui.notifications.info(`N5e content: ${result.created} imported, ${result.skipped} already present.`);
+      void foundry.applications.api.DialogV2.prompt({ window: { title: "Import selected N5e test content" }, content: '<p>Import selected D-rank general jutsu and eight clan packages into organized Item folders.</p><label><input name="update" type="checkbox">Replace previously imported world-library records with this release (overwrites edits to those records; actors unchanged)</label>', ok: { label: "Import", callback: (_e, _b, dialog) => ({ updateExisting: dialog.element.querySelector('[name="update"]').checked }) } }).then(async selection => {
+        if (!selection) return;
+        const result = await importSelectedWorld(selection);
+        ui.notifications.info(`N5e content: ${result.created} imported, ${result.updated ?? 0} updated, ${result.skipped} already present.`);
       }).catch(error => ui.notifications.error(error.message));
       return this;
     }
   }
   game.settings.registerMenu("n5e-module", "selectedContent", { name: "Selected N5e test content", label: "Import test content", hint: "Organized general jutsu and clan packages; reviewed automation is identified per record.", icon: "fas fa-scroll", type: SelectedContentMenu, restricted: true });
+  game.settings.registerMenu("n5e-module", "testActor", { name: "Prepare N5e test actor", label: "Set test level and Chakra", hint: "Choose a test actor and explicitly set its N5e level and Chakra pool.", icon: "fas fa-user-ninja", type: TestActorMenu, restricted: true });
 }

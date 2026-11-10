@@ -41,6 +41,7 @@ export function eligibility(actor, profile, options) {
   const available = actor.flags?.["n5e-module"]?.casting?.tags ?? [];
   if ((profile.requiredTags ?? []).some(tag => !available.includes(tag))) throw new Error("Missing a required affinity or source grant.");
   if (profile.known === false) throw new Error("This jutsu is not learned or granted.");
+  if (profile.requiresCompletedCasting && !options.castingCompleted) throw new Error("Complete the source casting time before confirming this cast.");
   return { rank, steps, modifiers: m };
 }
 
@@ -74,7 +75,7 @@ export function generalPlan(activity, options) {
       return { type: p.type, formula: `${base + state.steps * perRank}d${faces}${p.bonus ? ` + (${p.bonus})` : ""}` };
     }
     if (typeof p.formula !== "string") throw new Error("A reviewed formula is required.");
-    return { type: p.type, formula: p.formula.replaceAll("@upcast", String(state.steps)).replaceAll("@rank", String(ranks.indexOf(state.rank))) };
+    return { type: p.type, formula: p.formula.replaceAll("@upcast", String(state.steps)).replaceAll("@rank", String(ranks.indexOf(state.rank))).replaceAll("@ability", String(activity.actor.system.abilities[options.castingAbility].mod)) };
   });
   if (profile.durationSeconds !== undefined && (!Number.isSafeInteger(profile.durationSeconds) || profile.durationSeconds < 1)) throw new Error("Duration must be positive seconds.");
   return { profile, trial: { baseRank: profile.baseRank, source: { name: activity.item.name, discipline: profile.discipline, duration: "", keywords: "" } }, mode: activity.id, rank: state.rank, cost: castingCost(profile, state, options), parts, kind: mode.kind, saveAbility: mode.saveAbility ?? null, maintained: !!profile.concentration, outcomes: mode.outcomesByRank?.[state.rank] ?? mode.outcomes, durationSeconds: profile.durationSeconds ?? null, stable: !!profile.stable, efficient: !!profile.efficient };

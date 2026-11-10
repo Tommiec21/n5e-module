@@ -1,3 +1,7 @@
+## 0.1.0-alpha.12
+
+Selected S02:242 source-cost casting profiles,12 reviewed base-rank combat/healing modes, explicit manual riders, test-actor resources and opt-in library updates.
+
 ## 0.1.0-alpha.11
 
 Selected-content S01:377 native records, portable source snapshot, organized idempotent GM import and source-preserving actor import; mechanics review pending.

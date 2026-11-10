@@ -1,3 +1,13 @@
+# Selected content S02 — Gameplay/Data Conversion System
+
+Goal: connect selected native records to existing casting services without rebuilding special gameplay engines.
+
+242 jutsu connect source cost/components and available concentration metadata;12 have reviewed combat/healing modes,4 of those have their base-rank core fully connected.238 records are partial and135 are manual (including118 features/options/stances and17 unresolved-cost jutsu); status is recorded per item.
+
+Known manual work: feature grants/stances, higher-rank branches, martial sequencing, conditional riders, target/range/trigger confirmation, native states and consumable inventory choices. Casting menus intentionally permit only the authored base rank. Source-defined unresolved costs disable automatic casting.
+
+GM settings include explicit level/Chakra setup for a chosen test actor and opt-in replacement of prior world-library imports; replacements overwrite edits to imported library records but never update existing actor copies. No live verification or local installation; focused S02 gate pending.
+
 # Selected test content S01 — Data Conversion System
 
 Goal: provide a portable native library from existing N5e records, without assuming their old custom fields are native automation.

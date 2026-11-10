@@ -271,3 +271,5 @@ November10, slice18:42UTC, branch content/selected-01. User authorized164 D-rank
 This is an early selected subset of Batches13–15, not a resumption of all pending gameplay systems. S01 owns portable snapshots, native conversion, folders, import controls and coverage; S02 owns reviewed mechanics mapping across the selected data, S03 owns conversion checks, testing guide and final selected-content release. Do not duplicate the active converter or infer completed automation from successful structural import.
 
 S01 checkpoint18:49UTC:377 native records converted, five selected checks passed once in CI42878742579; private alpha11 release42878910177 published the44-file artifact without retesting. All mechanics remain explicitly manual at this structural checkpoint; next S02 maps supported mechanics, no new gameplay engines.
+
+S02 active18:49UTC, branch content/selected-02: connect reviewed source cost/components/duration to shared casting, author a conservative direct-effect subset, provide explicit test-actor resources, and retain exact manual effect reasons. No new reaction/conditional engines.

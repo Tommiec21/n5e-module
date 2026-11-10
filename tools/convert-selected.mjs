@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { pathToFileURL } from "node:url";
 import { resolve } from "node:path";
+import { applySelectedMechanics } from "./selected-mechanics.mjs";
 
 const labels = { nin: "Ninjutsu", gen: "Genjutsu", tai: "Taijutsu", buki: "Bukijutsu", nonElemental: "Non-Elemental", fire: "Fire Release", wind: "Wind Release", taijutsu: "Taijutsu", phantasm: "Phantasm", shinobiBasics: "Shinobi Basics" };
 const clanNames = { aburame: "Aburame", hyuga: "Hyūga", uchiha: "Uchiha", uzumaki: "Uzumaki", senju: "Senju", ryu: "Ryu", hebi: "Hebi", kuru: "Kuru" };
@@ -46,7 +47,7 @@ function linkRecords(items, records) {
 
 /** Produce a portable native-content bundle and an explicit per-record coverage inventory. */
 export function convertSnapshot(snapshot) {
-  const items = snapshot.records.map(convertRecord);
+  const items = snapshot.records.map(record => applySelectedMechanics(convertRecord(record), record));
   linkRecords(items, snapshot.records);
   return { version: 1, id: "selected-testing", items };
 }
