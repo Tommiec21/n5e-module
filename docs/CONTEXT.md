@@ -291,3 +291,5 @@ S04a checkpoint19:07UTC:source409eb98dd50c279bf7ee33a550226b560ca5ad71, five foc
 S04b active19:07UTC: native dependentOn source effects, most-potent same-source suppression per core chapter9, and six reviewed buffs; stop target100 remains active.
 
 User requested pause after current jutsu during S04b. Finish only the active correction/check/publication checkpoint, then pause; do not begin S04c or continue toward100 until resumed. First S04b attempt failed before scenarios due to a missing object brace in effects.mjs; correction uses cumulative attempt2, not a fresh budget.
+
+S04b slice checkpoint19:16UTC: implementation slice19:07–19:16 ended under ten minutes; corrected source52a00e1, cumulative attempt2 running. Remaining work is a separate bounded verification/publication checkpoint only, then user-requested pause; no new jutsu.

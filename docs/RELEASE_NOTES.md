@@ -6,7 +6,7 @@ Automates base-rank Body Camouflage, Body Flicker, Darkvision, Confidence, Bless
 
 Owner-approved effect cards support recipients the caster cannot edit. Native dependentOn cleanup is reused; active-GM source expiry is actor-indexed. No new socket/dependency engine, live Foundry verification or local installation.
 
-The qualifying total is12/100 (11 jutsu,1 clan feature); all other partial/manual records remain excluded. Selected S04b check gate pending.
+The qualifying total is12/100 (11 jutsu,1 clan feature); all other partial/manual records remain excluded. CI42883561617 passed4 focused checks on cumulative attempt2; attempt1 failed on syntax before scenarios and is retained in the ledger.
 
 # S04a — Clan grants and source condition automation
 
