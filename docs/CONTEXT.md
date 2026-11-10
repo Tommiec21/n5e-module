@@ -309,3 +309,13 @@ November10,slice19:21UTC,branch content/classes-01. User requests Scout-Nin/Ninj
 Reuse the native-content importer and native advancement types; portable dependency closure contains402 records (3 classes,20 subclasses,355 features/options,24 stances), with no missing structural references. This slice owns native HP/proficiencies/feature grants/choices/scales, stage-aware Mastery/affinity and Focus uses; all complex source mechanics are preserved and deferred.
 
 Classes slice checkpoint19:31UTC: conversion implementation19:21–19:31 saved under ten minutes; runtime8511ecaf753292a663a987f26d7d60219d78e938, CI42885781239 succeeded. A separate bounded publication/documentation checkpoint will finish the class task; no further feature engines or jutsu work.
+
+## Three-class conversion completed implementation/check checkpoint
+
+Runtime8511ecaf753292a663a987f26d7d60219d78e938; CI42885781239 passed6 focused checks on first attempt,0 failed/skipped. Implementation slice19:21–19:31 and final publication/documentation slice starting19:31 are separately bounded under ten minutes.
+
+Goal:convert Scout-Nin,Ninjutsu Specialist,Taijutsu Specialist into native module classes, reusing402 existing records and native advancement rather than implementing extensive custom feature engines. Delivered3 classes,20 subclasses,355 features/options,24 stances; HP/Hit Dice, proficiencies, level grants/choices, scales, subclass selection, Scholar Mastery stages, subclass affinity stages and native Focus uses/recovery.
+
+User explicitly permits extensive mechanics deferred; CLASS_CONVERSION.md enumerates Chakra rolls/custom resources, maneuvers/moldings, stances, reaction/conditional subclass automation and non-native choices. No claim that all355 source feature effects are automated. The separate jutsu/clan100 target remains paused at12, unchanged by class conversion.
+
+Private alpha15 publication dispatched using the48-file checked artifact. No live Foundry verification, installed module/world mutation, new subclass lore or resumption of jutsu work.

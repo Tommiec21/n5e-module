@@ -57,3 +57,7 @@ All source descriptions remain intact. Native acquisition is not a claim that th
 - Stancer
 - Passionate
 
+
+## Evidence
+
+Runtime8511ecaf753292a663a987f26d7d60219d78e938; CI42885781239 passed6 selected checks on attempt1,0 failures/skips. Alpha15 publishes the48-file checked artifact; no live verification.
