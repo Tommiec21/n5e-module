@@ -2,6 +2,7 @@ import { actorLevel } from "../skills/calculation.mjs";
 import { modifiers } from "../conditions/planner.mjs";
 import { computeJutsuCost } from "./cost.mjs";
 import { canMaintain } from "../concentration/planner.mjs";
+import { classTags } from "../classes/progression.mjs";
 
 export const ranks = ["E", "D", "C", "B", "A", "S"];
 
@@ -38,7 +39,7 @@ export function eligibility(actor, profile, options) {
   if (components.includes("m") && (flags.cannotMove || statuses.has("restrained") || !Object.values(actor.system.attributes?.movement ?? {}).some(v => typeof v === "number" && v > 0))) throw new Error("Mobility is unavailable.");
   if (components.includes("hs") && Array.from(actor.items ?? []).some(i => i.type === "equipment" && i.system.equipped && i.system.armor?.type && i.system.proficient === false)) throw new Error("Hand seals require armor proficiency.");
   if (!options.requirementsConfirmed) throw new Error("Confirm free hands, seals, equipment, prerequisites and target eligibility.");
-  const available = actor.flags?.["n5e-module"]?.casting?.tags ?? [];
+  const available = [...(actor.flags?.["n5e-module"]?.casting?.tags ?? []), ...classTags(actor)];
   if ((profile.requiredTags ?? []).some(tag => !available.includes(tag))) throw new Error("Missing a required affinity or source grant.");
   if (profile.known === false) throw new Error("This jutsu is not learned or granted.");
   if (profile.requiresCompletedCasting && !options.castingCompleted) throw new Error("Complete the source casting time before confirming this cast.");

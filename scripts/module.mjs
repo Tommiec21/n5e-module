@@ -1,3 +1,5 @@
+import { registerClassLibrary, importClassLibrary, loadClassLibrary } from "./classes/import.mjs";
+import { registerClassProficiencies } from "./classes/progression.mjs";
 import { registerCastEffects, sourceEffectClass, sourceEffectActorClass } from "./integration/effects.mjs";
 import { registerSelectedContent, loadSelectedContent, importSelectedWorld, importSelectedActor, prepareTestActor } from "./content/selected.mjs";
 import { generalPlan, eligibility, maximumRank } from "./integration/casting.mjs";
@@ -34,6 +36,7 @@ function initialize() {
   if (!module) return;
   const supported = supportsHost(game.system, game.version);
   if (supported) {
+    registerClassProficiencies(CONFIG);
     registerDamageFields(CONFIG, foundry.data.fields);
     registerSkills(CONFIG, foundry.data.fields);
     registerDamageCards();
@@ -42,6 +45,7 @@ function initialize() {
     registerCastEffects();
     CONFIG.ActiveEffect.documentClass = sourceEffectClass(CONFIG.ActiveEffect.documentClass);
     registerSelectedContent();
+    registerClassLibrary();
     registerConcentrationCards();
     registerConcentrationLifecycle();
     registerConditionDamage();
@@ -56,6 +60,7 @@ function initialize() {
     gameplayEnabled: false,
     skills: Object.freeze({ definitions: skills, roll: rollSkill, setMasterySources, disciplineNumbers }),
     casting: Object.freeze({ cast: castTrial, plan: generalPlan, eligibility, maximumRank }),
+    classes: Object.freeze({ importWorld: importClassLibrary, load: loadClassLibrary }),
     content: Object.freeze({ load: loadSelectedContent, importWorld: importSelectedWorld, importActor: importSelectedActor, prepareActor: prepareTestActor }),
     trial: Object.freeze({ importItems: importTrialItems, cast: castTrial }),
     concentration: Object.freeze({ begin: beginCast, end: endCast, payUpkeep, cleanup, applyCheck, list: maintainedCasts, damageCheckPlan, upkeepPlan, chooseReplacement, chooseUpkeep, rollCheck }),

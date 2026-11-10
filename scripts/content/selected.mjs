@@ -1,8 +1,9 @@
 let importing = false;
 
 /** Read the shipped native bundle without evaluating the preserved source descriptions. */
-export async function loadSelectedContent() {
-  const response = await fetch("modules/n5e-module/content/selected-content.json");
+export async function loadSelectedContent(library = "selected") {
+  if (!["selected", "class"].includes(library)) throw new Error("Unknown N5e content library.");
+  const response = await fetch(`modules/n5e-module/content/${library}-content.json`);
   if (!response.ok) throw new Error("Selected N5e content could not be loaded.");
   const bundle = await response.json();
   if (bundle.version !== 1 || !Array.isArray(bundle.items)) throw new Error("Unsupported selected-content bundle.");
@@ -25,13 +26,13 @@ async function ensureFolder(path, folders) {
 }
 
 /** Import an idempotent world library without changing existing actors or campaign content. */
-export async function importSelectedWorld({ clans = null, general = true, updateExisting = false } = {}) {
+export async function importSelectedWorld({ clans = null, general = true, updateExisting = false, library = "selected" } = {}) {
   if (!game.user.isGM) throw new Error("Only a GM can import the world library.");
   if (importing) throw new Error("A selected-content import is already running.");
   importing = true;
   const deadline = Date.now() + 300000;
   try {
-    const { items } = await loadSelectedContent();
+    const { items } = await loadSelectedContent(library);
     const chosen = items.filter(i => { const c = i.flags["n5e-module"].selected.clan; return c ? clans === null || clans.includes(c) : general; });
     const existing = new Map(Array.from(game.items).filter(i => i.flags?.["n5e-module"]?.selected).map(i => [i.flags["n5e-module"].selected.sourceId, i]));
     const folders = new Map(Array.from(game.folders).filter(f => f.type === "Item" && f.flags?.["n5e-module"]?.selectedFolder).map(f => [f.flags["n5e-module"].selectedFolder, f]));
@@ -57,10 +58,10 @@ export async function importSelectedWorld({ clans = null, general = true, update
 }
 
 /** Copy selected native records to an owned actor with fresh embedded IDs and duplicate protection. */
-export async function importSelectedActor(actor, sourceIds) {
+export async function importSelectedActor(actor, sourceIds, { library = "selected" } = {}) {
   if (!actor?.isOwner) throw new Error("Actor ownership is required.");
   if (!Array.isArray(sourceIds)) throw new Error("Choose explicit source IDs to import.");
-  const { items } = await loadSelectedContent();
+  const { items } = await loadSelectedContent(library);
   const existing = new Set(Array.from(actor.items).map(i => i.flags?.["n5e-module"]?.selected?.sourceId));
   const selected = new Set(sourceIds);
   const create = items.filter(i => selected.has(i.flags["n5e-module"].selected.sourceId) && !existing.has(i.flags["n5e-module"].selected.sourceId)).map(data => { const copy = structuredClone(data); delete copy._id; delete copy.folder; return copy; });

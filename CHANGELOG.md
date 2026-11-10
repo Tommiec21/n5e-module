@@ -1,3 +1,7 @@
+## 0.1.0-alpha.15
+
+Three native N5e classes with20 subclasses,355 features/options and24 stances; native HP/proficiencies/grants/choices/scales, Scholar Mastery, affinity stages and Focus counter/recovery.
+
 ## 0.1.0-alpha.14
 
 S04b:native dependent source effects, same-source strongest suppression, six buff automations and scoped expiry;12 complete items toward100.

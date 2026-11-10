@@ -1,4 +1,5 @@
 import { progression, sourceSkillKeys } from "./registry.mjs";
+import { classMasterySources } from "../classes/progression.mjs";
 
 /** Read the existing N5e level bands instead of inheriting dnd5e's four-level proficiency bands. */
 export function band(table, level) {
@@ -30,7 +31,7 @@ export function masteryFor(entries, target, level) {
 
 /** Ignore suppressed grants and use explicit source identities, never feature display names as unique IDs. */
 export function masterySources(actor) {
-  const result = [...(actor.system.n5e?.masterySources ?? [])];
+  const result = [...(actor.system.n5e?.masterySources ?? []), ...classMasterySources(actor)];
   for (const item of actor.items ?? []) result.push(...(item.flags?.["n5e-module"]?.masterySources ?? []));
   for (const effect of actor.effects ?? []) if (!effect.disabled && !effect.isSuppressed) result.push(...(effect.flags?.["n5e-module"]?.masterySources ?? []));
   return result.filter(entry => typeof entry.target === "string" && typeof entry.source === "string" && entry.source && (!/^ASI\b/i.test(entry.source) || /^(skill|tool)\./.test(entry.target)));

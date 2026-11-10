@@ -301,3 +301,9 @@ Final verification/publication slice began19:16UTC, separate from the saved19:07
 Goal of S04b:source-linked native buffs and cleanup, connecting selected jutsu to shared casting/native effects rather than creating parallel effect engines. Six buff additions bring the combined qualifying total to12/100, not100;88 remain.
 
 PAUSED by explicit user instruction after current jutsu/buff work; do not begin another automation, resume S04c, or continue toward100 without a new instruction. Documentation and check ledger preserve exact source IDs and attempts; no live verification or local installation.
+
+## User scope shift: three native classes
+
+November10,slice19:21UTC,branch content/classes-01. User requests Scout-Nin/Ninjutsu Specialist/Taijutsu Specialist conversion with simple automation; extensive automation is explicitly deferred. The jutsu100 target remains paused and this class conversion must not inflate its tally or resume jutsu development.
+
+Reuse the native-content importer and native advancement types; portable dependency closure contains402 records (3 classes,20 subclasses,355 features/options,24 stances), with no missing structural references. This slice owns native HP/proficiencies/feature grants/choices/scales, stage-aware Mastery/affinity and Focus uses; all complex source mechanics are preserved and deferred.

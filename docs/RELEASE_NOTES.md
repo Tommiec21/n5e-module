@@ -1,3 +1,15 @@
+# Three-class conversion — Data Conversion System
+
+Goal:reuse the existing Scout-Nin, Ninjutsu Specialist and Taijutsu Specialist as native dnd5e classes rather than rebuilding their progression.
+
+Includes402 records:3 classes,20 subclasses,355 features/options and24 stances, with all structural dependencies resolved. Native HP/Hit Dice, starting proficiencies/choices, feature grants/choices, subclass selection and20-level scales are configured. Scholar Mastery is stage-aware and deduplicated; five specialist subclass affinity stages and native Focus counter/spending/long-rest recovery are connected.
+
+Use Configure Settings > N5e class library > Import three classes, then drag a class onto a character and use the native advancement flow; the complete library must be imported before grants can resolve. Imports never alter existing actor copies.
+
+Explicitly deferred by the user:extensive maneuvers/moldings, stance/conditional/reaction automation, custom resource recovery and Chakra maximum rolls. Source text and original rules remain in the portable snapshot; class flags preserve Chakra die and source progression. ASI/global advancement and campaign multiclass rulings remain later progression work.
+
+Focused class conversion gate pending; no live verification, installed package changes or resumed jutsu automation. The12/100 jutsu/clan-feature tally remains paused.
+
 # S04b — Source-linked buffs
 
 Goal: reuse native dnd5e effect dependencies for concentration cleanup and source-preserving bonuses.
