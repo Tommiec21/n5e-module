@@ -10,11 +10,11 @@
 - Automated reactions are limited to successful hit and damage-roll timing; other timing is manual and nested chains are deferred.
 - Clan identity uses native species/race infrastructure; removed Clan Feats and redesigned tables are not approved imports.
 
-## Pending before dependent implementation
+## Additional confirmed rulings and remaining review
 
-Resolve exact graded-save equality/natural-result/tier-shift precedence from source and prior rulings; the existing degree.mjs is evidence, not permission to invent a rule.
+Confirmed graded saves: meet DC succeeds, beat by5+ critically succeeds, miss by5+ critically fails; natural20 guarantees at least success after tier shifts, and natural1 has no extra effect unless specified.
 
-Confirm how a failed concentration check affects two maintained jutsu, whether temporary-pool absorption counts for the damage threshold, and what damage amount is used for a mixed HP/Chakra event.
+Confirmed concentration: one failed check ends both non-Stable jutsu; use combined final HP/Chakra damage after defenses, including temporary-pool absorption.
 
 Confirm third-cast replacement and insufficient-upkeep selection; preserve actual cast rank and actual paid cost in the eventual state contract.
 

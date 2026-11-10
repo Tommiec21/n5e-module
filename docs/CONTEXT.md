@@ -67,3 +67,11 @@ CI42833821694 passed4 contract checks on first attempt with0 failures/skips; una
 Release42833951034 published v0.1.0-alpha.1 using the same artifact: module.json879bytes, n5e-module.zip12918bytes; no bypassed checks or live verification.
 
 Next: Batch02 ranked conditions, limited to source-settled behaviors; ask about condition-specific stacking only where source and existing rulings do not settle it.
+
+## User rulings received after Batch01
+
+Save tiers retain the existing five-point margins, meet-DC success and natural20 floor after shifts; natural1 has no extra effect unless specified.
+
+One failed concentration check ends both non-Stable maintained jutsu; concentration damage combines final HP/Chakra damage after defenses including temporary pools.
+
+Docs-only update; no gameplay implementation or check rerun.
