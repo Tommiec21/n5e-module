@@ -24,6 +24,7 @@ function advance(combat, changes) {
   const task = (queues.get(combat) ?? Promise.resolve()).catch(() => {}).then(async () => {
     if (outgoing?.actor && outgoing.id !== turnId) await processTurnEnd(outgoing.actor, outgoing.id, now);
     if (actor && outgoing?.id !== turnId) {
+      Hooks.callAll("n5e-module.conditionTurnStarted", actor, turnId);
       actor.n5eConditionDamageRequests = turnStartRequests(actor, turnId);
       if (actor.n5eConditionDamageRequests.length) Hooks.callAll("n5e-module.conditionDamageRequested", actor, actor.n5eConditionDamageRequests);
     }

@@ -1,8 +1,8 @@
 {
   "id": "n5e-module",
   "title": "N5e for dnd5e — Development",
-  "description": "Graded saves connected to N5e condition and HP/Chakra damage services on dnd5e.",
-  "version": "0.1.0-alpha.4",
+  "description": "N5e ranked conditions, graded saves, HP/Chakra damage and dual concentration services for dnd5e.",
+  "version": "0.1.0-alpha.5",
   "authors": [
     {
       "name": "King"
@@ -28,6 +28,6 @@
     "scripts/module.mjs"
   ],
   "url": "https://github.com/Tommiec21/n5e-module",
-  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.4/module.json",
-  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.4/n5e-module.zip"
+  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.5/module.json",
+  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.5/n5e-module.zip"
 }

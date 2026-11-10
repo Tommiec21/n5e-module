@@ -1,9 +1,11 @@
-# Batch04 graded saves
+# Batch05 dual concentration
 
-Native saving throws feed the confirmed N5e tier resolver, with explicit per-activity/rank/mode outcomes and manual Apply controls.
+Two source-linked maintained casts, player-selected replacement, actual-paid-cost upkeep and single damage checks are implemented through module APIs and native effects.
 
-Damage uses the original source roll and exactly one save multiplier; conditions use stable per-source IDs, while binary native saves retain native behavior.
+Upkeep uses the host attribute-consumption handler; insufficient Chakra produces a player-choice card, while Stable and Efficient remain separate rules.
 
-Bane is a demonstration table, not a full compendium conversion; bonus suppression and other exceptional outcome clauses remain manual.
+Concentration check cards use a native Chakra Control skill when configured, otherwise request the player’s full modifier and roll native dice; full skill/progression conversion remains outstanding.
 
-No live verification, local installation or automatic conversion of ordinary host/third-party save cards occurred.
+Item casting must call replacement preflight before initial payment and register the already-paid cast afterward; this connection follows in Batch06.
+
+Linked effects require owner/GM cleanup permission, and source cleanup/payment is not a distributed transaction; no live testing or local installation occurred.

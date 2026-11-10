@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.5
+
+- Add two source-linked maintained casts with player-selected replacement and upkeep choices.
+- Reuse actual-cost upkeep/DC formulas and native attribute consumption; damage checks preserve Stable casts and captured identities.
+- Add source-scoped ending/expiry controls and an implementation recap with outstanding integration limits.
+
 ## 0.1.0-alpha.4
 
 - Reuse the confirmed N5e graded-save resolver with native kept-d20 rolls.

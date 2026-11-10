@@ -21,3 +21,7 @@ Confirm third-cast replacement and insufficient-upkeep selection; preserve actua
 Confirm condition-specific source stacking and approved progression tables where reference text conflicts with prior user directions.
 
 Confirmed Batch02: ranks of the same condition from different sources add together up to the condition cap.
+
+Confirmed Batch05: the player chooses one existing jutsu to end before a third cast, and cancelling changes neither existing cast.
+
+If upkeep is insufficient, the player chooses which casts to maintain; unpaid casts end.

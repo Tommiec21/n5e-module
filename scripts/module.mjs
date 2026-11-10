@@ -1,3 +1,7 @@
+import { beginCast, endCast, payUpkeep, cleanup, applyCheck } from "./concentration/service.mjs";
+import { maintainedCasts, damageCheckPlan, upkeepPlan } from "./concentration/planner.mjs";
+import { chooseReplacement, chooseUpkeep, rollCheck, registerConcentrationCards } from "./concentration/controls.mjs";
+import { registerConcentrationLifecycle } from "./concentration/lifecycle.mjs";
 import { resolveSave } from "./saves/planner.mjs";
 import { applySaveOutcome } from "./saves/service.mjs";
 import { rollSave, registerSaveCards } from "./saves/native.mjs";
@@ -24,6 +28,8 @@ function initialize() {
     registerDamageFields(CONFIG, foundry.data.fields);
     registerDamageCards();
     registerSaveCards();
+    registerConcentrationCards();
+    registerConcentrationLifecycle();
     registerConditionDamage();
     CONFIG.Actor.documentClass = conditionActorClass(CONFIG.Actor.documentClass);
     for (const [key, def] of Object.entries(conditions)) if (!CONFIG.statusEffects.some(e => e.id === `n5e.${key}`)) CONFIG.statusEffects.push({ id: `n5e.${key}`, name: def.label, img: def.icon });
@@ -33,6 +39,7 @@ function initialize() {
     version: module.version,
     supported: supportsHost(game.system, game.version),
     gameplayEnabled: false,
+    concentration: Object.freeze({ begin: beginCast, end: endCast, payUpkeep, cleanup, applyCheck, list: maintainedCasts, damageCheckPlan, upkeepPlan, chooseReplacement, chooseUpkeep, rollCheck }),
     saves: Object.freeze({ resolve: resolveSave, apply: applySaveOutcome, roll: rollSave }),
     damage: Object.freeze({ plan: planDamage, apply: applyDamage, applyWithChoice, post: postDamage, recover, planRecovery, retarget }),
     conditions: Object.freeze({ definitions: conditions, modifiers, add: addRanks, set: setCondition, remove: removeCondition, resolveRemoval, processTurnEnd, turnStartRequests, open: openConditions })
