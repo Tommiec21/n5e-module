@@ -1,6 +1,6 @@
 # Selected N5e content: user testing
 
-Current private release: [v0.1.0-alpha.12](https://github.com/Tommiec21/n5e-module/releases/tag/v0.1.0-alpha.12).
+Current private release: [v0.1.0-alpha.14](https://github.com/Tommiec21/n5e-module/releases/tag/v0.1.0-alpha.14).
 
 ## Install and import
 
@@ -27,7 +27,7 @@ Record the Item, actor/token, module version, expected result, actual result and
 | Import and duplicates | Import the library twice without replacement | First import creates377 records; the second creates none and preserves existing records |
 | Native casting | Cast Chakra Bolt against a target | One Chakra payment, native attack roll and4d6 force damage roll; applying damage uses the shared damage controls |
 | Damage and condition | Cast Fireball and resolve a failed target save |4d6+4 fire damage and1 Burned; successful save uses half damage and adds no Burned |
-| Corrected source outcome | Cast Erupting Flame and resolve success | Half damage; Dazed is a manual failure rider, not automatically applied |
+| Corrected source outcome | Cast Erupting Flame and resolve success | Half damage; Dazed applies only on failure and expires through the existing condition lifecycle |
 | Mixed pools | Cast Fracturing Splinter and resolve failure | Separate2d8 force/HP and2d8 Chakra components; D-rank does not add Sealed |
 | Graded saves | Cast Bane | Native Charisma save maps to the four degrees; its penalty/suppression are explicitly manual |
 | Healing | Cast Second Wind with the caster selected as recipient |2d6 plus Ninjutsu ability modifier; healing requires the explicit Apply control |
@@ -41,8 +41,12 @@ An ordinary owned-actor cast does not introduce a GM approval gate. A target own
 
 ## Coverage and additional work
 
-The library contains377 records:164 general jutsu,87 clan jutsu,8 clan identities and118 features/options/stances.242 jutsu have shared cost/components/concentration profiles,12 have reviewed combat/healing modes, and4 have fully connected base-rank core effects; every record has an explicit status in [SELECTED_CONTENT_COVERAGE.md](SELECTED_CONTENT_COVERAGE.md).
+The library contains377 records:164 general jutsu,87 clan jutsu,8 clan identities and118 features/options/stances.242 jutsu have shared cost/components/concentration profiles,12 have reviewed combat/healing modes, and12 combined jutsu/features have qualifying base-rank/base-level automation; every record has an explicit status in [SELECTED_CONTENT_COVERAGE.md](SELECTED_CONTENT_COVERAGE.md).
 
 All higher-rank branches remain manual, and automatic casting only permits the authored base rank. Conditional effects, weapon/unarmed sequences and native clan grants remain assigned to additional S04 and Batches11–13; successful import is not evidence of their implementation.
 
 Two focused automated gates passed once each: five structural/import checks and five selected-mechanics checks. No live Foundry verification, campaign migration or local installation was performed by the agent.
+
+## Current pause checkpoint
+
+Alpha14 adds source-linked buffs and eight clans’ basic native grants; twelve completed jutsu/features count toward100, while partial identities/grants remain excluded. S04a passed5 checks once; S04b passed4 checks on attempt2 after one syntax failure before scenarios. No live verification was performed.

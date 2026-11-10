@@ -293,3 +293,11 @@ S04b active19:07UTC: native dependentOn source effects, most-potent same-source 
 User requested pause after current jutsu during S04b. Finish only the active correction/check/publication checkpoint, then pause; do not begin S04c or continue toward100 until resumed. First S04b attempt failed before scenarios due to a missing object brace in effects.mjs; correction uses cumulative attempt2, not a fresh budget.
 
 S04b slice checkpoint19:16UTC: implementation slice19:07–19:16 ended under ten minutes; corrected source52a00e1, cumulative attempt2 running. Remaining work is a separate bounded verification/publication checkpoint only, then user-requested pause; no new jutsu.
+
+## User-requested pause — S04b current-item completion
+
+Final verification/publication slice began19:16UTC, separate from the saved19:07–19:16 implementation slice. Corrected runtime52a00e188119f0cec703f5da39014ddc9459921f passed4 focused checks on attempt2 in CI42883561617; first syntax failure retained. Private alpha14 release dispatched from that checked45-file artifact.
+
+Goal of S04b:source-linked native buffs and cleanup, connecting selected jutsu to shared casting/native effects rather than creating parallel effect engines. Six buff additions bring the combined qualifying total to12/100, not100;88 remain.
+
+PAUSED by explicit user instruction after current jutsu/buff work; do not begin another automation, resume S04c, or continue toward100 without a new instruction. Documentation and check ledger preserve exact source IDs and attempts; no live verification or local installation.

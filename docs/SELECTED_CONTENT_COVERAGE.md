@@ -1,34 +1,8 @@
-# Selected-content coverage
+# Selected-content coverage — current paused checkpoint
 
-Snapshot:377 native records;242 casting profiles;12 reviewed combat/healing modes. Four records have their base-rank core connected,238 are partial and135 are manual; no live acceptance is claimed.
+Current release:alpha14.377 native records,242 casting profiles,12 qualifying automations (11 jutsu,1 clan feature),239 partial and126 manual. User-requested pause is active; do not resume automatically.
 
-Source descriptions, keywords, expressions and provenance are preserved. General selections are D-rank; clan packages retain their associated jutsu at all source ranks. Higher-rank casting branches are not automated.
-
-## Reviewed combat/healing modes
-
-- Bane
-- Fire Release: Devastating Blaze
-- Fire Release: Erupting Flame
-- Fire Release: Fireball
-- Fire Release: Hellfire Rejection
-- Fire Release: White Flame Strike
-- Chakra Bolt
-- Sealing Art: Fracturing Splinter
-- Thunderous Screech
-- Wind Release: Raging Gale
-- Wind Release: Second Wind
-- Wind Release: Violent Whirlwind
-
-## Additional batches
-
-- S04: review remaining selected damage/save/heal and utility mappings that can reuse existing services; include unresolved costs and target-specific expressions as individual review tasks.
-- 11: conditional effects, triggered riders, longer-casting interruptions and source-based cleanup.
-- 12: weapon/unarmed expression integration, martial sequencing and Clash.
-- 13: automatic clan feature choices, grants, native advancement and progression.
-- 16: final resource/sheet controls.
-- 19: integrated regression; user performs live verification.
-
-## Every selected record
+The100-item target remains outstanding by88 items; see AUTOMATION_TARGET_100.md for the exact named tally. Partial grants and text-only imports never count; all unimplemented work remains additional S04c onward and Batches11–13/16/19 as appropriate.
 
 | Record | Kind | Status | Connected | Manual / next work | Source ID |
 | --- | --- | --- | --- | --- | --- |
@@ -54,10 +28,10 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Still Pond, Racing River | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.1e7459676cbfbea0 |
 | Weapon Deflect | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.e7e8004aaa6f5c0d |
 | Bane | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep, native rolls, graded save outcomes | Penalty and bonus suppression remain manual; the graded save is automated. | n5e.jutsu.d247c6d72a89200f |
-| Bless | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.12448fb134f8f2bf |
+| Bless | spell | base-rank-core | base-rank eligibility, Chakra cost, dual concentration/upkeep, native rolls |  | n5e.jutsu.12448fb134f8f2bf |
 | Cause Fear | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.fece21bf5f70af41 |
 | Compelled Duel | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.c4c9e71d2f8c29bd |
-| Confidence | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.f5d40537718cbca6 |
+| Confidence | spell | base-rank-core | base-rank eligibility, Chakra cost, dual concentration/upkeep, native rolls |  | n5e.jutsu.f5d40537718cbca6 |
 | Corruption: Animus | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.11eb1bc2b9f400cd |
 | Corruption: Asperity | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.4aaf51e73627f5f5 |
 | Corruption: Audacity | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.772364e3a270f3cf |
@@ -82,7 +56,7 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Fire Release: Devastating Blaze | spell | base-rank-core | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage |  | n5e.jutsu.c33c4ad32eb7ca55 |
 | Fire Release: Dragon Flame Bolt | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.ad55f77a439c276b |
 | Fire Release: Ember | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.624ed870caad9edf |
-| Fire Release: Erupting Flame | spell | partial | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage | Apply native Dazed manually. | n5e.jutsu.5cd5e0d4c206f6f6 |
+| Fire Release: Erupting Flame | spell | base-rank-core | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage |  | n5e.jutsu.5cd5e0d4c206f6f6 |
 | Fire Release: Fireball | spell | base-rank-core | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage |  | n5e.jutsu.851eb7678d7df6a0 |
 | Fire Release: Flame Coat | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.debb8c610f3b7fe9 |
 | Fire Release: Flame Whip | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.n5eGBuBPx5BSU05q |
@@ -102,13 +76,13 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Beast Imitating Art: Rats | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.d2d362cb91681162 |
 | Beast Imitating Art: Reptile | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.01b42f787848841a |
 | Beast Imitating Art: Retrieval Hawk | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.8062fbf67d71676c |
-| Body Camouflage | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.31212616b1843ae0 |
-| Body Flicker | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.d015ec34d8460b30 |
+| Body Camouflage | spell | base-rank-core | base-rank eligibility, Chakra cost, dual concentration/upkeep, native rolls |  | n5e.jutsu.31212616b1843ae0 |
+| Body Flicker | spell | base-rank-core | base-rank eligibility, Chakra cost, native rolls |  | n5e.jutsu.d015ec34d8460b30 |
 | Chakra Bolt | spell | base-rank-core | base-rank eligibility, Chakra cost, native rolls, typed damage |  | n5e.jutsu.50b3c560292b3188 |
 | Chakra Leaping | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.ddc2f5291c57c77a |
 | Chakra Shield | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.n5eBNdg8qjsq07DE |
 | Chakra Skin | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.2d13eb70f0680b59 |
-| Darkvision | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.bc4d86de442de304 |
+| Darkvision | spell | base-rank-core | base-rank eligibility, Chakra cost, native rolls |  | n5e.jutsu.bc4d86de442de304 |
 | Ink Clone | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.n5eDdX1LrQKdZ6HR |
 | Lock/Release | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.b2b1860f6393ab4e |
 | Oppressive Aura | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.065755920698f67d |
@@ -123,7 +97,7 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Striking Shadow Snake | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.59895cc3a8c72ed9 |
 | Substitution Technique | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.68611399507cd4a2 |
 | Summoning Technique | spell | manual |  | Source-defined cost requires manual resolution; automatic casting is disabled. | n5e.jutsu.5644f7d85cb1b7e7 |
-| Thunderous Screech | spell | partial | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage | Construct/structure disadvantage, Deafened and trap triggering remain manual. | n5e.jutsu.5d46a5a18db50713 |
+| Thunderous Screech | spell | partial | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage | Construct/structure disadvantage and trap triggering remain manual. | n5e.jutsu.5d46a5a18db50713 |
 | Wind Release: Air Current Dance | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.628d2c82b276ba50 |
 | Wind Release: Blades of the Wind | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.6b7695fbbe1503c5 |
 | Wind Release: Blurring Wind | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.0109ebac82f7661a |
@@ -134,7 +108,7 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Wind Release: Gale Bomb | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.48244ec32727e66b |
 | Wind Release: Gale Fists | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.678adbea63eec218 |
 | Wind Release: Gryphons Surge | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.62284afab0e81d63 |
-| Wind Release: Lions Roar | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.e9b0be090310f836 |
+| Wind Release: Lions Roar | spell | base-rank-core | base-rank eligibility, Chakra cost, dual concentration/upkeep, native rolls |  | n5e.jutsu.e9b0be090310f836 |
 | Wind Release: Palm Vortex | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.197557ce4542b0c9 |
 | Wind Release: Passing Typhoon | spell | partial | base-rank eligibility, Chakra cost, dual concentration/upkeep | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.177ba7d85e2fbe5e |
 | Wind Release: Raging Gale | spell | partial | base-rank eligibility, Chakra cost, native rolls, graded save outcomes, typed damage | Movement and Prone remain manual. | n5e.jutsu.54b1dc117daae70f |
@@ -196,7 +170,7 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Swallow Dance | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.6fdfa48f7b185957 |
 | Switch Kick | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.392b2988cdef7bf7 |
 | Wild Dance | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.jutsu.1b24f8b59d6aaa9f |
-| Aburame | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.57e91a27b77ca724 |
+| Aburame | race | partial | native skill proficiency grants, native walking speed | Clan-specific feature progression, choices, senses and languages retain their source instructions. | n5e.clans.57e91a27b77ca724 |
 | Deceptive Swarm | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.f65894539a962fbd |
 | Festering Brood | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.530c64111a661bb2 |
 | Grand Veil | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.50ed5d5a90f9bd05 |
@@ -222,7 +196,7 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Symbiotic Hive: Parasites | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.a94d006ddf1fcc81 |
 | Symbiotic Hive: Worms | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.338e042d49d9dbaa |
 | Swarm Chakra | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.6f4e0cef146908d0 |
-| Hyūga | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.11cc0206f8ef3e90 |
+| Hyūga | race | partial | native skill proficiency grants, native walking speed | Clan-specific feature progression, choices, senses and languages retain their source instructions. | n5e.clans.11cc0206f8ef3e90 |
 | Bloodline of the Elite | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.9c2d7031b1557e4a |
 | Byakugan | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.90b2edba7d2f2aba |
 | Eight Trigrams – Gentle End | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.1249a688f58fd0ce |
@@ -251,9 +225,9 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Bloodline of the Elite: Predictive Perception | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.eccb3e02b98ea5ac |
 | Bloodline of the Elite: Sensory Type | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.e8644535e1f9c423 |
 | Bloodline of the Elite: Tenketsu Needle | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c98017247e99733c |
-| Bloodline of the Elite: Wisdom of the Court | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.815a0bc23087f4fa |
+| Bloodline of the Elite: Wisdom of the Court | feat | base-level-core | Wisdom for Persuasion, Wisdom for Intimidation |  | n5e.clans.815a0bc23087f4fa |
 | Gentle Fist | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c528f0bfa0cc799a |
-| Senju | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.52983e4ff678512a |
+| Senju | race | partial | native skill proficiency grants, native walking speed | Clan-specific feature progression, choices, senses and languages retain their source instructions. | n5e.clans.52983e4ff678512a |
 | Blood of the leaf | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.475dbeff3111ea16 |
 | Built Different | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.6d7a04d9acc8a3a2 |
 | Mokuton Infusion | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.4fa51212fe7fc92e |
@@ -307,7 +281,7 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Sharingan: Sharingan Copy | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.6c07b966f9e4bc11 |
 | Sharingan: Sharingan Dodge | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.4451c79f459882ae |
 | Agile Fist | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.1429da04470921b8 |
-| Uzumaki | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.ce66fbf61320860d |
+| Uzumaki | race | partial | native skill proficiency grants, native walking speed | Clan-specific feature progression, choices, senses and languages retain their source instructions. | n5e.clans.ce66fbf61320860d |
 | Binding Chains | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.e3ed133f96ad1cd2 |
 | Gut Feeling | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.3d6da26bae158d6c |
 | Spiraling Chains | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.6fc50891179d4f5a |
@@ -333,7 +307,7 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Tenacious Chakra | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.3c7e9a8392dbf3e0 |
 | Unbreakable Will | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.d734245fadb0f595 |
 | Binding Chain | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c2ef13b94209c2f2 |
-| Hebi | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c929017cb2dbb862 |
+| Hebi | race | partial | native skill proficiency grants, native walking speed | Clan-specific feature progression, choices, senses and languages retain their source instructions. | n5e.clans.c929017cb2dbb862 |
 | Blood of the Basilisk | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.ab8f310e58180c17 |
 | Ouroboros | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c4c8c76a48d1a9b5 |
 | Serpents Blood | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.3a7824548f52d87f |
@@ -362,7 +336,7 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Venomous Technique: Virulent Infusion | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.5b2b4acdcad1d9d3 |
 | Serpents Coil | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.3f8640f86ba3b82e |
 | Serpent’s Coil | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.f297a7f3d0a8df84 |
-| Kuru | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.a3aa204ccbac0880 |
+| Kuru | race | partial | native skill proficiency grants, native walking speed | Clan-specific feature progression, choices, senses and languages retain their source instructions. | n5e.clans.a3aa204ccbac0880 |
 | Black Fang | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.cd4b2359de2e5dfa |
 | Eye of Prophecy | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.d1385b121f04a4a1 |
 | Miraigan | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c70ae477c5f9baa9 |
@@ -390,7 +364,7 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Yin Release Adept: Yin Release – Uncertain Future | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.b4d9874f428fb108 |
 | Yin Release Adept: Yin Release – Veil of mystery | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.dc2a07a483e8ec54 |
 | Black Fang | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.bc9519c12b17e429 |
-| Ryu | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.bfc5e2f9a9bc67b1 |
+| Ryu | race | partial | native skill proficiency grants, native walking speed | Clan-specific feature progression, choices, senses and languages retain their source instructions. | n5e.clans.bfc5e2f9a9bc67b1 |
 | Defiance of Fate | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.a26e1832b73a91ee |
 | Dragon Kings Legacy | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.ad407c04194d52b8 |
 | Ryūken | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.c534552db70462f7 |
@@ -408,4 +382,4 @@ Source descriptions, keywords, expressions and provenance are preserved. General
 | Conqueror’s Art: Fang of Ruin | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.a1de6a37bd100f14 |
 | Conqueror’s Art: Monarchs Roar | spell | partial | base-rank eligibility, Chakra cost | Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected. | n5e.clans.022252bc5b862c2d |
 | Ryūken | feat | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.33cc60cbfcf1b9bd |
-| Uchiha | race | manual |  | Mechanics mapping awaits source review; this record preserves its complete source description. | n5e.clans.n5eUchihaClan001 |
+| Uchiha | race | partial | native skill proficiency grants, native walking speed | Clan-specific feature progression, choices, senses and languages retain their source instructions. | n5e.clans.n5eUchihaClan001 |

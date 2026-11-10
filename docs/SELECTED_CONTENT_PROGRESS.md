@@ -37,3 +37,7 @@ S03 handoff documentation: SELECTED_CONTENT_COVERAGE.md lists every record; SELE
 S04 is an additional Gameplay/Data Conversion batch: extend the source-reviewed mappings across the remaining selected records using existing services, and keep exact per-record reasons for mechanics dependent on11/12/13. The current delivery is a usable partial testing library, not a declaration that every selected jutsu or clan feature is automated.
 
 S04a:source-owned native skill/speed clan grants, approved Hijutsu ability choices, Wisdom of the Court and source condition turn expiry; CI42881714057 passed5 checks once. Running honest count6/100, listed in AUTOMATION_TARGET_100.md; subsequent batches continue toward100.
+
+S04b delivery: six buffs (Body Camouflage, Body Flicker, Darkvision, Confidence, Bless, Lions Roar) use native source-linked effects, strongest same-source suppression and scoped expiry. CI42883561617 passed4 checks on attempt2 after correcting a syntax error from attempt1; neither attempt is hidden or reset.
+
+USER PAUSE:after this current buff work, stop at12/100 qualifying automations (11 jutsu,1 clan feature). Remaining88 are outstanding; do not start another item automatically.
