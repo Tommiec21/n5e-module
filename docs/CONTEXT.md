@@ -18,7 +18,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | 04 Saves | Published | v0.1.0-alpha.4; 6 first-attempt checks passed; manual exceptional clauses disclosed |
 | 05 Concentration | Published | v0.1.0-alpha.5; 6 first-attempt checks, explicit manual skill/permission boundaries |
 | 06 Integration | Published trial slice | v0.1.0-alpha.6; 3 first-attempt checks; native live acceptance pending |
-| 07 Packaging | Not started | Verified or explicitly limited prerelease |
+| 07 Packaging | In progress | Codex, batch/07-milestone; slice started17:48UTC; no gameplay test rerun |
 
 ## Expanded remaining schedule
 

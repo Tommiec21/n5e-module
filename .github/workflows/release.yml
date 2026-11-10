@@ -24,7 +24,7 @@ jobs:
           set -euo pipefail
           [[ "$SOURCE_RUN" =~ ^[0-9]+$ ]]
           gh api "repos/$GH_REPO/actions/runs/$SOURCE_RUN" > run.json
-          node -e 'const r=require("./run.json"); if(r.conclusion!=="success" || r.path!==".github/workflows/validate.yml" || r.head_repository.full_name!==process.env.GH_REPO) process.exit(1)'
+          node -e 'const r=require("./run.json"); if(r.conclusion!=="success" || ![".github/workflows/validate.yml",".github/workflows/milestone.yml"].includes(r.path) || r.head_repository.full_name!==process.env.GH_REPO) process.exit(1)'
           gh run download "$SOURCE_RUN" --name foundation-release --dir artifact
           node -e 'const fs=require("fs"),r=require("./run.json"),a=require("./artifact/source.json");if(a.commit!==r.head_sha)process.exit(1)'
       - name: Publish a development prerelease from its checked source commit

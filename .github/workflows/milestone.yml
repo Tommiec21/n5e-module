@@ -1,0 +1,47 @@
+name: Inspect interim milestone
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Successful selected validation run supplying the unchanged runtime artifact
+        required: true
+permissions:
+  contents: read
+  actions: read
+jobs:
+  inspect:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      SOURCE_RUN: ${{ inputs.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Download previously checked artifact
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($env:SOURCE_RUN -notmatch '^\d+$') { throw 'Invalid run ID.' }
+          New-Item -ItemType Directory -Force work | Out-Null
+          gh api "repos/$env:GH_REPO/actions/runs/$env:SOURCE_RUN" | Set-Content work/prior-run.json -Encoding utf8
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          gh run download $env:SOURCE_RUN --name foundation-release --dir work/prior
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          Expand-Archive -LiteralPath work/prior/n5e-module.zip -DestinationPath work/verified-runtime
+      - name: Inspect and package without repeating gameplay tests
+        run: node tools/bounded.mjs 60000 node tools/milestone.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: foundation-release
+          path: dist/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: milestone-evidence
+          path: |
+            docs/check-ledger.json
+            work/*.json

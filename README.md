@@ -2,7 +2,7 @@
 
 Private, staged adaptation of Naruto 5e to dnd5e, guided by SW5e's extension approach and existing N5e rules code.
 
-Status: Batch00 foundation module; gameplay automation is disabled and live Foundry acceptance has not been performed.
+Status: interim development milestone0.1.0-alpha.7, with shared services and six opt-in trial Items; full N5e conversion and live acceptance remain outstanding.
 
 ## Starting a batch
 
@@ -39,3 +39,9 @@ Use npm run check for the selected cumulative gate and npm run package for an al
 Every executable launched by the runner has a deadline of at most590seconds plus at most5seconds of cleanup; CI jobs stop at10minutes.
 
 The package contains only module.json, runtime scripts, README, LICENSE and CHANGELOG; source installations, planning documents and campaign data stay outside it.
+
+## Interim milestone
+
+See docs/MILESTONE_07.md for implemented services, supported inspection targets, source-check evidence, scheduled follow-ups and the opt-in user acceptance checklist.
+
+This private package requires authenticated download and manual installation if Foundry cannot access GitHub assets; no local install or campaign migration has been performed.

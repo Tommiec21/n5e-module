@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.7 — Interim milestone
+
+- Package the unchanged Batch06 runtime with updated version and milestone documentation.
+- Link runtime byte hashes to the previously checked artifact, inspect archive allowlisting/version agreement and retain provenance.
+- Publish an annotated milestone version without rerunning gameplay checks; remaining work stays assigned to08–20.
+
 ## 0.1.0-alpha.6
 
 - Add six opt-in native trial jutsu Items and a scoped activity-use bridge.

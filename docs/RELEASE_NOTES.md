@@ -1,11 +1,11 @@
-# Batch06 representative integration
+# Batch07 interim development milestone
 
-Goal: connect shared services through a source-reviewed native Item/activity trial set, proving the module workflow before full content conversion.
+Goal: freeze the shared-service/native-trial work into a reproducible interim baseline, with accurate limitations and a user-led acceptance checklist.
 
-Trial Items are Chakra Bolt, Adept Healing, Butterfly Kick, Bane, Arms of Buddha and Fracturing Splinter; the import API is opt-in and native embedded IDs are generated safely.
+Gameplay runtime is byte-identical to the successful Batch06 artifact; package inspection checks provenance, host bindings, archive contents and version agreement without repeating gameplay tests.
 
-Native actor data/stat automation, full component/range/eligibility checks and general activity coverage remain in Batches08/10/12/14/16; source requirements must be confirmed explicitly in the trial dialog.
+Seven selected gameplay/component gates previously passed34 checks with no failures/skips/bypasses; no live verification or campaign migration occurred.
 
-Butterfly Kick is D-rank only in this trial; Bane suppression, higher-rank exceptional clauses and attack-hit confirmation remain source-directed follow-ups, not hidden permanent omissions.
+The module is not feature-complete, and all remaining completion work is assigned to Batches08–20.
 
-No live verification or local installation; use the acceptance checklist before relying on the trial in play.
+Private assets require authenticated download; see docs/MILESTONE_07.md and docs/TRIAL_ACCEPTANCE.md before user-led testing.
