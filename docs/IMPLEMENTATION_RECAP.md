@@ -35,7 +35,7 @@ The player chooses third-cast replacement and affordable upkeep selection; clone
 
 ## Validation and publication
 
-Batches00–04 each passed one selected CI run:4,4,5,6 and6 checks respectively, with no failures/skips or bypasses; Batch05 evidence is appended after publication.
+Batches00–05 each passed one selected CI run:4,4,5,6,6 and6 checks respectively, totalling31 passed with no failures/skips or bypasses.
 
 Checks are host-independent/native-shaped automated checks, not a live Foundry multiplayer or campaign acceptance test; earlier unaffected gates were not repeatedly rerun.
 
@@ -50,3 +50,5 @@ The existing968-jutsu standalone-system import has not been converted into nativ
 No campaign/world/token/UUID migration, polished character sheet, universal Midi-QOL/DAE compatibility, full combat automation or distributed exactly-once guarantee is claimed.
 
 Some APIs/controls already operate independently, but gameplayEnabled:false still signals that the whole N5e game integration is unfinished.
+
+Batch05 publication: https://github.com/Tommiec21/n5e-module/releases/tag/v0.1.0-alpha.5; CI42860468142 and release42860690181 succeeded using runtime commit75aedb05c53eb1961e25bf972acb8814c1192530.

@@ -23,6 +23,6 @@ Explicit user rulings override reference text; unanswered items remain pending a
 
 ## Further source review before implementation
 
-Third-cast replacement, insufficient-upkeep selection and condition-specific stacking must follow source and user rulings; ask only if that review cannot settle them.
+Third-cast replacement, insufficient-upkeep player selection and additive capped condition ranks are confirmed in RULINGS.md; multi-source decay allocation remains manual pending source review.
 
 Native species progression and redesigned Clan Feats/tables remain outside these contracts and cannot be silently imported as a dependency.

@@ -116,7 +116,28 @@
       "status": "passed",
       "affectedBehavior": [],
       "nextAction": "No repeat without affected changes; native live acceptance remains user-led."
+    },
+    {
+      "scenarioId": "dual-concentration-upkeep-and-damage-check",
+      "batch": "05",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "75aedb05c53eb1961e25bf972acb8814c1192530",
+          "startedAt": "2026-11-10T17:01:01Z",
+          "endedAt": "2026-11-10T17:01:02Z",
+          "result": "passed",
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42860468142",
+          "tests": 6,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": [],
+      "nextAction": "Do not repeat without affected changes; full native activity/skill acceptance remains outstanding."
     }
   ],
-  "history": "Batches00–04 each ran their selected gate once in CI; no local or live test runs."
+  "history": "Batches00–05 each ran one selected CI gate, totalling31 passed checks with0 failures/skips/bypasses; no local or live tests."
 }

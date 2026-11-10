@@ -2,7 +2,7 @@
 
 Updated November 10, 2026; repository owner Tommiec21, project n5e-module, visibility private.
 
-Current milestone: Batch04 graded-save services published privately as v0.1.0-alpha.4; full item/activity integration remains for Batch06.
+Current milestone: Batch05 dual concentration published privately as v0.1.0-alpha.5; shared services exist and complete item/activity integration remains for Batch06.
 
 Current scope: reusable prompts, private repository, version history and bounded future implementation batches for ranked conditions, HP/Chakra damage, graded saves and dual concentration.
 
@@ -16,7 +16,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | 02 Conditions | Published with disclosed manual paths | v0.1.0-alpha.2; 5 checks passed once, no live verification |
 | 03 Damage | Published | v0.1.0-alpha.3; 6 first-attempt checks passed; user live acceptance outstanding |
 | 04 Saves | Published | v0.1.0-alpha.4; 6 first-attempt checks passed; manual exceptional clauses disclosed |
-| 05 Concentration | In progress | Codex, batch/05-concentration; slice started16:53UTC |
+| 05 Concentration | Published | v0.1.0-alpha.5; 6 first-attempt checks, explicit manual skill/permission boundaries |
 | 06 Integration | Not started | Representative jutsu only |
 | 07 Packaging | Not started | Verified or explicitly limited prerelease |
 
@@ -127,3 +127,19 @@ CI42858609483 passed6 selected checks on first attempt with0 failures/skips; rel
 Private v0.1.0-alpha.4 assets: module.json872bytes, n5e-module.zip74291bytes; no local installation, live verification or bypasses.
 
 Next: Batch05 dual concentration and upkeep using the confirmed single-check/non-Stable failure and combined-final-damage policies; do not start automatically.
+
+## Batch05 completed checkpoint
+
+Codex slice16:53–17:03UTC, under ten minutes; runtime75aedb05c53eb1961e25bf972acb8814c1192530, branch batch/05-concentration.
+
+Implemented two source-linked casts, player-selected replacement/upkeep, actual-rank/cost retention, native attribute consumption, Stable/Efficient distinction, captured damage checks and source-scoped cleanup.
+
+User confirmed third-cast replacement selection and player choice when upkeep is insufficient; no initial cast payment is duplicated by beginCast.
+
+CI42860468142 passed6 selected checks on first attempt with0 failures/skips; release42860690181 reused the29-file artifact without a second test gate.
+
+Private v0.1.0-alpha.5: module.json889bytes and n5e-module.zip92071bytes; recap in docs/IMPLEMENTATION_RECAP.md.
+
+Full Chakra Control calculation is not converted: a configured native skill is used if present, otherwise the user supplies a full modifier for native dice; linked effect permission failures require owner/GM reconciliation.
+
+No full Item/activity pipeline, compendium/world migration, local installation or live verification; next is Batch06 representative integration.

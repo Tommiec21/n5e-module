@@ -16,7 +16,7 @@ Confirmed graded saves: meet DC succeeds, beat by5+ critically succeeds, miss by
 
 Confirmed concentration: one failed check ends both non-Stable jutsu; use combined final HP/Chakra damage after defenses, including temporary-pool absorption.
 
-Confirm third-cast replacement and insufficient-upkeep selection; preserve actual cast rank and actual paid cost in the eventual state contract.
+Third-cast replacement and insufficient-upkeep selection are confirmed below; preserve actual cast rank and actual paid cost.
 
 Confirm condition-specific source stacking and approved progression tables where reference text conflicts with prior user directions.
 
