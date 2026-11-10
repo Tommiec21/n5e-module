@@ -51,7 +51,14 @@ export async function applyCastEffect(actor, request) {
     const source = await fromUuid(request.dependentOn);
     if (source?.flags?.["n5e-module"]?.maintainedCast?.castId !== request.source.castId) throw new Error("The originating concentration has ended.");
   }
-  const data = { name: request.name, img: request.img, origin: request.source.itemUuid, transfer: false, changes: structuredClone(request.changes), flags: { "n5e-module": { castEffect: structuredClone(request), masterySources: request.masteryTargets.map(target => ({ target, source: request.source.itemUuid })) }, ...(request.dependentOn ? { dnd5e: { dependentOn: request.dependentOn } } : {}) };
+  const data = {
+    name: request.name, img: request.img, origin: request.source.itemUuid, transfer: false,
+    changes: structuredClone(request.changes),
+    flags: {
+      "n5e-module": { castEffect: structuredClone(request), masterySources: request.masteryTargets.map(target => ({ target, source: request.source.itemUuid })) },
+      ...(request.dependentOn ? { dnd5e: { dependentOn: request.dependentOn } } : {})
+    }
+  };
   if (request.expiresAt !== null) data.duration = { startTime: game.time.worldTime, seconds: Math.max(0, request.expiresAt - game.time.worldTime) };
   const result = await actor.createEmbeddedDocuments("ActiveEffect", [data]);
   winners.delete(actor);

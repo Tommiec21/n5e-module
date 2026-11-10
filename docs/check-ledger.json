@@ -288,6 +288,27 @@
       ],
       "status": "passed",
       "affectedBehavior": []
+    },
+    {
+      "scenarioId": "selected-buffs-native-dependency-stacking-and-expiry",
+      "batch": "selected-04b",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "9ee6c5484e1646d0870bb28e241e621663335a96",
+          "result": "failed",
+          "tests": 1,
+          "failed": 1,
+          "skipped": 0,
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42883195079",
+          "cause": "Missing closing object brace in effects.mjs:54 caused a syntax error before individual gameplay scenarios executed."
+        }
+      ],
+      "status": "pending",
+      "affectedBehavior": [
+        "Buff batch not released; second bounded attempt reserved after the syntax correction."
+      ]
     }
   ],
   "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08–10:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."

@@ -289,3 +289,5 @@ This slice owns native source-preserving clan proficiency/speed grants, Hijutsu 
 S04a checkpoint19:07UTC:source409eb98dd50c279bf7ee33a550226b560ca5ad71, five focused checks passed once in CI42881714057, private alpha13 release dispatched. Qualifying count6/100 (5 jutsu,1 clan feature); partial grants to8 clan identities do not count. Next S04b reuses native dnd5e dependentOn effects for source-linked buffs and cleanup; do not build a parallel dependency/socket engine. Native source confirmed DependentDocumentMixin and ActiveEffect5e._onDelete use dnd5e.registry.dependents and activeGM cleanup.
 
 S04b active19:07UTC: native dependentOn source effects, most-potent same-source suppression per core chapter9, and six reviewed buffs; stop target100 remains active.
+
+User requested pause after current jutsu during S04b. Finish only the active correction/check/publication checkpoint, then pause; do not begin S04c or continue toward100 until resumed. First S04b attempt failed before scenarios due to a missing object brace in effects.mjs; correction uses cumulative attempt2, not a fresh budget.
