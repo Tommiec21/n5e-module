@@ -2,7 +2,7 @@
 
 Updated November 10, 2026; repository owner Tommiec21, project n5e-module, visibility private.
 
-Current milestone: planning baseline prepared; no runtime module or gameplay feature implemented.
+Current milestone: planning baseline published privately as v0.0.0-plan.1; no runtime module or gameplay feature implemented.
 
 Current scope: reusable prompts, private repository, version history and bounded future implementation batches for ranked conditions, HP/Chakra damage, graded saves and dual concentration.
 
@@ -10,7 +10,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 
 | Batch | Status | Checkpoint |
 | --- | --- | --- |
-| Planning baseline | Prepared | Prompt pack and rules recorded |
+| Planning baseline | Published | 88e8193, annotated tag v0.0.0-plan.1 |
 | 00 Foundation | Not started | Native package and time-bounded tooling |
 | 01 Contracts | Not started | Pending rule questions and canonical data contracts |
 | 02 Conditions | Not started | Registry/state/lifecycle adapter |
@@ -31,3 +31,9 @@ A tool yielding output does not stop its underlying process; enforce the ten-min
 Explicit user rulings override conflicting book/code text; preserve source provenance and ask about unresolved contradictions.
 
 Research findings are design evidence, not a claim of live compatibility; no live verification is permitted.
+
+## Publication record
+
+Private repository https://github.com/Tommiec21/n5e-module created with user-selected private visibility; initial commit and annotated planning tag pushed successfully.
+
+Eight batch prompts plus COMMON, rules, reuse map and ledger are versioned; no gameplay tests or live verification ran, and no command approached the 600-second ceiling.
