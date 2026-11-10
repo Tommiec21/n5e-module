@@ -2,7 +2,7 @@
 
 Updated November 10, 2026; repository owner Tommiec21, project n5e-module, visibility private.
 
-Current milestone: Batch05 dual concentration published privately as v0.1.0-alpha.5; shared services exist and complete item/activity integration remains for Batch06.
+Current milestone: Batch06 six-jutsu native integration trial published privately as v0.1.0-alpha.6; generalization remains assigned to08–16.
 
 Current scope: reusable prompts, private repository, version history and bounded future implementation batches for ranked conditions, HP/Chakra damage, graded saves and dual concentration.
 
@@ -17,7 +17,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | 03 Damage | Published | v0.1.0-alpha.3; 6 first-attempt checks passed; user live acceptance outstanding |
 | 04 Saves | Published | v0.1.0-alpha.4; 6 first-attempt checks passed; manual exceptional clauses disclosed |
 | 05 Concentration | Published | v0.1.0-alpha.5; 6 first-attempt checks, explicit manual skill/permission boundaries |
-| 06 Integration | In progress | Codex, batch/06-integration; slice started17:12UTC |
+| 06 Integration | Published trial slice | v0.1.0-alpha.6; 3 first-attempt checks; native live acceptance pending |
 | 07 Packaging | Not started | Verified or explicitly limited prerelease |
 
 ## Expanded remaining schedule
@@ -163,3 +163,21 @@ Docs/prompts update only; no implementation or validation rerun.
 All00–20 prompts and the remaining schedule now carry the user-requested primary category; docs/BATCH_CATEGORIES.md is the complete categorized index.
 
 Documentation only, with no implementation changes or check reruns.
+
+## Batch06 completed checkpoint
+
+Codex slice17:12–17:22UTC, under ten minutes; runtimeac042e23609e9edd285d3554010a885e12a02032, branch batch/06-integration.
+
+Goal: join the shared services through native Items/activities for a small source-reviewed set, proving the module’s integration pattern before broad content conversion.
+
+Delivered six opt-in trial Items with preserved source identity/text and native activity modes: Chakra Bolt, Adept Healing, Butterfly Kick, Bane, Arms of Buddha and Fracturing Splinter.
+
+Scoped native activity interception joins one payment, native rolls, defender-owned saves, damage/healing cards and maintained-cast registration; no original installation was changed.
+
+CI42863913486 passed3 selected integration checks first attempt with0 failures/skips; release42864068634 reused the34-file artifact.
+
+Private v0.1.0-alpha.6 assets: module.json884bytes and n5e-module.zip142981bytes; no live verification.
+
+Follow-up owners:08 full stat calculation,10 requirements/general casting,11 exceptions,12 martial/advanced upcast branches,14 full968-entry conversion,16 controls; the trial requires explicit stat inputs/eligibility confirmation and GM hit adjudication.
+
+Next:07 interim milestone; final completion reports must repeat each batch goal and its module role per the user’s directive.

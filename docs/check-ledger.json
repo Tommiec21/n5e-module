@@ -137,7 +137,28 @@
       "status": "passed",
       "affectedBehavior": [],
       "nextAction": "Do not repeat without affected changes; full native activity/skill acceptance remains outstanding."
+    },
+    {
+      "scenarioId": "native-trial-jutsu-vertical-slice",
+      "batch": "06",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "ac042e23609e9edd285d3554010a885e12a02032",
+          "startedAt": "2026-11-10T17:20:35Z",
+          "endedAt": "2026-11-10T17:20:37Z",
+          "result": "passed",
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42863913486",
+          "tests": 3,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": [],
+      "nextAction": "User-led native Item/activity acceptance is outstanding; do not repeat unaffected gates."
     }
   ],
-  "history": "Batches00–05 each ran one selected CI gate, totalling31 passed checks with0 failures/skips/bypasses; no local or live tests."
+  "history": "Batches00–06 each ran one selected gate:34 checks passed,0 failed/skipped/bypassed; no live tests."
 }
