@@ -2,7 +2,7 @@
 
 Updated November 10, 2026; repository owner Tommiec21, project n5e-module, visibility private.
 
-Current milestone: Batch02 ranked-condition services published privately as v0.1.0-alpha.2; casting and damage integration remain disabled.
+Current milestone: Batch03 HP/Chakra damage services published privately as v0.1.0-alpha.3; full native/third-party casting-card integration remains deferred.
 
 Current scope: reusable prompts, private repository, version history and bounded future implementation batches for ranked conditions, HP/Chakra damage, graded saves and dual concentration.
 
@@ -14,7 +14,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | 00 Foundation | Published | v0.1.0-alpha.0; first CI attempt, 4 passed; no live verification |
 | 01 Contracts | Published | v0.1.0-alpha.1; 4 first-attempt contract checks passed; pending rulings remain explicit |
 | 02 Conditions | Published with disclosed manual paths | v0.1.0-alpha.2; 5 checks passed once, no live verification |
-| 03 Damage | In progress | Codex, batch/03-damage; slice started16:33UTC |
+| 03 Damage | Published | v0.1.0-alpha.3; 6 first-attempt checks passed; user live acceptance outstanding |
 | 04 Saves | Not started | Native rolls and graded outcomes |
 | 05 Concentration | Not started | Two casts, upkeep and damage checks |
 | 06 Integration | Not started | Representative jutsu only |
@@ -93,3 +93,21 @@ Manual/deferred paths are explicit: multi-source decay allocation, movement/rest
 Native status picker entries are icons only unless applied through the ranked-condition API/dialog; documentation corrects this distinction without claiming rank-aware native status toggling.
 
 Next: Batch03 HP/Chakra damage and condition-damage request consumption; do not start it automatically.
+
+## Batch03 completed checkpoint
+
+Codex slice16:33–16:41UTC, under ten minutes; runtime067826d05eab7307b314ef6327a081c146b9d547, branch batch/03-damage.
+
+Reused original damagePlan/healPlan, extended native creature models by inheritance with n5e.chakra and DR, and added one owner-checked resource application path with per-actor local queues and bounded receipts.
+
+Implemented independent HP/CP DR, user-selected same-pool ordering, dynamic reduction, confirmed multiplier cancellation, temporary pools, original-roll association, explicit retargeting, recovery restrictions and native zero-HP updates.
+
+Condition requests now roll native cards with manual Apply/Retarget; final combined HP/Chakra damage including temporary absorption emits n5e-module.damageApplied for future concentration.
+
+CI42856612727 passed6 selected checks on first attempt with0 failures/skips; release42856818354 reused the19-file artifact without retesting.
+
+Private v0.1.0-alpha.3 includes module.json888bytes and n5e-module.zip62753bytes; no local installation, live verification or bypasses.
+
+Scope boundaries: ordinary host/third-party cards remain native, resource maxima/DR need explicit configuration until progression/UI integration, and unsupported type-to-pool conversion fails rather than guessing.
+
+Next: Batch04 graded saves; do not start it automatically.

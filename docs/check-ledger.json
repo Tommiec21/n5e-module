@@ -74,7 +74,28 @@
       "status": "passed",
       "affectedBehavior": [],
       "nextAction": "No repeat unless affected code changes; user-led native acceptance remains outstanding."
+    },
+    {
+      "scenarioId": "dual-pool-damage-application",
+      "batch": "03",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "067826d05eab7307b314ef6327a081c146b9d547",
+          "startedAt": "2026-11-10T16:39:03Z",
+          "endedAt": "2026-11-10T16:39:04Z",
+          "result": "passed",
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42856612727",
+          "tests": 6,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": [],
+      "nextAction": "No repeat without affected changes; live acceptance remains user-led."
     }
   ],
-  "history": "Batch00 and Batch01 each executed their selected gate once in CI; no local or live test runs."
+  "history": "Batches00–03 each ran their selected gate once in CI; no local or live test runs."
 }
