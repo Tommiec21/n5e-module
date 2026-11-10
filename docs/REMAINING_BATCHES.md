@@ -116,3 +116,7 @@ Every discovered omission must identify an owning batch, its source/ruling depen
 An exhausted check is recorded as bypassed-unverified with the affected behavior retained in the owning batch, never silently marked complete.
 
 The schedule does not promise universal third-party compatibility or distributed exactly-once execution; selected supported profiles and documented duplicate protection have concrete acceptance scope.
+
+## Planned13C — Clan advancement
+
+User-requested planning only; see [CLAN_ADVANCEMENT_PLAN.md](CLAN_ADVANCEMENT_PLAN.md). Ordered sub-batches13C.1–13C.6 cover source audit, shared native builders, progression/choices, player controls, opt-in reconciliation and focused offline verification; implementation remains for later.

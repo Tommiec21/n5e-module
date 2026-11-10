@@ -319,3 +319,11 @@ Goal:convert Scout-Nin,Ninjutsu Specialist,Taijutsu Specialist into native modul
 User explicitly permits extensive mechanics deferred; CLASS_CONVERSION.md enumerates Chakra rolls/custom resources, maneuvers/moldings, stances, reaction/conditional subclass automation and non-native choices. No claim that all355 source feature effects are automated. The separate jutsu/clan100 target remains paused at12, unchanged by class conversion.
 
 Private alpha15 publication dispatched using the48-file checked artifact. No live Foundry verification, installed module/world mutation, new subclass lore or resumption of jutsu work.
+
+## Future clan advancement plan recorded
+
+User requested a plan for later, not implementation. CLAN_ADVANCEMENT_PLAN.md defines13C.1–13C.6 with required batch categories, reuse of native species/class advancement builders, source-owned grants/choices, branch filtering and opt-in existing-character reconciliation.
+
+Known audit cases are explicit:Hyuga Main/Side exclusivity, Senju Verdant Bloodline3rd-versus7th-level conflict, Hebi duplicate/upgrade stance records, Aburame/Uchiha option progression and clan resource prerequisites. Resolve from source first; ask the user only about remaining rule ambiguity.
+
+No gameplay/content implementation, live tests, packaging change or test rerun for this documentation-only request. Clan Feats remain excluded and the12/100 jutsu/clan-feature automation task remains paused.
