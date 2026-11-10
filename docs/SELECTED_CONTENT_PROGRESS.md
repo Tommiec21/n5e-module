@@ -35,3 +35,5 @@ S03 handoff documentation: SELECTED_CONTENT_COVERAGE.md lists every record; SELE
 ## Next requested work
 
 S04 is an additional Gameplay/Data Conversion batch: extend the source-reviewed mappings across the remaining selected records using existing services, and keep exact per-record reasons for mechanics dependent on11/12/13. The current delivery is a usable partial testing library, not a declaration that every selected jutsu or clan feature is automated.
+
+S04a:source-owned native skill/speed clan grants, approved Hijutsu ability choices, Wisdom of the Court and source condition turn expiry; CI42881714057 passed5 checks once. Running honest count6/100, listed in AUTOMATION_TARGET_100.md; subsequent batches continue toward100.
