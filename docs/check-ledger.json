@@ -252,6 +252,24 @@
       ],
       "status": "passed",
       "affectedBehavior": []
+    },
+    {
+      "scenarioId": "selected-content-casting-and-reviewed-d-rank-mechanics",
+      "batch": "selected-02",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "bce0827705accec08af131b10cbff545b7dd2468",
+          "result": "passed",
+          "tests": 5,
+          "failed": 0,
+          "skipped": 0,
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42879782786"
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": []
     }
   ],
   "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08–10:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."

@@ -2,7 +2,7 @@
 
 Goal: connect selected native records to existing casting services without rebuilding special gameplay engines.
 
-242 jutsu connect source cost/components and available concentration metadata;12 have reviewed combat/healing modes,4 of those have their base-rank core fully connected.238 records are partial and135 are manual (including118 features/options/stances and17 unresolved-cost jutsu); status is recorded per item.
+242 jutsu connect source cost/components and available concentration metadata;12 have reviewed combat/healing modes,4 of those have their base-rank core fully connected.238 records are partial and135 are manual (including118 features/options/stances,8 clan identities and9 unresolved-cost jutsu); status is recorded per item.
 
 Known manual work: feature grants/stances, higher-rank branches, martial sequencing, conditional riders, target/range/trigger confirmation, native states and consumable inventory choices. Casting menus intentionally permit only the authored base rank. Source-defined unresolved costs disable automatic casting.
 
