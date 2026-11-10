@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "policy": {
+    "maximumAttemptsPerScenario": 3,
+    "countsAcross": [
+      "local",
+      "CI",
+      "resumed slices"
+    ],
+    "afterExhaustion": "bypassed-unverified; preserve evidence and continue independent work",
+    "maximumProcessSeconds": 600,
+    "noLiveVerification": true
+  },
+  "scenarios": [],
+  "history": "No gameplay checks executed in this repository; retain original system history separately."
+}

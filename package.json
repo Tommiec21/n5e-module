@@ -1,0 +1,10 @@
+{
+  "name": "n5e-module",
+  "version": "0.0.0-plan.1",
+  "private": true,
+  "description": "Planning baseline for the N5e dnd5e adaptation module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tommiec21/n5e-module.git"
+  }
+}

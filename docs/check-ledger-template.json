@@ -1,0 +1,20 @@
+{
+  "scenarioId": "stable-id",
+  "batch": "00",
+  "attempts": [
+    {
+      "number": 1,
+      "location": "local-or-CI",
+      "commit": "sha",
+      "startedAt": "ISO timestamp",
+      "endedAt": "ISO timestamp",
+      "result": "passed|failed|timed-out",
+      "evidence": "path-or-run-url",
+      "cause": "brief cause"
+    }
+  ],
+  "status": "pending|passed|bypassed-unverified",
+  "affectedBehavior": [],
+  "nextAction": "bounded follow-up",
+  "releaseDisclosure": "required when unresolved"
+}
