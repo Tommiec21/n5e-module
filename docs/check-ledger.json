@@ -11,6 +11,28 @@
     "maximumProcessSeconds": 600,
     "noLiveVerification": true
   },
-  "scenarios": [],
-  "history": "No gameplay checks executed in this repository; retain original system history separately."
+  "scenarios": [
+    {
+      "scenarioId": "foundation-contract-and-process-lifecycle",
+      "batch": "00",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "e688636a1c8333056ec4ac713b0c07199935c8ab",
+          "startedAt": "2026-11-10T13:59:20Z",
+          "endedAt": "2026-11-10T13:59:25Z",
+          "result": "passed",
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42829555459",
+          "tests": 4,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": [],
+      "nextAction": "Do not rerun unless affected code changes; two attempts remain under the existing policy."
+    }
+  ],
+  "history": "Batch00 selected gate executed once in CI; no local or live test runs."
 }

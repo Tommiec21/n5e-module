@@ -2,7 +2,7 @@
 
 Updated November 10, 2026; repository owner Tommiec21, project n5e-module, visibility private.
 
-Current milestone: planning baseline published privately as v0.0.0-plan.1; no runtime module or gameplay feature implemented.
+Current milestone: Batch00 published privately as v0.1.0-alpha.0; native module foundation exists and gameplay automation is disabled.
 
 Current scope: reusable prompts, private repository, version history and bounded future implementation batches for ranked conditions, HP/Chakra damage, graded saves and dual concentration.
 
@@ -11,7 +11,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | Batch | Status | Checkpoint |
 | --- | --- | --- |
 | Planning baseline | Published | 88e8193, annotated tag v0.0.0-plan.1 |
-| 00 Foundation | In progress | Codex, branch batch/00-foundation; slice started 2026-11-10 13:55 UTC |
+| 00 Foundation | Published | v0.1.0-alpha.0; first CI attempt, 4 passed; no live verification |
 | 01 Contracts | Not started | Pending rule questions and canonical data contracts |
 | 02 Conditions | Not started | Registry/state/lifecycle adapter |
 | 03 Damage | Not started | HP/CP planning and application |
@@ -37,3 +37,19 @@ Research findings are design evidence, not a claim of live compatibility; no liv
 Private repository https://github.com/Tommiec21/n5e-module created with user-selected private visibility; initial commit and annotated planning tag pushed successfully.
 
 Eight batch prompts plus COMMON, rules, reuse map and ledger are versioned; no gameplay tests or live verification ran, and no command approached the 600-second ceiling.
+
+## Batch00 completed checkpoint
+
+Codex work slice: 2026-11-10 13:55–14:02 UTC, under ten minutes; runtime commit e688636a1c8333056ec4ac713b0c07199935c8ab, branch batch/00-foundation.
+
+Added module.json, host compatibility guard and init/ready status API without model replacement or gameplay hooks; supported inspection target is Foundry13.347+ within v13 and dnd5e5.3.3.
+
+Added bounded process runner with cancellation/child-tree cleanup, cumulative gate ledger, four foundation checks, deterministic allowlisted ZIP packaging and artifact-only release workflow.
+
+CI42829555459 passed four checks on its first attempt with no failures or skips; publication42829787396 reused that artifact without retesting.
+
+Private development prerelease v0.1.0-alpha.0 contains module.json (755 bytes) and n5e-module.zip (5255 bytes); native Foundry acceptance remains unverified and private assets require authenticated access.
+
+No live instance, campaign migration, installed package changes or gameplay automation; no bypassed checks.
+
+Next: Batch01 contracts and pending rule questions only when requested; do not begin another batch automatically.
