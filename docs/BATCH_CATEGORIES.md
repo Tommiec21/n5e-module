@@ -14,7 +14,7 @@ One primary category describes each batch’s aim; supporting implementation may
 | 07 | Interim milestone | Engine Set up | Published interim baseline |
 | 08 | Skills and Mastery | Gameplay System | Published component delivery |
 | 09 | Condition lifecycle completion | Gameplay System | Published component delivery |
-| 10 | Casting integration | Gameplay System | Pending |
+| 10 | Casting integration | Gameplay System | Published component delivery; user acceptance pending |
 | 11 | Conditional effects and exceptions | Gameplay System | Pending |
 | 12 | Martial sequences and Clash | Gameplay System | Pending |
 | 13 | Character options and progression | Data Conversion System | Pending |

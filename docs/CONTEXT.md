@@ -247,3 +247,19 @@ Next requested batch10 completes general casting/concentration integration, then
 ## Batch10 active scope
 
 Codex branch batch/10-casting, slice18:22UTC; general reviewed casting descriptors, eligibility, native payment and pre-payment concentration choices. Stop after10; no live testing.
+
+## Batch10 completed checkpoint and requested stop
+
+Slice18:22–18:31UTC, under ten minutes; runtime1ad05a3d3a21d5ba47f4ce5f59ae93047177129e, branch batch/10-casting.
+
+Goal: complete the general reviewed casting bridge; role: connect native jutsu activities to shared eligibility, cost, rolls, damage/saves and dual-concentration services without per-jutsu workflow duplication.
+
+Delivered rank limits and explicit overrides, base-rank ability requirements with Hijutsu/upcast exceptions, components/armor/mobility/condition checks, affinity tags, discipline ability/bonus grants, authored cost and upcast choices, native material and Chakra consumption, pre-payment replacement, duplicate/overlap guards and automatic maintained records.
+
+CI42875586246 passed8 selected checks on attempt1,0 failures/skips; release42875721607 reused the42-file artifact without retesting. Private v0.1.0-alpha.10 assets: module.json878bytes, ZIP183498bytes.
+
+Physical facts unavailable in native data require confirmation; exceptional effects and interrupted longer casting remain11, martial branches12, automatic progression grants13, full968-entry conversion14 and final sheet editing16. Existing sample-specific modes remain supported beside general authored profiles; no full-content or final integrated certification is claimed.
+
+53 selected component/integration checks across00–10 plus one Batch07 package inspection are historical scoped evidence, not live/user acceptance. No tests bypassed, no live Foundry or local installation; user-led game testing remains pending.
+
+Do not duplicate Batch10 or begin11 automatically: user asked to stop at10. The repository context/profiles are authoritative; older OneDrive planning copies were not rewritten.

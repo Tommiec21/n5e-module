@@ -64,3 +64,11 @@ Batch07 published0.1.0-alpha.7 with30 unchanged runtime files linked to that che
 Total prior selected component/integration checks:34 passed; one additional packaging inspection passed, and user-led live acceptance remains pending.
 
 The user requested a stop after07;08 is next only upon a new instruction.
+
+## Batch10 — Gameplay System
+
+Goal: general casting integration; role: connect reviewed native activities to rank/component eligibility, shared calculations, native payment and dual concentration without per-jutsu workflow scripts.
+
+Delivered authored version-one profiles, level/rank limits, ability thresholds/exceptions, component/armor/mobility checks, explicit affinity/ability grants, authored costs/upcast expressions, native materials, pre-payment replacement and local overlap guards. CI42875586246 passed8 checks once; no live/user acceptance.
+
+Remaining11–20 retain exceptions/longer casting, martial choices, progression, full content conversion, final UI, compatibility, migration, integrated checks and final supported release. Stop after10 at the user milestone.

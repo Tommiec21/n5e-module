@@ -6,7 +6,7 @@ Implemented: reviewed version-one Item casting profiles; E–S rank limits and e
 
 Physical free hands, seals, specific weapons and other prerequisites require player confirmation where native data cannot establish the fact. Batch13 supplies automatic feature/progression grants and Batch16 supplies final sheet editing; Batch11 owns exceptional effects and longer-casting interruptions, Batch12 martial sequencing, Batch14 bulk conversion. These remain scheduled work.
 
-Validation: selected Batch10 automated gate pending; no live verification or local installation. Document writes across actor/items/effects are not a distributed transaction; a transport/write failure requires inspecting resources and effects before retrying.
+Validation: CI42875586246 passed8 selected checks on attempt1,0 failures/skips, with42 allowlisted package files; no live verification or local installation. Document writes across actor/items/effects are not a distributed transaction; a transport/write failure requires inspecting resources and effects before retrying.
 
 # Batch09 condition lifecycle completion
 

@@ -2,7 +2,7 @@
 
 Updated November10,2026; this schedule supersedes earlier descriptions of implementation boundaries.
 
-Batches00–07 have published component/trial/interim milestones, while the additional integration and completion work below is explicitly planned, not an assumed exclusion or a claim that it already works.
+Batches00–10 have published component/trial/interim milestones, while the additional integration and completion work below is explicitly planned, not an assumed exclusion or a claim that it already works.
 
 ## Category meanings
 
@@ -21,8 +21,7 @@ Number07 is the published interim milestone, and number20 is the pending full su
 
 | Batch | Category | Work remaining | Depends on |
 | --- | --- | --- | --- |
-| 10 | Gameplay System | **Complete casting and concentration integration** — Implement general rank/DC/cost/components/eligibility/upcast choices, native payment and automatic maintained-cast registration. | 06,08,09 |
-| 11 | Gameplay System | **Conditional effects and exceptional jutsu** — Implement shared conditional bonus/suppression, graded outcome riders, aura targeting, resource-linked modes and source-based effect cleanup. | 09,10 |
+| 11 | Gameplay System | **Conditional effects and exceptional jutsu** — Implement shared conditional bonus/suppression, graded outcome riders, aura targeting, resource-linked modes, interrupted longer casting and source-based effect cleanup. | 09,10 |
 | 12 | Gameplay System | **Martial sequences and simple Clash** — Integrate weapon/unarmed expressions, Chain, Combo/Finisher eligibility and opposed-skill Clash. | 08,10,11 |
 | 13 | Data Conversion System | **Character options, progression and resources** — Convert classes, clan-as-species, backgrounds and their approved features/choices/advancements, including automatic Chakra maxima, DR contributions and source HP/Chakra/Hit-Die short/long/full rest recovery. | 08,09,10 |
 | 14 | Data Conversion System | **Full Jutsu compendium conversion** — Convert the existing968 source entries into native module content with preserved identities, expressions, variants and Discipline/Group/Rank folders. | 10,11,12,13 |
@@ -35,7 +34,7 @@ Number07 is the published interim milestone, and number20 is the pending full su
 
 ## Completion criteria
 
-### 10: Complete casting and concentration integration
+### Published10: Complete casting and concentration integration
 
 Category: **Gameplay System**.
 

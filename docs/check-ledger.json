@@ -216,7 +216,25 @@
       ],
       "status": "passed",
       "affectedBehavior": []
+    },
+    {
+      "scenarioId": "general-casting-eligibility-payment-and-concentration",
+      "batch": "10",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "1ad05a3d3a21d5ba47f4ce5f59ae93047177129e",
+          "result": "passed",
+          "tests": 8,
+          "failed": 0,
+          "skipped": 0,
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42875586246"
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": []
     }
   ],
-  "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests."
+  "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08–10:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."
 }
