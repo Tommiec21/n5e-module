@@ -1,9 +1,9 @@
-# Batch03 HP and Chakra damage
+# Batch04 graded saves
 
-Native HP and inherited Chakra fields feed the reused N5e damage/healing planners; module-owned cards apply through one owner-checked path with capped receipts.
+Native saving throws feed the confirmed N5e tier resolver, with explicit per-activity/rank/mode outcomes and manual Apply controls.
 
-Condition damage rolls once into a native card with manual Apply/Retarget, and combined final HP/Chakra damage emits an event for Batch05 concentration.
+Damage uses the original source roll and exactly one save multiplier; conditions use stable per-source IDs, while binary native saves retain native behavior.
 
-Unmodified dnd5e and third-party cards remain native until their later casting/integration adapters; they do not automatically acquire N5e rules from this release.
+Bane is a demonstration table, not a full compendium conversion; bonus suppression and other exceptional outcome clauses remain manual.
 
-No live verification or local installation; Chakra maxima and DR must be configured explicitly until character progression/UI integration.
+No live verification, local installation or automatic conversion of ordinary host/third-party save cards occurred.

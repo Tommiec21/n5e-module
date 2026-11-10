@@ -15,7 +15,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | 01 Contracts | Published | v0.1.0-alpha.1; 4 first-attempt contract checks passed; pending rulings remain explicit |
 | 02 Conditions | Published with disclosed manual paths | v0.1.0-alpha.2; 5 checks passed once, no live verification |
 | 03 Damage | Published | v0.1.0-alpha.3; 6 first-attempt checks passed; user live acceptance outstanding |
-| 04 Saves | Not started | Native rolls and graded outcomes |
+| 04 Saves | In progress | Codex, batch/04-graded-saves; slice started16:46UTC |
 | 05 Concentration | Not started | Two casts, upkeep and damage checks |
 | 06 Integration | Not started | Representative jutsu only |
 | 07 Packaging | Not started | Verified or explicitly limited prerelease |

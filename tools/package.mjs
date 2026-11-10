@@ -1,7 +1,7 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 
 // Only these runtime files may enter the archive, so local credentials and campaign data cannot leak in.
-const files = ["module.json", "scripts/module.mjs", "scripts/compatibility.mjs", "scripts/contracts.mjs", "scripts/conditions/registry.mjs", "scripts/conditions/modifiers.mjs", "scripts/conditions/planner.mjs", "scripts/conditions/service.mjs", "scripts/conditions/actor.mjs", "scripts/conditions/controls.mjs", "scripts/conditions/lifecycle.mjs", "scripts/damage/calculation.mjs", "scripts/damage/schema.mjs", "scripts/damage/planner.mjs", "scripts/damage/service.mjs", "scripts/damage/controls.mjs", "README.md", "LICENSE", "CHANGELOG.md"];
+const files = ["module.json", "scripts/module.mjs", "scripts/compatibility.mjs", "scripts/contracts.mjs", "scripts/conditions/registry.mjs", "scripts/conditions/modifiers.mjs", "scripts/conditions/planner.mjs", "scripts/conditions/service.mjs", "scripts/conditions/actor.mjs", "scripts/conditions/controls.mjs", "scripts/conditions/lifecycle.mjs", "scripts/damage/calculation.mjs", "scripts/damage/schema.mjs", "scripts/damage/planner.mjs", "scripts/damage/service.mjs", "scripts/damage/controls.mjs", "scripts/saves/degree.mjs", "scripts/saves/planner.mjs", "scripts/saves/service.mjs", "scripts/saves/native.mjs", "scripts/saves/examples.mjs", "README.md", "LICENSE", "CHANGELOG.md"];
 
 /** Compute the ZIP integrity checksum without a packaging dependency. */
 function crc32(bytes) {

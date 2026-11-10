@@ -1,3 +1,6 @@
+import { resolveSave } from "./saves/planner.mjs";
+import { applySaveOutcome } from "./saves/service.mjs";
+import { rollSave, registerSaveCards } from "./saves/native.mjs";
 import { registerDamageFields } from "./damage/schema.mjs";
 import { planDamage, planRecovery } from "./damage/planner.mjs";
 import { applyDamage, recover, retarget } from "./damage/service.mjs";
@@ -20,6 +23,7 @@ function initialize() {
   if (supported) {
     registerDamageFields(CONFIG, foundry.data.fields);
     registerDamageCards();
+    registerSaveCards();
     registerConditionDamage();
     CONFIG.Actor.documentClass = conditionActorClass(CONFIG.Actor.documentClass);
     for (const [key, def] of Object.entries(conditions)) if (!CONFIG.statusEffects.some(e => e.id === `n5e.${key}`)) CONFIG.statusEffects.push({ id: `n5e.${key}`, name: def.label, img: def.icon });
@@ -29,6 +33,7 @@ function initialize() {
     version: module.version,
     supported: supportsHost(game.system, game.version),
     gameplayEnabled: false,
+    saves: Object.freeze({ resolve: resolveSave, apply: applySaveOutcome, roll: rollSave }),
     damage: Object.freeze({ plan: planDamage, apply: applyDamage, applyWithChoice, post: postDamage, recover, planRecovery, retarget }),
     conditions: Object.freeze({ definitions: conditions, modifiers, add: addRanks, set: setCondition, remove: removeCondition, resolveRemoval, processTurnEnd, turnStartRequests, open: openConditions })
   });

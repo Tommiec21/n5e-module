@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.4
+
+- Reuse the confirmed N5e graded-save resolver with native kept-d20 rolls.
+- Apply explicit per-target, per-mode and per-rank outcome tables through shared damage/condition services.
+- Preserve unscaled source damage and binary native saves; include a Bane local-remapping fixture with manual exceptions.
+
 ## 0.1.0-alpha.3
 
 - Reuse N5e damage/healing planners against native HP and inherited Chakra fields.

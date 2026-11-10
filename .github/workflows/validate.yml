@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '22'
       - name: Execute selected gate once
-        run: node tools/check.mjs damage
+        run: node tools/check.mjs saves
       - name: Package without repeating checks
         run: node tools/bounded.mjs 60000 node tools/package.mjs
       - name: Upload exact checked artifact
