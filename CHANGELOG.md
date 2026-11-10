@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.8
+
+- Reuse N5e skill/proficiency/Mastery tables through inherited native preparation and rolls.
+- Register Chakra Control, Illusions, Martial Arts and Ninshou with native skill data; concentration no longer needs a manual modifier on prepared actors.
+- Apply source-unique additive Mastery, untrained-save half proficiency and one physical/mental condition contribution per skill roll.
+
 ## 0.1.0-alpha.7 — Interim milestone
 
 - Package the unchanged Batch06 runtime with updated version and milestone documentation.

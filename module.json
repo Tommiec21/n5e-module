@@ -1,8 +1,8 @@
 {
   "id": "n5e-module",
   "title": "N5e for dnd5e — Development",
-  "description": "Interim N5e module milestone: shared services and six opt-in native trial jutsu; full conversion remains scheduled.",
-  "version": "0.1.0-alpha.7",
+  "description": "N5e skill, proficiency and Mastery calculations with automatic native Chakra Control checks.",
+  "version": "0.1.0-alpha.8",
   "authors": [
     {
       "name": "King"
@@ -28,6 +28,6 @@
     "scripts/module.mjs"
   ],
   "url": "https://github.com/Tommiec21/n5e-module",
-  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.7/module.json",
-  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.7/n5e-module.zip"
+  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.8/module.json",
+  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.8/n5e-module.zip"
 }

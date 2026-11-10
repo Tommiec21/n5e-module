@@ -6,6 +6,7 @@ import { postDamage } from "../damage/controls.mjs";
 import { recover } from "../damage/service.mjs";
 import { baneExample } from "../saves/examples.mjs";
 import { rollSave } from "../saves/native.mjs";
+import { disciplineNumbers } from "../skills/native.mjs";
 
 const busy = new WeakSet();
 const row = (damage, conditions = [], manual = []) => ({ damage, conditions, manual });
@@ -31,6 +32,10 @@ async function requestSave(target, definition) {
 export async function castTrial(activity, options, targets = []) {
   const actor = activity.actor;
   if (!actor?.isOwner || busy.has(actor)) throw new Error("Own the caster and finish its current cast first.");
+  if (options.attackBonus == null || options.dc == null) {
+    const numbers = disciplineNumbers(actor, activity.item.flags["n5e-module"].trial.source.discipline);
+    options = { ...options, attackBonus: options.attackBonus ?? numbers.attack, dc: options.dc ?? numbers.dc };
+  }
   const plan = trialPlan(activity, options);
   if (plan.mode === "strike" && !maintainedCasts(actor).some(r => r.itemUuid === activity.item.uuid)) throw new Error("Maintain Arms of Buddha before using its strike.");
   for (const part of plan.parts) if (!Roll.validate(part.formula)) throw new Error("Invalid damage/healing formula.");

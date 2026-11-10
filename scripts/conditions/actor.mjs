@@ -17,7 +17,7 @@ export function conditionActorClass(Base) {
         bonuses.abilities.save = append(bonuses.abilities.save, m.allDice);
       }
       for (const kind of ["mwak", "rwak", "msak", "rsak"]) if (bonuses?.[kind]) bonuses[kind].attack = append(bonuses[kind].attack, m.allDice + m.checksAndAttacks);
-      for (const skill of Object.values(this.system.skills ?? {})) if (skill.bonuses) skill.bonuses.check = append(skill.bonuses.check, ["str", "dex", "con"].includes(skill.ability) ? m.d20Physical : m.d20Mental);
+      // Native skill rolls already include their ability-check bonus, so physical/mental penalties belong there only.
       if (Number.isFinite(this.system.skills?.prc?.passive)) this.system.skills.prc.passive += m.perception;
       for (const [key, ability] of Object.entries(this.system.abilities ?? {})) {
         if (!ability.bonuses) continue;

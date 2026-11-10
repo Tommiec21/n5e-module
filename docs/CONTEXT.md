@@ -199,3 +199,9 @@ Implemented/automated-checked/package-inspected/published statuses are distinct 
 User asked to stop after this batch for the next few hours; do not begin08 or resume automatically, and await the next user instruction.
 
 Next requested batch:08 Skills/Abilities/Mastery, Gameplay System; remaining list08–20 and category index are current.
+
+## Batch08 active scope
+
+Codex, branch batch/08-skills; slice started17:58UTC, goal native N5e skill/proficiency/Mastery calculations and automatic Chakra Control.
+
+User plans to stop at Batch10; do not proceed beyond10 without a new instruction.

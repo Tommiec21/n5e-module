@@ -1,4 +1,6 @@
 import { importTrialItems } from "./integration/content.mjs";
+import { registerSkills, skillActorClass, rollSkill, setMasterySources, disciplineNumbers } from "./skills/native.mjs";
+import { skills } from "./skills/registry.mjs";
 import { castTrial, registerTrialBridge } from "./integration/bridge.mjs";
 import { beginCast, endCast, payUpkeep, cleanup, applyCheck } from "./concentration/service.mjs";
 import { maintainedCasts, damageCheckPlan, upkeepPlan } from "./concentration/planner.mjs";
@@ -28,13 +30,14 @@ function initialize() {
   const supported = supportsHost(game.system, game.version);
   if (supported) {
     registerDamageFields(CONFIG, foundry.data.fields);
+    registerSkills(CONFIG, foundry.data.fields);
     registerDamageCards();
     registerSaveCards();
     registerTrialBridge();
     registerConcentrationCards();
     registerConcentrationLifecycle();
     registerConditionDamage();
-    CONFIG.Actor.documentClass = conditionActorClass(CONFIG.Actor.documentClass);
+    CONFIG.Actor.documentClass = skillActorClass(conditionActorClass(CONFIG.Actor.documentClass));
     for (const [key, def] of Object.entries(conditions)) if (!CONFIG.statusEffects.some(e => e.id === `n5e.${key}`)) CONFIG.statusEffects.push({ id: `n5e.${key}`, name: def.label, img: def.icon });
     registerConditionLifecycle();
   }
@@ -42,6 +45,7 @@ function initialize() {
     version: module.version,
     supported: supportsHost(game.system, game.version),
     gameplayEnabled: false,
+    skills: Object.freeze({ definitions: skills, roll: rollSkill, setMasterySources, disciplineNumbers }),
     trial: Object.freeze({ importItems: importTrialItems, cast: castTrial }),
     concentration: Object.freeze({ begin: beginCast, end: endCast, payUpkeep, cleanup, applyCheck, list: maintainedCasts, damageCheckPlan, upkeepPlan, chooseReplacement, chooseUpkeep, rollCheck }),
     saves: Object.freeze({ resolve: resolveSave, apply: applySaveOutcome, roll: rollSave }),
