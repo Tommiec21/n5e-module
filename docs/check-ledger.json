@@ -180,6 +180,24 @@
       "status": "passed",
       "affectedBehavior": [],
       "nextAction": "Preserve artifact provenance; no further work until user requests Batch08."
+    },
+    {
+      "scenarioId": "skills-proficiency-mastery-and-concentration-integration",
+      "batch": "08",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "f3add722009f7731374107bb09dec7baa9db6f03",
+          "result": "passed",
+          "tests": 6,
+          "failed": 0,
+          "skipped": 0,
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42871658487"
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": []
     }
   ],
   "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests."

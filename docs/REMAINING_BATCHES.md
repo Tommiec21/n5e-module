@@ -35,12 +35,6 @@ Number07 is the published interim milestone, and number20 is the pending full su
 
 ## Completion criteria
 
-### 08: Skills, abilities and Mastery
-
-Category: **Gameplay System**.
-
-Chakra Control no longer needs a manually supplied full modifier; source-reviewed bonuses and condition penalties apply once.
-
 ### 09: Complete condition lifecycle
 
 Category: **Gameplay System**.

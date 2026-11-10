@@ -2,7 +2,7 @@
 
 Updated November 10, 2026; repository owner Tommiec21, project n5e-module, visibility private.
 
-Current milestone: Batch07 interim baseline published privately as v0.1.0-alpha.7; remaining batches08–20 are pending.
+Current milestone: Batch08 skills/proficiency/Mastery published privately as v0.1.0-alpha.8; planned stop after Batch10.
 
 Current scope: reusable prompts, private repository, version history and bounded future implementation batches for ranked conditions, HP/Chakra damage, graded saves and dual concentration.
 
@@ -205,3 +205,21 @@ Next requested batch:08 Skills/Abilities/Mastery, Gameplay System; remaining lis
 Codex, branch batch/08-skills; slice started17:58UTC, goal native N5e skill/proficiency/Mastery calculations and automatic Chakra Control.
 
 User plans to stop at Batch10; do not proceed beyond10 without a new instruction.
+
+## Batch08 completed checkpoint
+
+Codex slice17:58–18:08UTC, under ten minutes; runtimef3add722009f7731374107bb09dec7baa9db6f03, branch batch/08-skills.
+
+Goal: reuse N5e skill/proficiency/Mastery rules with native preparation and rolls, removing the manual Chakra Control modifier from prepared actors.
+
+Delivered canonical20 skills, four namespaced skill additions, source progression bands, independent source-unique Mastery, half-proficiency saves and native concentration routing.
+
+Corrected duplicated physical/mental condition contributions in native skill rolls; basic trial attack/DC inputs can now derive from core discipline values.
+
+CI42871658487:6 passed on first attempt,0 failures/skips; release42871826398 reused the37-file artifact without retesting.
+
+Private v0.1.0-alpha.8 assets: module.json885bytes and n5e-module.zip156886bytes; no live verification or local installation.
+
+Native training/source grants remain explicitly editable until13 automates progression; alternative casting abilities/feature bonuses remain10/13, armor formula selection13 and final sheet filtering16.
+
+User plans to stop at10; next requested batch09, and do not proceed beyond10 without further instruction.
