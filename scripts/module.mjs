@@ -1,3 +1,5 @@
+import { registerConditionCompletion, finishConditionRest, processMovement } from "./conditions/completion-hooks.mjs";
+import { expireConditions, normalizeConditionCaps, removeConditionRanks } from "./conditions/completion.mjs";
 import { importTrialItems } from "./integration/content.mjs";
 import { registerSkills, skillActorClass, rollSkill, setMasterySources, disciplineNumbers } from "./skills/native.mjs";
 import { skills } from "./skills/registry.mjs";
@@ -40,6 +42,7 @@ function initialize() {
     CONFIG.Actor.documentClass = skillActorClass(conditionActorClass(CONFIG.Actor.documentClass));
     for (const [key, def] of Object.entries(conditions)) if (!CONFIG.statusEffects.some(e => e.id === `n5e.${key}`)) CONFIG.statusEffects.push({ id: `n5e.${key}`, name: def.label, img: def.icon });
     registerConditionLifecycle();
+    registerConditionCompletion();
   }
   module.api = Object.freeze({
     version: module.version,
@@ -50,7 +53,7 @@ function initialize() {
     concentration: Object.freeze({ begin: beginCast, end: endCast, payUpkeep, cleanup, applyCheck, list: maintainedCasts, damageCheckPlan, upkeepPlan, chooseReplacement, chooseUpkeep, rollCheck }),
     saves: Object.freeze({ resolve: resolveSave, apply: applySaveOutcome, roll: rollSave }),
     damage: Object.freeze({ plan: planDamage, apply: applyDamage, applyWithChoice, post: postDamage, recover, planRecovery, retarget }),
-    conditions: Object.freeze({ definitions: conditions, modifiers, add: addRanks, set: setCondition, remove: removeCondition, resolveRemoval, processTurnEnd, turnStartRequests, open: openConditions })
+    conditions: Object.freeze({ definitions: conditions, modifiers, expire: expireConditions, normalizeCaps: normalizeConditionCaps, removeRanks: removeConditionRanks, finishRest: finishConditionRest, movement: processMovement, add: addRanks, set: setCondition, remove: removeCondition, resolveRemoval, processTurnEnd, turnStartRequests, open: openConditions })
   });
 }
 

@@ -28,7 +28,7 @@ test("rank caps, source removal and Sealed aggregation do not duplicate penaltie
   await setCondition(a, record("second", "sealed", 3));
   assert.equal(modifiers(a).baseCost.nin, 20);
   await removeCondition(a, "first");
-  assert.equal(modifiers(a).baseCost.nin, 12);
+  assert.equal(modifiers(a).baseCost.nin, 4);
   assert.equal(applications(a).length, 1);
   await setCondition(a, record("second", "sealed", 2));
   assert.equal(applications(a).length, 1);

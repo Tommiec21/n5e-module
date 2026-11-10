@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.9
+
+- Complete condition expiry, oldest-source decay and capped-source storage without latent overflow.
+- Add willing-movement Chilled requests and automatic ending outside combat.
+- Integrate Envenomed rest blocking and food/drink-dependent Exhaustion recovery with native rest hooks.
+
 ## 0.1.0-alpha.8
 
 - Reuse N5e skill/proficiency/Mastery tables through inherited native preparation and rolls.

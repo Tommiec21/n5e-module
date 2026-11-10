@@ -2,8 +2,8 @@ import { conditions } from "./registry.mjs";
 import { aggregatePenalties, clampRanks } from "./modifiers.mjs";
 
 /** Read only enabled N5e condition applications, keeping their native effect identity. */
-export function applications(actor) {
-  return Array.from(actor.effects ?? []).filter(e => !e.disabled && !e.isSuppressed && e.flags?.["n5e-module"]?.condition).map(e => ({ ...e.flags["n5e-module"].condition, effectId: e.id }));
+export function applications(actor, { includeExpired = false } = {}) {
+  return Array.from(actor.effects ?? []).filter(e => !e.disabled && !e.isSuppressed && e.flags?.["n5e-module"]?.condition).map((e, index) => ({ ...e.flags["n5e-module"].condition, effectId: e.id, creationOrder: e._stats?.createdTime ?? index })).filter(r => includeExpired || r.expiresAt === null || actor.n5eWorldTime === undefined || r.expiresAt > actor.n5eWorldTime);
 }
 
 /** Combine ranks only under an explicit source policy, then apply the registry cap once. */

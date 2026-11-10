@@ -15,7 +15,7 @@ function enqueue(actor, action) {
 }
 
 /** Set one source application, preserving other sources and native effect lifecycle methods. */
-export function setCondition(actor, input, { worldTime = 0, turnId = null, increment = false } = {}) {
+export function setCondition(actor, input, { worldTime = globalThis.game?.time?.worldTime ?? 0, turnId = null, increment = false } = {}) {
   return enqueue(actor, async () => {
     const record = structuredClone(validateContract("ConditionApplication", input));
     record.stackingPolicyId = "add";
@@ -25,9 +25,11 @@ export function setCondition(actor, input, { worldTime = 0, turnId = null, incre
     record.ranks = clampRanks(def, record.ranks);
     record.gainedTurnId = input.gainedTurnId ?? turnId;
     if (record.expiresAt === null && !def.persists && !def.endsAt) record.expiresAt = worldTime + 60;
-    const existing = applications(actor).find(r => r.id === record.id);
+    const existing = applications(actor, { includeExpired: true }).find(r => r.id === record.id);
     if (increment && existing) record.ranks = clampRanks(def, existing.ranks + input.ranks);
     const other = applications(actor).filter(r => r.id !== record.id && r.key === record.key);
+    if (def.maxRanks > 0) record.ranks = Math.min(record.ranks, Math.max(0, def.maxRanks - other.reduce((sum, r) => sum + r.ranks, 0)));
+    if (record.ranks === 0) return existing ? actor.deleteEmbeddedDocuments("ActiveEffect", [existing.effectId]) : { blocked: "rank cap" };
     if (other.length && (!["add", "highest"].includes(record.stackingPolicyId) || other.some(r => r.stackingPolicyId !== record.stackingPolicyId))) throw new Error("Select a consistent stacking policy before adding another source.");
     const data = { name: `${def.label}${def.maxRanks === null ? "" : ` (${record.ranks})`}`, img: def.icon, statuses: [`n5e.${record.key}`], changes: [], flags: { "n5e-module": { condition: record } } };
     if (existing) return actor.effects.get(existing.effectId).update(data);
@@ -38,7 +40,7 @@ export function setCondition(actor, input, { worldTime = 0, turnId = null, incre
 /** Remove only the selected application, rather than deleting every source of the condition. */
 export function removeCondition(actor, applicationId) {
   return enqueue(actor, () => {
-    const record = applications(actor).find(r => r.id === applicationId);
+    const record = applications(actor, { includeExpired: true }).find(r => r.id === applicationId);
     return record ? actor.deleteEmbeddedDocuments("ActiveEffect", [record.effectId]) : null;
   });
 }
@@ -54,21 +56,23 @@ export async function resolveRemoval(actor, applicationId, optionIndex, total) {
 
 /** Process one actor's end-of-turn decay and expiry, retaining source-specific timing. */
 export async function processTurnEnd(actor, turnId, worldTime) {
+  const { normalizeConditionCaps, removeConditionRanks, expireConditions } = await import("./completion.mjs");
+  await normalizeConditionCaps(actor, worldTime);
+  await expireConditions(actor, worldTime);
   const records = applications(actor);
-  const manual = [];
+  const decayed = new Set();
   for (const record of records) {
     const def = conditions[record.key];
     if (record.expiresAt !== null && record.expiresAt <= worldTime) { await removeCondition(actor, record.id); continue; }
     if (record.gainedTurnId === turnId) continue;
-    if (def.decay?.when === "turnEnd" && records.filter(r => r.key === record.key).length > 1) { manual.push(record.id); continue; }
     if (def.endsAt === "nextTurnEnd") await removeCondition(actor, record.id);
-    else if (def.decay?.when === "turnEnd") {
-      const ranks = record.ranks - def.decay.amount;
-      if (ranks <= 0) await removeCondition(actor, record.id);
-      else await setCondition(actor, { ...record, ranks }, { worldTime });
+    else if (def.decay?.when === "turnEnd" && !decayed.has(record.key)) {
+      const eligible = records.filter(r => r.key === record.key && r.gainedTurnId !== turnId).sort((a, b) => a.creationOrder - b.creationOrder);
+      await removeConditionRanks(actor, record.key, def.decay.amount, eligible.map(r => r.id), worldTime);
+      decayed.add(record.key);
     }
   }
-  return { manualDecayApplicationIds: manual };
+  return { manualDecayApplicationIds: [] };
 }
 
 /** Add ranks within one source using the same serialized native write boundary. */

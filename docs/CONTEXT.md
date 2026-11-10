@@ -223,3 +223,7 @@ Private v0.1.0-alpha.8 assets: module.json885bytes and n5e-module.zip156886bytes
 Native training/source grants remain explicitly editable until13 automates progression; alternative casting abilities/feature bonuses remain10/13, armor formula selection13 and final sheet filtering16.
 
 User plans to stop at10; next requested batch09, and do not proceed beyond10 without further instruction.
+
+## Batch09 active scope
+
+Codex, branch batch/09-condition-lifecycle; slice started18:08UTC, completing condition movement/rest/decay/expiry without opening Batch10 early.

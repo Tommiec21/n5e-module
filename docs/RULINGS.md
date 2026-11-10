@@ -25,3 +25,5 @@ Confirmed Batch02: ranks of the same condition from different sources add togeth
 Confirmed Batch05: the player chooses one existing jutsu to end before a third cast, and cancelling changes neither existing cast.
 
 If upkeep is insufficient, the player chooses which casts to maintain; unpaid casts end.
+
+Confirmed Batch09: condition rank loss removes the oldest source first, excess ranks above the cap are discarded, and Chilled ends automatically outside combat.

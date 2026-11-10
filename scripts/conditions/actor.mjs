@@ -6,6 +6,7 @@ export function conditionActorClass(Base) {
   return class N5eConditionActor extends Base {
     prepareData() {
       super.prepareData();
+      this.n5eWorldTime = globalThis.game?.time?.worldTime;
       try { this.n5eConditions = modifiers(this); this.n5eConditionError = null; }
       catch (error) { this.n5eConditions = emptyPenalties(); this.n5eConditionError = error.message; }
       const m = this.n5eConditions;

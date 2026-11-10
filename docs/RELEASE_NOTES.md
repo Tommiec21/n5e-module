@@ -1,11 +1,11 @@
-# Batch08 skills and Mastery
+# Batch09 condition lifecycle completion
 
-Goal: supply N5e skills, ability/proficiency rules and independent Mastery through native actor preparation and rolls, removing manual Chakra Control modifiers.
+Goal: complete condition movement/rest behavior, multi-source decay and out-of-combat expiry using the existing condition and damage services.
 
-Canonical20 skills include four namespaced additions; native legacy Arcana/Religion data is retained for later migration/UI filtering rather than silently deleted.
+Oldest sources lose ranks first, excess ranks are discarded at the cap, and Chilled ends automatically outside combat under the user’s rulings.
 
-Native class levels drive proficiency, with an explicit n5e.level override for test/NPC actors until Batch13 progression conversion; Mastery grants use stable source IDs and source-defined level caps.
+Willing movement exceeding5feet produces one Chilled damage request per combat turn; forced/teleport movement is excluded or explicitly confirmed when native movement lacks classification.
 
-Basic trial attack/DC values can now be calculated automatically, while feature-specific ability overrides and complete casting validation remain Batch10 work.
+Native rests cannot grant benefits to Envenomed actors, and confirmed food/drink enables long-rest Exhaustion recovery.
 
-No live verification or local installation; the user’s planned stopping point is Batch10.
+This is condition-rest integration, not conversion of all N5e HP/Chakra/Hit-Die rest resource rules, which remain owned by13; no live verification occurred.
