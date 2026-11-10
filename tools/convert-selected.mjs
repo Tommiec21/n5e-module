@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { pathToFileURL } from "node:url";
 import { resolve } from "node:path";
 import { applySelectedMechanics } from "./selected-mechanics.mjs";
+import { applyClanTraits } from "./selected-clans.mjs";
 
 const labels = { nin: "Ninjutsu", gen: "Genjutsu", tai: "Taijutsu", buki: "Bukijutsu", nonElemental: "Non-Elemental", fire: "Fire Release", wind: "Wind Release", taijutsu: "Taijutsu", phantasm: "Phantasm", shinobiBasics: "Shinobi Basics" };
 const clanNames = { aburame: "Aburame", hyuga: "Hyūga", uchiha: "Uchiha", uzumaki: "Uzumaki", senju: "Senju", ryu: "Ryu", hebi: "Hebi", kuru: "Kuru" };
@@ -47,7 +48,14 @@ function linkRecords(items, records) {
 
 /** Produce a portable native-content bundle and an explicit per-record coverage inventory. */
 export function convertSnapshot(snapshot) {
-  const items = snapshot.records.map(record => applySelectedMechanics(convertRecord(record), record));
+  const items = snapshot.records.map(record => applyClanTraits(applySelectedMechanics(convertRecord(record), record), record));
+  const clans = new Map(items.filter(i => i.type === "race").map(i => [i.flags["n5e-module"].selected.clan, i.flags["n5e-module"].clanTraits]));
+  for (const item of items) {
+    const c = item.flags["n5e-module"].selected.clan;
+    if (c && item.flags["n5e-module"].casting) item.flags["n5e-module"].casting.allowedAbilities = clans.get(c).abilities;
+  }
+  const counted = items.filter(i => ["base-rank-core", "base-level-core"].includes(i.flags["n5e-module"].selected.automation.status));
+  if (counted.length > 100) throw new Error("The user requested a stop at100 automated jutsu/features.");
   linkRecords(items, snapshot.records);
   return { version: 1, id: "selected-testing", items };
 }

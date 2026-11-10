@@ -32,7 +32,7 @@ export function applySaveOutcome(actor, request, roll) {
     }
     const worldTime = globalThis.game?.time?.worldTime ?? 0;
     const combat = globalThis.game?.combat;
-    for (const [index, item] of effect.conditions.entries()) await setCondition(actor, { version: 1, id: outcome.conditionApplicationIds[index], targetUuid: actor.uuid, source: outcome.source, key: item.key, ranks: item.ranks, sourceRank: request.rank, stackingPolicyId: "add", expiresAt: item.seconds === undefined ? null : worldTime + item.seconds }, { worldTime, turnId: combat ? `${combat.uuid}:${combat.round}:${combat.turn}` : null });
+    for (const [index, item] of effect.conditions.entries()) await setCondition(actor, { version: 1, id: outcome.conditionApplicationIds[index], targetUuid: actor.uuid, source: outcome.source, key: item.key, ranks: item.ranks, sourceRank: request.rank, stackingPolicyId: "add", endsAt: item.endsAt, expiresAt: item.seconds === undefined ? null : worldTime + item.seconds }, { worldTime, turnId: combat ? `${combat.uuid}:${combat.round}:${combat.turn}` : null });
     await actor.update({ "flags.n5e-module.saveReceipts": [...receipts.slice(-49), { id: outcome.id, fingerprint, rollUuid: roll.rollUuid }] });
     return resolved;
   });

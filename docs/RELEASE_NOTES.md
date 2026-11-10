@@ -1,3 +1,15 @@
+# S04a — Clan grants and source condition automation
+
+Goal: connect native clan grants, approved Hijutsu ability choices and reusable source-specific condition expiration without overwriting source documents.
+
+Eight clan identities now grant native source-owned skill proficiency/walking-speed effects; their incomplete clan features do not count toward the stop target. Wisdom of the Court changes Persuasion/Intimidation to Wisdom through a native transferable effect. Clan jutsu expose only source-approved Hijutsu abilities.
+
+Erupting Flame now applies Dazed through the existing condition service; Thunderous Screech applies source-timed Deafened, with construct/structure disadvantage and environmental trap handling still manual.
+
+The honest running total is6 complete base-rank/base-level items (5 jutsu,1 clan feature), with100 as the user stop cap; imports and partial/cost-only profiles never count. Remaining automation is additional S04b onward plus named11/12/13 implementations.
+
+Focused S04a check gate pending; no live Foundry verification or local installation.
+
 # Selected content S02 — Gameplay/Data Conversion System
 
 Goal: connect selected native records to existing casting services without rebuilding special gameplay engines.

@@ -13,6 +13,7 @@ export function validateDefinition(request) {
     const row = table?.[key];
     if (!row || !["none", "full", "half", "double"].includes(row.damage) || !Array.isArray(row.conditions) || !Array.isArray(row.manual)) throw new Error(`Invalid outcome table: ${key}.`);
     for (const item of row.conditions) if (!conditions[item.key] || !Number.isSafeInteger(item.ranks) || item.ranks <= 0 || item.seconds !== undefined && (!Number.isFinite(item.seconds) || item.seconds < 0)) throw new Error("Unknown condition or invalid outcome ranks/duration.");
+    if (row.conditions.some(item => item.endsAt !== undefined && item.endsAt !== "nextTurnEnd")) throw new Error("Unsupported condition turn expiration.");
     if (row.outcome !== undefined && !DEGREE_KEYS.includes(row.outcome)) throw new Error("Invalid activity-local outcome remapping.");
     if (row.manual.some(text => typeof text !== "string")) throw new Error("Manual instructions must be text.");
   }

@@ -279,3 +279,9 @@ S02 checkpoint18:57UTC: runtimebce0827705accec08af131b10cbff545b7dd2468;5 focuse
 The data subset is imported and source-preserved; full automation is not complete. Additional source-review batch S04 owns remaining mappings possible with existing services, alongside11 conditional effects,12 martial sequences and13 native feature/progression grants; none are user exclusions. S03 is documentation/coverage handoff only and must not rerun passed gates.
 
 S03 documentation handoff18:58UTC: selected coverage lists all377 records, a user-led testing guide covers imports/resources/core services, and source snapshot plus converter prevent duplicate rework. S04 remains an explicit additional mapping batch; no existing passed checks were rerun.
+
+## S04a active — user stop target100
+
+Slice18:59UTC, branch content/selected-04a. User requests stopping at a combined100 automated jutsu and clan features; only base-rank-core/base-level-core entries count, never imports or cost-only/partial profiles. Initial qualifying total4; a converter guard prevents exceeding100.
+
+This slice owns native source-preserving clan proficiency/speed grants, Hijutsu ability selection, Wisdom of the Court, and source-specific condition turn expiry; additional mappings remain subsequent bounded slices toward100.

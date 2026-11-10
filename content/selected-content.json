@@ -5978,7 +5978,7 @@
               "D-Rank"
             ],
             "automation": {
-              "status": "partial",
+              "status": "base-rank-core",
               "owner": "selected-content-02",
               "automated": [
                 "base-rank eligibility",
@@ -5987,9 +5987,7 @@
                 "graded save outcomes",
                 "typed damage"
               ],
-              "reasons": [
-                "Apply native Dazed manually."
-              ],
+              "reasons": [],
               "upcasting": "manual; source text retained, higher-rank automated modes not authored"
             },
             "sourceLine": 2232,
@@ -6049,17 +6047,23 @@
                   },
                   "failure": {
                     "damage": "full",
-                    "conditions": [],
-                    "manual": [
-                      "On failure, apply Dazed until its source-defined end."
-                    ]
+                    "conditions": [
+                      {
+                        "key": "dazed",
+                        "ranks": 1
+                      }
+                    ],
+                    "manual": []
                   },
                   "critFailure": {
                     "damage": "full",
-                    "conditions": [],
-                    "manual": [
-                      "On failure, apply Dazed until its source-defined end."
-                    ]
+                    "conditions": [
+                      {
+                        "key": "dazed",
+                        "ranks": 1
+                      }
+                    ],
+                    "manual": []
                   }
                 }
               }
@@ -10842,7 +10846,7 @@
                 "typed damage"
               ],
               "reasons": [
-                "Construct/structure disadvantage, Deafened and trap triggering remain manual."
+                "Construct/structure disadvantage and trap triggering remain manual."
               ],
               "upcasting": "manual; source text retained, higher-rank automated modes not authored"
             },
@@ -10903,17 +10907,25 @@
                   },
                   "failure": {
                     "damage": "full",
-                    "conditions": [],
-                    "manual": [
-                      "Apply Deafened until the end of the target's next turn."
-                    ]
+                    "conditions": [
+                      {
+                        "key": "deafened",
+                        "ranks": 1,
+                        "endsAt": "nextTurnEnd"
+                      }
+                    ],
+                    "manual": []
                   },
                   "critFailure": {
                     "damage": "full",
-                    "conditions": [],
-                    "manual": [
-                      "Apply Deafened until the end of the target's next turn."
-                    ]
+                    "conditions": [
+                      {
+                        "key": "deafened",
+                        "ranks": 1,
+                        "endsAt": "nextTurnEnd"
+                      }
+                    ],
+                    "manual": []
                   }
                 }
               }
@@ -19698,7 +19710,37 @@
         },
         "advancement": []
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Aburame — clan traits",
+          "transfer": true,
+          "changes": [
+            {
+              "key": "system.skills.ani.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.skills.nat.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.attributes.movement.walk",
+              "mode": 5,
+              "value": "30",
+              "priority": 5
+            }
+          ],
+          "flags": {
+            "n5e-module": {
+              "clanTraits": true
+            }
+          }
+        }
+      ],
       "flags": {
         "n5e-module": {
           "selected": {
@@ -19719,10 +19761,14 @@
               "Identity"
             ],
             "automation": {
-              "status": "manual",
-              "owner": "selected-content-02",
+              "status": "partial",
+              "owner": "selected-content-04a",
+              "automated": [
+                "native skill proficiency grants",
+                "native walking speed"
+              ],
               "reasons": [
-                "Mechanics mapping awaits source review; this record preserves its complete source description."
+                "Clan-specific feature progression, choices, senses and languages retain their source instructions."
               ]
             },
             "sourceLine": 524,
@@ -19755,6 +19801,14 @@
               "n5e.clans.338e042d49d9dbaa",
               "n5e.clans.6f4e0cef146908d0"
             ]
+          },
+          "clanTraits": {
+            "abilities": [
+              "int",
+              "wis"
+            ],
+            "skillChoice": null,
+            "affinities": []
           }
         }
       }
@@ -20151,7 +20205,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -20260,7 +20318,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -20432,7 +20494,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -20542,7 +20608,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 6
+            "durationSeconds": 6,
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -20649,7 +20719,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -20758,7 +20832,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -20866,7 +20944,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -20976,7 +21058,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -21083,7 +21169,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -21190,7 +21280,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -21735,7 +21829,37 @@
         },
         "advancement": []
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Hyūga — clan traits",
+          "transfer": true,
+          "changes": [
+            {
+              "key": "system.skills.n5eMartialArts.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.skills.prc.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.attributes.movement.walk",
+              "mode": 5,
+              "value": "30",
+              "priority": 5
+            }
+          ],
+          "flags": {
+            "n5e-module": {
+              "clanTraits": true
+            }
+          }
+        }
+      ],
       "flags": {
         "n5e-module": {
           "selected": {
@@ -21759,10 +21883,14 @@
               "Identity"
             ],
             "automation": {
-              "status": "manual",
-              "owner": "selected-content-02",
+              "status": "partial",
+              "owner": "selected-content-04a",
+              "automated": [
+                "native skill proficiency grants",
+                "native walking speed"
+              ],
               "reasons": [
-                "Mechanics mapping awaits source review; this record preserves its complete source description."
+                "Clan-specific feature progression, choices, senses and languages retain their source instructions."
               ]
             },
             "sourceLine": 905,
@@ -21800,6 +21928,14 @@
               "n5e.clans.815a0bc23087f4fa",
               "n5e.clans.c528f0bfa0cc799a"
             ]
+          },
+          "clanTraits": {
+            "abilities": [
+              "str",
+              "wis"
+            ],
+            "skillChoice": null,
+            "affinities": []
           }
         }
       }
@@ -22372,7 +22508,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -22482,7 +22622,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -22593,7 +22737,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -22701,7 +22849,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -22812,7 +22964,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -22920,7 +23076,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -23032,7 +23192,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -23144,7 +23308,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 6
+            "durationSeconds": 6,
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -23252,7 +23420,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -23360,7 +23532,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -23470,7 +23646,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -23581,7 +23761,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 6
+            "durationSeconds": 6,
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -23689,7 +23873,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -23798,7 +23986,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -24175,7 +24367,26 @@
         "requirements": "Level 3; Hyūga",
         "activities": {}
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Bloodline of the Elite: Wisdom of the Court",
+          "transfer": true,
+          "changes": [
+            {
+              "key": "system.skills.per.ability",
+              "mode": 5,
+              "value": "wis",
+              "priority": 50
+            },
+            {
+              "key": "system.skills.itm.ability",
+              "mode": 5,
+              "value": "wis",
+              "priority": 50
+            }
+          ]
+        }
+      ],
       "flags": {
         "n5e-module": {
           "selected": {
@@ -24196,11 +24407,13 @@
               "Feature Choices"
             ],
             "automation": {
-              "status": "manual",
-              "owner": "selected-content-02",
-              "reasons": [
-                "Mechanics mapping awaits source review; this record preserves its complete source description."
-              ]
+              "status": "base-level-core",
+              "owner": "selected-content-04a",
+              "automated": [
+                "Wisdom for Persuasion",
+                "Wisdom for Intimidation"
+              ],
+              "reasons": []
             },
             "sourceLine": 941,
             "sourceExpressions": [],
@@ -24285,7 +24498,37 @@
         },
         "advancement": []
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Senju — clan traits",
+          "transfer": true,
+          "changes": [
+            {
+              "key": "system.skills.n5eChakraControl.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.skills.n5eNinshou.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.attributes.movement.walk",
+              "mode": 5,
+              "value": "30",
+              "priority": 5
+            }
+          ],
+          "flags": {
+            "n5e-module": {
+              "clanTraits": true
+            }
+          }
+        }
+      ],
       "flags": {
         "n5e-module": {
           "selected": {
@@ -24308,10 +24551,14 @@
               "Identity"
             ],
             "automation": {
-              "status": "manual",
-              "owner": "selected-content-02",
+              "status": "partial",
+              "owner": "selected-content-04a",
+              "automated": [
+                "native skill proficiency grants",
+                "native walking speed"
+              ],
               "reasons": [
-                "Mechanics mapping awaits source review; this record preserves its complete source description."
+                "Clan-specific feature progression, choices, senses and languages retain their source instructions."
               ]
             },
             "sourceLine": 1925,
@@ -24341,6 +24588,14 @@
               "n5e.clans.d4cc4553a498ba5c",
               "n5e.clans.6e2bca54dfcb307e"
             ]
+          },
+          "clanTraits": {
+            "abilities": [
+              "con",
+              "int"
+            ],
+            "skillChoice": null,
+            "affinities": []
           }
         }
       }
@@ -24998,7 +25253,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 6
+            "durationSeconds": 6,
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -25110,7 +25369,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -25226,7 +25489,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -25337,7 +25604,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -25451,7 +25722,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -25565,7 +25840,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -25676,7 +25955,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -26425,7 +26708,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -26534,7 +26821,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -26646,7 +26937,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -26754,7 +27049,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -26866,7 +27165,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -26978,7 +27281,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -27088,7 +27395,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -27196,7 +27507,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -27307,7 +27622,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -27416,7 +27735,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -27527,7 +27850,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -27638,7 +27965,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "int",
+              "wis"
+            ]
           }
         }
       }
@@ -28473,7 +28804,37 @@
         },
         "advancement": []
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Uzumaki — clan traits",
+          "transfer": true,
+          "changes": [
+            {
+              "key": "system.skills.n5eChakraControl.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.skills.n5eNinshou.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.attributes.movement.walk",
+              "mode": 5,
+              "value": "30",
+              "priority": 5
+            }
+          ],
+          "flags": {
+            "n5e-module": {
+              "clanTraits": true
+            }
+          }
+        }
+      ],
       "flags": {
         "n5e-module": {
           "selected": {
@@ -28494,10 +28855,14 @@
               "Identity"
             ],
             "automation": {
-              "status": "manual",
-              "owner": "selected-content-02",
+              "status": "partial",
+              "owner": "selected-content-04a",
+              "automated": [
+                "native skill proficiency grants",
+                "native walking speed"
+              ],
               "reasons": [
-                "Mechanics mapping awaits source review; this record preserves its complete source description."
+                "Clan-specific feature progression, choices, senses and languages retain their source instructions."
               ]
             },
             "sourceLine": 2336,
@@ -28530,6 +28895,14 @@
               "n5e.clans.d734245fadb0f595",
               "n5e.clans.c2ef13b94209c2f2"
             ]
+          },
+          "clanTraits": {
+            "abilities": [
+              "con",
+              "int"
+            ],
+            "skillChoice": null,
+            "affinities": []
           }
         }
       }
@@ -28987,7 +29360,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -29097,7 +29474,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -29210,7 +29591,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 600
+            "durationSeconds": 600,
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -29320,7 +29705,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -29433,7 +29822,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -29544,7 +29937,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -29655,7 +30052,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -29767,7 +30168,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -29876,7 +30281,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "con",
+              "int"
+            ]
           }
         }
       }
@@ -30485,7 +30894,37 @@
         },
         "advancement": []
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Hebi — clan traits",
+          "transfer": true,
+          "changes": [
+            {
+              "key": "system.skills.ani.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.skills.sur.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.attributes.movement.walk",
+              "mode": 5,
+              "value": "30",
+              "priority": 5
+            }
+          ],
+          "flags": {
+            "n5e-module": {
+              "clanTraits": true
+            }
+          }
+        }
+      ],
       "flags": {
         "n5e-module": {
           "selected": {
@@ -30508,10 +30947,14 @@
               "Identity"
             ],
             "automation": {
-              "status": "manual",
-              "owner": "selected-content-02",
+              "status": "partial",
+              "owner": "selected-content-04a",
+              "automated": [
+                "native skill proficiency grants",
+                "native walking speed"
+              ],
               "reasons": [
-                "Mechanics mapping awaits source review; this record preserves its complete source description."
+                "Clan-specific feature progression, choices, senses and languages retain their source instructions."
               ]
             },
             "sourceLine": 8261,
@@ -30547,6 +30990,14 @@
               "n5e.clans.3f8640f86ba3b82e",
               "n5e.clans.f297a7f3d0a8df84"
             ]
+          },
+          "clanTraits": {
+            "abilities": [
+              "str",
+              "con"
+            ],
+            "skillChoice": null,
+            "affinities": []
           }
         }
       }
@@ -31010,7 +31461,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "con"
+            ]
           }
         }
       }
@@ -31121,7 +31576,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "con"
+            ]
           }
         }
       }
@@ -31234,7 +31693,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "con"
+            ]
           }
         }
       }
@@ -31344,7 +31807,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 6
+            "durationSeconds": 6,
+            "allowedAbilities": [
+              "str",
+              "con"
+            ]
           }
         }
       }
@@ -31455,7 +31922,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "con"
+            ]
           }
         }
       }
@@ -31565,7 +32036,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "con"
+            ]
           }
         }
       }
@@ -31677,7 +32152,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "con"
+            ]
           }
         }
       }
@@ -31786,7 +32265,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "con"
+            ]
           }
         }
       }
@@ -31895,7 +32378,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "con"
+            ]
           }
         }
       }
@@ -32006,7 +32493,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "con"
+            ]
           }
         }
       }
@@ -32725,7 +33216,37 @@
         },
         "advancement": []
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Kuru — clan traits",
+          "transfer": true,
+          "changes": [
+            {
+              "key": "system.skills.ins.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.skills.n5eMartialArts.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.attributes.movement.walk",
+              "mode": 5,
+              "value": "30",
+              "priority": 5
+            }
+          ],
+          "flags": {
+            "n5e-module": {
+              "clanTraits": true
+            }
+          }
+        }
+      ],
       "flags": {
         "n5e-module": {
           "selected": {
@@ -32752,10 +33273,14 @@
               "Identity"
             ],
             "automation": {
-              "status": "manual",
-              "owner": "selected-content-02",
+              "status": "partial",
+              "owner": "selected-content-04a",
+              "automated": [
+                "native skill proficiency grants",
+                "native walking speed"
+              ],
               "reasons": [
-                "Mechanics mapping awaits source review; this record preserves its complete source description."
+                "Clan-specific feature progression, choices, senses and languages retain their source instructions."
               ]
             },
             "sourceLine": 8418,
@@ -32790,6 +33315,14 @@
               "n5e.clans.dc2a07a483e8ec54",
               "n5e.clans.bc9519c12b17e429"
             ]
+          },
+          "clanTraits": {
+            "abilities": [
+              "str",
+              "wis"
+            ],
+            "skillChoice": null,
+            "affinities": []
           }
         }
       }
@@ -33252,7 +33785,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -33366,7 +33903,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -33481,7 +34022,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -33592,7 +34137,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -33706,7 +34255,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -33888,7 +34441,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -34000,7 +34557,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -34111,7 +34672,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -34224,7 +34789,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "wis"
+            ]
           }
         }
       }
@@ -34885,7 +35454,37 @@
         },
         "advancement": []
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Ryu — clan traits",
+          "transfer": true,
+          "changes": [
+            {
+              "key": "system.skills.n5eChakraControl.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.skills.n5eMartialArts.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.attributes.movement.walk",
+              "mode": 5,
+              "value": "30",
+              "priority": 5
+            }
+          ],
+          "flags": {
+            "n5e-module": {
+              "clanTraits": true
+            }
+          }
+        }
+      ],
       "flags": {
         "n5e-module": {
           "selected": {
@@ -34908,10 +35507,14 @@
               "Identity"
             ],
             "automation": {
-              "status": "manual",
-              "owner": "selected-content-02",
+              "status": "partial",
+              "owner": "selected-content-04a",
+              "automated": [
+                "native skill proficiency grants",
+                "native walking speed"
+              ],
               "reasons": [
-                "Mechanics mapping awaits source review; this record preserves its complete source description."
+                "Clan-specific feature progression, choices, senses and languages retain their source instructions."
               ]
             },
             "sourceLine": 8630,
@@ -34936,6 +35539,14 @@
               "n5e.clans.022252bc5b862c2d",
               "n5e.clans.33cc60cbfcf1b9bd"
             ]
+          },
+          "clanTraits": {
+            "abilities": [
+              "str",
+              "int"
+            ],
+            "skillChoice": null,
+            "affinities": []
           }
         }
       }
@@ -35396,7 +36007,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "int"
+            ]
           }
         }
       }
@@ -35507,7 +36122,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "int"
+            ]
           }
         }
       }
@@ -35618,7 +36237,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "int"
+            ]
           }
         }
       }
@@ -35728,7 +36351,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "int"
+            ]
           }
         }
       }
@@ -35839,7 +36466,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "int"
+            ]
           }
         }
       }
@@ -35950,7 +36581,11 @@
                 "parts": []
               }
             },
-            "durationSeconds": 60
+            "durationSeconds": 60,
+            "allowedAbilities": [
+              "str",
+              "int"
+            ]
           }
         }
       }
@@ -36060,7 +36695,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "int"
+            ]
           }
         }
       }
@@ -36171,7 +36810,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "int"
+            ]
           }
         }
       }
@@ -36283,7 +36926,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "int"
+            ]
           }
         }
       }
@@ -36392,7 +37039,11 @@
                 "kind": "maintain",
                 "parts": []
               }
-            }
+            },
+            "allowedAbilities": [
+              "str",
+              "int"
+            ]
           }
         }
       }
@@ -36473,7 +37124,31 @@
         },
         "advancement": []
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Uchiha — clan traits",
+          "transfer": true,
+          "changes": [
+            {
+              "key": "system.skills.ins.value",
+              "mode": 4,
+              "value": "1",
+              "priority": 40
+            },
+            {
+              "key": "system.attributes.movement.walk",
+              "mode": 5,
+              "value": "30",
+              "priority": 5
+            }
+          ],
+          "flags": {
+            "n5e-module": {
+              "clanTraits": true
+            }
+          }
+        }
+      ],
       "flags": {
         "n5e-module": {
           "selected": {
@@ -36499,10 +37174,14 @@
               "Identity"
             ],
             "automation": {
-              "status": "manual",
-              "owner": "selected-content-02",
+              "status": "partial",
+              "owner": "selected-content-04a",
+              "automated": [
+                "native skill proficiency grants",
+                "native walking speed"
+              ],
               "reasons": [
-                "Mechanics mapping awaits source review; this record preserves its complete source description."
+                "Clan-specific feature progression, choices, senses and languages retain their source instructions."
               ]
             },
             "sourceLine": 2137,
@@ -36540,6 +37219,23 @@
               "n5e.clans.6c07b966f9e4bc11",
               "n5e.clans.4451c79f459882ae",
               "n5e.clans.1429da04470921b8"
+            ]
+          },
+          "clanTraits": {
+            "abilities": [
+              "int",
+              "wis"
+            ],
+            "skillChoice": {
+              "count": 1,
+              "from": [
+                "n5eIllusions",
+                "n5eMartialArts",
+                "n5eNinshou"
+              ]
+            },
+            "affinities": [
+              "fire"
             ]
           }
         }

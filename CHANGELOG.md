@@ -1,3 +1,7 @@
+## 0.1.0-alpha.13
+
+Selected S04a:source-owned native clan proficiency/speed effects, Hijutsu ability choices, Wisdom of the Court and source-specific condition expiration; six complete entries toward the user cap100.
+
 ## 0.1.0-alpha.12
 
 Selected S02:242 source-cost casting profiles,12 reviewed base-rank combat/healing modes, explicit manual riders, test-actor resources and opt-in library updates.

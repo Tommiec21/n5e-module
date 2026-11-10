@@ -9,7 +9,7 @@ const attack = (formula, type) => ({ kind: "attack", parts: [{ formula, type }] 
 export const reviewedModes = {
   "chakra-bolt": { mode: attack("4d6", "force"), manual: [] },
   "fire-release-devastating-blaze": { mode: save("dex", "3d6+3", "fire", [condition("shaken")]), manual: [] },
-  "fire-release-erupting-flame": { mode: save("dex", "4d8+4", "fire", [], "half", ["On failure, apply Dazed until its source-defined end."]), manual: ["Apply native Dazed manually."] },
+  "fire-release-erupting-flame": { mode: save("dex", "4d8+4", "fire", [condition("dazed")], "half"), manual: [] },
   "fire-release-fireball": { mode: save("dex", "4d6+4", "fire", [condition("burned")]), manual: [] },
   "fire-release-hellfire-rejection": { mode: save("dex", "3d8+3", "fire"), manual: ["Confirm the reaction trigger and eligible creatures."] },
   "fire-release-white-flame-strike": { mode: save("dex", "3d6+3", "fire", [condition("burned")]), manual: ["Flying targets save at disadvantage and take vulnerable damage; adjust these manually."] },
@@ -17,7 +17,7 @@ export const reviewedModes = {
   "wind-release-raging-gale": { mode: save("str", "2d10", "wind", [], "none", ["Move the target as printed and apply Prone on failure."]), manual: ["Movement and Prone remain manual."] },
   "wind-release-violent-whirlwind": { mode: save("str", "2d8", "wind", [], "half", ["Apply Prone on failure."]), manual: ["Prone and dispersing environmental effects remain manual."] },
   "wind-release-second-wind": { mode: { kind: "heal", parts: [{ formula: "2d6 + @ability", type: "healing" }] }, manual: ["Select the caster as the healing recipient."] },
-  "thunderous-screech": { mode: save("con", "2d6", "bludgeoning", [], "half", ["Apply Deafened until the end of the target's next turn."]), manual: ["Construct/structure disadvantage, Deafened and trap triggering remain manual."] },
+  "thunderous-screech": { mode: save("con", "2d6", "bludgeoning", [{ key: "deafened", ranks: 1, endsAt: "nextTurnEnd" }], "half"), manual: ["Construct/structure disadvantage and trap triggering remain manual."] },
   "bane": { mode: { kind: "save", saveAbility: "cha", parts: [], outcomes: { critSuccess: row(), success: row(), failure: row("none", [], ["Apply the printed 1d4 attack/save penalty for the duration."]), critFailure: row("none", [], ["Apply the printed 1d4 attack/save penalty and suppress equal/lower-rank beneficial jutsu."]) } }, manual: ["Penalty and bonus suppression remain manual; the graded save is automated."] }
 };
 

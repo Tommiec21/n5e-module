@@ -24,7 +24,7 @@ export function setCondition(actor, input, { worldTime = globalThis.game?.time?.
     if (immune(actor, record.key)) return { blocked: "immune" };
     record.ranks = clampRanks(def, record.ranks);
     record.gainedTurnId = input.gainedTurnId ?? turnId;
-    if (record.expiresAt === null && !def.persists && !def.endsAt) record.expiresAt = worldTime + 60;
+    if (record.expiresAt === null && !def.persists && !def.endsAt && !record.endsAt) record.expiresAt = worldTime + 60;
     const existing = applications(actor, { includeExpired: true }).find(r => r.id === record.id);
     if (increment && existing) record.ranks = clampRanks(def, existing.ranks + input.ranks);
     const other = applications(actor).filter(r => r.id !== record.id && r.key === record.key);
@@ -65,7 +65,7 @@ export async function processTurnEnd(actor, turnId, worldTime) {
     const def = conditions[record.key];
     if (record.expiresAt !== null && record.expiresAt <= worldTime) { await removeCondition(actor, record.id); continue; }
     if (record.gainedTurnId === turnId) continue;
-    if (def.endsAt === "nextTurnEnd") await removeCondition(actor, record.id);
+    if ((record.endsAt ?? def.endsAt) === "nextTurnEnd") await removeCondition(actor, record.id);
     else if (def.decay?.when === "turnEnd" && !decayed.has(record.key)) {
       const eligible = records.filter(r => r.key === record.key && r.gainedTurnId !== turnId).sort((a, b) => a.creationOrder - b.creationOrder);
       await removeConditionRanks(actor, record.key, def.decay.amount, eligible.map(r => r.id), worldTime);

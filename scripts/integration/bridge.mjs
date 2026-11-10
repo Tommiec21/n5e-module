@@ -41,7 +41,8 @@ export async function castTrial(activity, options, targets = []) {
   try {
   const profile = castingProfile(activity);
   const trial = activity.item.flags?.["n5e-module"]?.trial;
-  const numbers = disciplineNumbers(actor, profile?.discipline ?? trial?.source.discipline);
+  if (profile?.allowedAbilities && !profile.allowedAbilities.includes(options.castingAbility)) throw new Error("Choose one of this clan's Hijutsu casting abilities.");
+  const numbers = disciplineNumbers(actor, profile?.discipline ?? trial?.source.discipline, { ability: profile?.allowedAbilities ? options.castingAbility : undefined });
   options = { ...options, rank: options.rank ?? profile?.baseRank ?? trial?.baseRank, castingAbility: numbers.ability, attackBonus: options.attackBonus ?? numbers.attack, dc: options.dc ?? numbers.dc };
   if (!profile) eligibility(actor, { baseRank: trial.baseRank, discipline: trial.source.discipline, components: trial.source.components.split(",").map(c => c.trim().toLowerCase()) }, options);
   const plan = profile ? generalPlan(activity, options) : trialPlan(activity, options);
@@ -110,8 +111,9 @@ export async function useTrial(activity) {
   const choices = profile?.costChoices?.filter(c => !c.automatic) ?? [];
   const rankOptions = allowed.map(r => '<option>' + r + '</option>').join('');
   const costOptions = choices.map((_c, i) => '<label><input name="cost" type="checkbox" value="' + i + '">Cost option ' + (i + 1) + '</label>').join('');
-  const content = '<label>Rank<select name="rank">' + rankOptions + '</select></label><label>Full unarmed formula<input name="unarmed"></label>' + costOptions + (profile?.requiresCompletedCasting ? '<label><input name="complete" type="checkbox">The source casting time has been completed</label>' : '') + '<label><input name="confirmed" type="checkbox">Confirm free hands, seals, required equipment, prerequisites, range and targets</label>';
-  const options = await foundry.applications.api.DialogV2.prompt({ window: { title: activity.item.name }, content, ok: { label: "Cast", callback: (_e, _b, dialog) => { const get = n => dialog.element.querySelector('[name="' + n + '"]'); return { rank: get("rank").value, unarmedFormula: get("unarmed").value, requirementsConfirmed: get("confirmed").checked, castingCompleted: get("complete")?.checked ?? false, costChoices: Array.from(dialog.element.querySelectorAll('[name="cost"]:checked')).map(input => choices[Number(input.value)].id) }; } } });
+  const abilityOptions = profile?.allowedAbilities ? '<label>Hijutsu ability<select name="ability">' + profile.allowedAbilities.map(a => '<option>' + a + '</option>').join('') + '</select></label>' : '';
+  const content = '<label>Rank<select name="rank">' + rankOptions + '</select></label>' + abilityOptions + '<label>Full unarmed formula<input name="unarmed"></label>' + costOptions + (profile?.requiresCompletedCasting ? '<label><input name="complete" type="checkbox">The source casting time has been completed</label>' : '') + '<label><input name="confirmed" type="checkbox">Confirm free hands, seals, required equipment, prerequisites, range and targets</label>';
+  const options = await foundry.applications.api.DialogV2.prompt({ window: { title: activity.item.name }, content, ok: { label: "Cast", callback: (_e, _b, dialog) => { const get = n => dialog.element.querySelector('[name="' + n + '"]'); return { rank: get("rank").value, castingAbility: get("ability")?.value, unarmedFormula: get("unarmed").value, requirementsConfirmed: get("confirmed").checked, castingCompleted: get("complete")?.checked ?? false, costChoices: Array.from(dialog.element.querySelectorAll('[name="cost"]:checked')).map(input => choices[Number(input.value)].id) }; } } });
   if (options === null || options === undefined) return { cancelled: true };
   return castTrial(activity, options, Array.from(game.user.targets).map(token => token.actor).filter(Boolean));
 }
