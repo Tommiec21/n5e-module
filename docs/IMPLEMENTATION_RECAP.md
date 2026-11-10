@@ -1,6 +1,6 @@
 # N5e module implementation recap
 
-Status: development prerelease0.1.0-alpha.5, November10,2026; private repository https://github.com/Tommiec21/n5e-module.
+Status: interim development prerelease0.1.0-alpha.7, November10,2026; private repository https://github.com/Tommiec21/n5e-module.
 
 ## Implemented modules
 
@@ -43,7 +43,7 @@ Every work slice and child command was bounded below ten minutes, and private de
 
 ## Scheduled additional batches
 
-Batch06 representative native Item/activity integration and Batch07 packaging/acceptance milestone remain pending, despite individual development artifacts already being published.
+Batches06/07 delivered the six-Item integration trial and interim package; remaining work is explicitly scheduled in08–20.
 
 The existing968-jutsu standalone-system import has not been converted into native dnd5e module compendiums, and classes/clans/backgrounds/advancement have not migrated.
 
@@ -53,4 +53,14 @@ Some APIs/controls already operate independently, but gameplayEnabled:false stil
 
 Batch05 publication: https://github.com/Tommiec21/n5e-module/releases/tag/v0.1.0-alpha.5; CI42860468142 and release42860690181 succeeded using runtime commit75aedb05c53eb1961e25bf972acb8814c1192530.
 
-The authoritative remaining schedule is docs/REMAINING_BATCHES.md, covering06–20; earlier manual/deferred descriptions identify current runtime limitations, not user-approved permanent omissions.
+The authoritative remaining schedule is docs/REMAINING_BATCHES.md, covering08–20; earlier manual/deferred descriptions identify current runtime limitations, not user-approved permanent omissions.
+
+## Added milestone deliveries
+
+Batch06 connected six source-reviewed native trial Items to shared payment/roll/save/damage/concentration paths, passing three selected checks once.
+
+Batch07 published0.1.0-alpha.7 with30 unchanged runtime files linked to that checked artifact and34 allowlisted archive entries, with no gameplay check repetition.
+
+Total prior selected component/integration checks:34 passed; one additional packaging inspection passed, and user-led live acceptance remains pending.
+
+The user requested a stop after07;08 is next only upon a new instruction.

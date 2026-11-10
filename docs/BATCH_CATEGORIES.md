@@ -10,8 +10,8 @@ One primary category describes each batch’s aim; supporting implementation may
 | 03 | HP/Chakra damage | Gameplay System | Published component delivery |
 | 04 | Graded saves | Gameplay System | Published component delivery |
 | 05 | Dual concentration | Gameplay System | Published component delivery |
-| 06 | Representative integration | Gameplay System | Pending |
-| 07 | Interim milestone | Engine Set up | Pending |
+| 06 | Representative integration | Gameplay System | Published trial delivery |
+| 07 | Interim milestone | Engine Set up | Published interim baseline |
 | 08 | Skills and Mastery | Gameplay System | Pending |
 | 09 | Condition lifecycle completion | Gameplay System | Pending |
 | 10 | Casting integration | Gameplay System | Pending |

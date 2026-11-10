@@ -2,7 +2,7 @@
 
 Updated November10,2026; this schedule supersedes earlier descriptions of implementation boundaries.
 
-Batches00–05 have published components, while the additional integration and completion work below is explicitly planned, not an assumed exclusion or a claim that it already works.
+Batches00–07 have published component/trial/interim milestones, while the additional integration and completion work below is explicitly planned, not an assumed exclusion or a claim that it already works.
 
 ## Category meanings
 
@@ -17,14 +17,10 @@ Each batch has one primary category; its completion criteria can include support
 
 All listed batches are not started; execute one requested batch at a time, using separate work slices capped at ten minutes and persistent checkpoints.
 
-Number07 remains an interim milestone, and number20 is the full supported-release milestone; publishing an early artifact does not close the later work.
+Number07 is the published interim milestone, and number20 is the pending full supported-release milestone; publishing an early artifact does not close the later work.
 
 | Batch | Category | Work remaining | Depends on |
 | --- | --- | --- | --- |
-| 06 | Gameplay System | **Representative integration** — Connect the existing services through native Items/activities for the source-reviewed trial jutsu and two maintained jutsu. | 05 |
-| 07 | Engine Set up | **Interim development milestone** — Package the representative integration and document the expanded remaining schedule. | 06 |
-| 08 | Gameplay System | **Skills, abilities and Mastery** — Implement N5e skill/proficiency/Mastery calculations and automatic Chakra Control modifiers using native roll infrastructure. | 06 |
-| 09 | Gameplay System | **Complete condition lifecycle** — Implement movement-triggered effects, rest behavior, multi-source rank-decay allocation and out-of-combat expiry cleanup. | 02,08 |
 | 10 | Gameplay System | **Complete casting and concentration integration** — Implement general rank/DC/cost/components/eligibility/upcast choices, native payment and automatic maintained-cast registration. | 06,08,09 |
 | 11 | Gameplay System | **Conditional effects and exceptional jutsu** — Implement shared conditional bonus/suppression, graded outcome riders, aura targeting, resource-linked modes and source-based effect cleanup. | 09,10 |
 | 12 | Gameplay System | **Martial sequences and simple Clash** — Integrate weapon/unarmed expressions, Chain, Combo/Finisher eligibility and opposed-skill Clash. | 08,10,11 |
@@ -38,18 +34,6 @@ Number07 remains an interim milestone, and number20 is the full supported-releas
 | 20 | Front End User System | **Final supported release and handoff** — Publish the supported release/profile documentation, user-led acceptance checklist, migration instructions and remaining explicit limitations. | 19 |
 
 ## Completion criteria
-
-### 06: Representative integration
-
-Category: **Gameplay System**.
-
-Initial cost/payment, roll, save, damage, condition and concentration paths work end to end for the trial set.
-
-### 07: Interim development milestone
-
-Category: **Engine Set up**.
-
-Publish a clearly labelled interim prerelease without implying completion of the later batches.
 
 ### 08: Skills, abilities and Mastery
 

@@ -158,7 +158,29 @@
       "status": "passed",
       "affectedBehavior": [],
       "nextAction": "User-led native Item/activity acceptance is outstanding; do not repeat unaffected gates."
+    },
+    {
+      "scenarioId": "interim-artifact-provenance-and-allowlist",
+      "batch": "07",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "4f684c2c2842ee2a9e11273eb5f844ff8fc789fc",
+          "startedAt": "2026-11-10T17:52:20Z",
+          "endedAt": "2026-11-10T17:52:21Z",
+          "result": "passed",
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42869279100",
+          "inspectionOnly": true,
+          "unchangedRuntimeFiles": 30,
+          "allowlistedEntries": 34,
+          "gameplayTestsRepeated": false
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": [],
+      "nextAction": "Preserve artifact provenance; no further work until user requests Batch08."
     }
   ],
-  "history": "Batches00–06 each ran one selected gate:34 checks passed,0 failed/skipped/bypassed; no live tests."
+  "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests."
 }

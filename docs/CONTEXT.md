@@ -2,7 +2,7 @@
 
 Updated November 10, 2026; repository owner Tommiec21, project n5e-module, visibility private.
 
-Current milestone: Batch06 six-jutsu native integration trial published privately as v0.1.0-alpha.6; generalization remains assigned to08–16.
+Current milestone: Batch07 interim baseline published privately as v0.1.0-alpha.7; remaining batches08–20 are pending.
 
 Current scope: reusable prompts, private repository, version history and bounded future implementation batches for ranked conditions, HP/Chakra damage, graded saves and dual concentration.
 
@@ -18,13 +18,13 @@ Current scope: reusable prompts, private repository, version history and bounded
 | 04 Saves | Published | v0.1.0-alpha.4; 6 first-attempt checks passed; manual exceptional clauses disclosed |
 | 05 Concentration | Published | v0.1.0-alpha.5; 6 first-attempt checks, explicit manual skill/permission boundaries |
 | 06 Integration | Published trial slice | v0.1.0-alpha.6; 3 first-attempt checks; native live acceptance pending |
-| 07 Packaging | In progress | Codex, batch/07-milestone; slice started17:48UTC; no gameplay test rerun |
+| 07 Packaging | Published interim milestone | v0.1.0-alpha.7; unchanged-runtime/archive inspection passed once |
 
 ## Expanded remaining schedule
 
-User requested every outstanding item be assigned an additional batch; docs/REMAINING_BATCHES.md is authoritative for06–20, all not started.
+User requested every outstanding item be assigned an additional batch; docs/REMAINING_BATCHES.md is authoritative for08–20, all pending;06/07 are now delivered trial/interim milestones.
 
-Published00–05 are completed component deliveries, not claims that their scheduled integration/lifecycle follow-ups are implemented.
+Published00–07 are component/trial/interim deliveries, not claims that their scheduled integration/lifecycle follow-ups are implemented.
 
 ## Handoff record format
 
@@ -181,3 +181,21 @@ Private v0.1.0-alpha.6 assets: module.json884bytes and n5e-module.zip142981bytes
 Follow-up owners:08 full stat calculation,10 requirements/general casting,11 exceptions,12 martial/advanced upcast branches,14 full968-entry conversion,16 controls; the trial requires explicit stat inputs/eligibility confirmation and GM hit adjudication.
 
 Next:07 interim milestone; final completion reports must repeat each batch goal and its module role per the user’s directive.
+
+## Batch07 completed checkpoint and stop
+
+Codex slice17:48–17:55UTC, under ten minutes; milestone commit4f684c2c2842ee2a9e11273eb5f844ff8fc789fc, annotated tagv0.1.0-alpha.7, branch batch/07-milestone.
+
+Goal: package the shared-service/native-trial state into a reproducible interim baseline; its module role is a resumable checkpoint before the remaining feature/conversion batches.
+
+Inspection42869279100 passed once:30 shipped runtime files byte-match Batch06 CI42863913486 and34 ZIP entries match the allowlist/current sources, with unchanged host bindings and matching version URLs.
+
+No gameplay gate was repeated;34 prior component/integration checks remain evidence for their selected scopes, not a full live or final integrated certification.
+
+Release42869498216 published private v0.1.0-alpha.7: module.json908bytes, n5e-module.zip143807bytes; package proof is retained in CI milestone-evidence.json.
+
+Implemented/automated-checked/package-inspected/published statuses are distinct from live/user acceptance, which remains unperformed; no bypassed checks or local installation.
+
+User asked to stop after this batch for the next few hours; do not begin08 or resume automatically, and await the next user instruction.
+
+Next requested batch:08 Skills/Abilities/Mastery, Gameplay System; remaining list08–20 and category index are current.
