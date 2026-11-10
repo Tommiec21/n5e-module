@@ -35,3 +35,7 @@ No function is required to be called only once: single use means single responsi
 Read the selected batch prompt, claim its narrow scope in docs/CONTEXT.md, and preserve unrelated work; implementation of other batches is not implied by receiving one prompt.
 
 Use the native dnd5e type race for Clan identity and native spell/activity infrastructure where suitable for Jutsu, with explicit N5e metadata rather than pretending E–S ranks are native spell slots.
+
+## Outstanding work ownership
+
+Read docs/REMAINING_BATCHES.md for the06–20 completion schedule; every omission must have a named batch/sub-batch and must not be treated as a user exclusion merely because an earlier agent left it manual.

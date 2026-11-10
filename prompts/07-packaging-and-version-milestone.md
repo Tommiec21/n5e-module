@@ -1,4 +1,4 @@
-# Batch 07: Packaging and version milestone
+# Batch 07: Interim packaging and version milestone
 
 ## Objective
 
@@ -29,3 +29,5 @@ Previous batches through 06 must have the required contracts/behavior available;
 At 540 seconds stop starting new work, terminate pending work before 600 seconds, and save the exact next step in docs/CONTEXT.md.
 
 Update the cumulative check ledger and hand off in at most two sentences; do not start the next numbered batch automatically.
+
+This is an interim milestone only; docs/REMAINING_BATCHES.md schedules all follow-ups through the final supported-release Batch20.

@@ -20,6 +20,12 @@ Current scope: reusable prompts, private repository, version history and bounded
 | 06 Integration | Not started | Representative jutsu only |
 | 07 Packaging | Not started | Verified or explicitly limited prerelease |
 
+## Expanded remaining schedule
+
+User requested every outstanding item be assigned an additional batch; docs/REMAINING_BATCHES.md is authoritative for06–20, all not started.
+
+Published00–05 are completed component deliveries, not claims that their scheduled integration/lifecycle follow-ups are implemented.
+
 ## Handoff record format
 
 Record batch, owner, start/end time, changed files, completed slice, next checkpoint, decisions, check attempt IDs and bypassed limitations.
@@ -143,3 +149,11 @@ Private v0.1.0-alpha.5: module.json889bytes and n5e-module.zip92071bytes; recap 
 Full Chakra Control calculation is not converted: a configured native skill is used if present, otherwise the user supplies a full modifier for native dice; linked effect permission failures require owner/GM reconciliation.
 
 No full Item/activity pipeline, compendium/world migration, local installation or live verification; next is Batch06 representative integration.
+
+## Backlog classification correction
+
+Former agent-deferred limitations now have explicit owners:08 skills,09 conditions,10 casting,11 exceptional effects,12 martial sequences,13 progression,14 Jutsu,15 other content,16 UI,17 compatibility,18 migration,19 regression/performance and20 final release.
+
+Original06 representative integration and07 interim packaging remain in place; all future omissions require a numbered batch/sub-batch rather than an unowned boundary.
+
+Docs/prompts update only; no implementation or validation rerun.

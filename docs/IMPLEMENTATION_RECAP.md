@@ -4,14 +4,14 @@ Status: development prerelease0.1.0-alpha.5, November10,2026; private repository
 
 ## Implemented modules
 
-| Batch | Implemented | Boundary |
+| Batch | Published components | Scheduled follow-up |
 | --- | --- | --- |
 | 00 Foundation | Native package, pinned host guard, inherited extension strategy, bounded runner, selected CI gate, allowlisted ZIP and artifact-only releases | No installed-system/campaign changes |
 | 01 Contracts | Versioned source-aware snapshots, conditions, saves, damage/spending, cast records, structural validation and NativeAdapter interface | Interface alone is not a complete native workflow adapter |
-| 02 Conditions | Reused condition registry/calculations, source-specific ActiveEffects, capped additive ranks, controls/removal, immunity, inherited derived bonuses and combat lifecycle | Movement/rest behavior, multi-source decay allocation and out-of-combat condition expiry cleanup remain manual |
-| 03 Damage | Reused HP/CP planners, native HP/extended Chakra fields, per-pool DR, target allocation, dynamic reduction, multipliers, temporary pools, retargeting, recovery restrictions and condition roll cards | Ordinary host/third-party cards remain native until integration; resource maxima/DR require explicit configuration |
-| 04 Saves | Confirmed four-tier outcomes, native kept-d20 cards, explicit activity/rank/mode tables and target-specific damage/condition application | Binary saves stay native; Bane suppression and unsupported exceptional clauses remain manual |
-| 05 Concentration | Two maintained casts, replacement preflight, actual-spend upkeep, native consumption, owner choice cards, source cleanup, expiry and captured damage checks | Complete Chakra Control skill calculation and item casting registration await integration |
+| 02 Conditions | Reused condition registry/calculations, source-specific ActiveEffects, capped additive ranks, controls/removal, immunity, inherited derived bonuses and combat lifecycle | Batch09: movement/rest behavior, multi-source decay allocation and out-of-combat condition expiry cleanup |
+| 03 Damage | Reused HP/CP planners, native HP/extended Chakra fields, per-pool DR, target allocation, dynamic reduction, multipliers, temporary pools, retargeting, recovery restrictions and condition roll cards | Batches10/16/17: native/third-party integration; Batch13: resource maxima/DR progression |
+| 04 Saves | Confirmed four-tier outcomes, native kept-d20 cards, explicit activity/rank/mode tables and target-specific damage/condition application | Binary saves remain native by design; Batch11: Bane suppression and exceptional clauses |
+| 05 Concentration | Two maintained casts, replacement preflight, actual-spend upkeep, native consumption, owner choice cards, source cleanup, expiry and captured damage checks | Batch08: Chakra Control calculation; Batch10: casting registration |
 
 ## What has been reused
 
@@ -41,7 +41,7 @@ Checks are host-independent/native-shaped automated checks, not a live Foundry m
 
 Every work slice and child command was bounded below ten minutes, and private development releases reuse checked artifacts without running a second release gate.
 
-## Not yet implemented or converted
+## Scheduled additional batches
 
 Batch06 representative native Item/activity integration and Batch07 packaging/acceptance milestone remain pending, despite individual development artifacts already being published.
 
@@ -52,3 +52,5 @@ No campaign/world/token/UUID migration, polished character sheet, universal Midi
 Some APIs/controls already operate independently, but gameplayEnabled:false still signals that the whole N5e game integration is unfinished.
 
 Batch05 publication: https://github.com/Tommiec21/n5e-module/releases/tag/v0.1.0-alpha.5; CI42860468142 and release42860690181 succeeded using runtime commit75aedb05c53eb1961e25bf972acb8814c1192530.
+
+The authoritative remaining schedule is docs/REMAINING_BATCHES.md, covering06–20; earlier manual/deferred descriptions identify current runtime limitations, not user-approved permanent omissions.
