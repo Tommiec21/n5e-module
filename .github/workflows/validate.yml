@@ -1,4 +1,4 @@
-name: Validate foundation
+name: Validate selected batch
 on:
   push:
     branches: [main]
@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 jobs:
-  foundation:
+  selected:
     runs-on: windows-latest
     timeout-minutes: 10
     steps:
@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '22'
       - name: Execute selected gate once
-        run: node tools/check.mjs
+        run: node tools/check.mjs contracts
       - name: Package without repeating checks
         run: node tools/bounded.mjs 60000 node tools/package.mjs
       - name: Upload exact checked artifact

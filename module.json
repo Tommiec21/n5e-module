@@ -1,15 +1,33 @@
 {
   "id": "n5e-module",
   "title": "N5e for dnd5e — Development",
-  "description": "Development foundation for Naruto 5e on dnd5e; gameplay automation is not implemented.",
-  "version": "0.1.0-alpha.0",
-  "authors": [{ "name": "King" }],
-  "compatibility": { "minimum": "13.347", "maximum": "13" },
-  "relationships": {
-    "systems": [{ "id": "dnd5e", "type": "system", "compatibility": { "minimum": "5.3.3", "maximum": "5.3.3" } }]
+  "description": "Development foundation and shared N5e data contracts; gameplay automation is disabled.",
+  "version": "0.1.0-alpha.1",
+  "authors": [
+    {
+      "name": "King"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13.347",
+    "maximum": "13"
   },
-  "esmodules": ["scripts/module.mjs"],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.3.3",
+          "maximum": "5.3.3"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/module.mjs"
+  ],
   "url": "https://github.com/Tommiec21/n5e-module",
-  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.0/module.json",
-  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.0/n5e-module.zip"
+  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.1/module.json",
+  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.1/n5e-module.zip"
 }

@@ -1,11 +1,9 @@
-# Foundation development prerelease
+# Batch01 development prerelease
 
-Minimal dnd5e module shell, host guard, bounded process runner and allowlisted package tooling.
+Versioned shared data contracts, structural validation and a host-independent NativeAdapter interface are implemented; no gameplay adapter or rules resolution is enabled.
 
-Gameplay automation is disabled; this is not a replacement for the existing N5e system.
+The selected contracts gate is executed once, and packaging reuses its artifact without repeating unaffected foundation checks.
 
-Target: Foundry v13 build347 or later within v13 and dnd5e5.3.3; no runtime compatibility certification or live verification.
+Pending gameplay decisions are tracked in docs/DECISIONS.md; the interface declarations do not choose those rules.
 
-Private GitHub release assets require authenticated download and may not install directly through Foundry’s unauthenticated URL downloader.
-
-Foundation checks cover host/lifecycle boundaries, exit preservation, deadline and cancellation cleanup; user-led Foundry acceptance remains outstanding.
+No live verification or local installation was performed; private release assets need authenticated download.

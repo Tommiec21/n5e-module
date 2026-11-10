@@ -12,7 +12,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | --- | --- | --- |
 | Planning baseline | Published | 88e8193, annotated tag v0.0.0-plan.1 |
 | 00 Foundation | Published | v0.1.0-alpha.0; first CI attempt, 4 passed; no live verification |
-| 01 Contracts | Not started | Pending rule questions and canonical data contracts |
+| 01 Contracts | In progress | Codex, batch/01-contracts; slice started 2026-11-10 14:20 UTC |
 | 02 Conditions | Not started | Registry/state/lifecycle adapter |
 | 03 Damage | Not started | HP/CP planning and application |
 | 04 Saves | Not started | Native rolls and graded outcomes |

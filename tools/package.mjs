@@ -1,7 +1,7 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 
 // Only these runtime files may enter the archive, so local credentials and campaign data cannot leak in.
-const files = ["module.json", "scripts/module.mjs", "scripts/compatibility.mjs", "README.md", "LICENSE", "CHANGELOG.md"];
+const files = ["module.json", "scripts/module.mjs", "scripts/compatibility.mjs", "scripts/contracts.mjs", "README.md", "LICENSE", "CHANGELOG.md"];
 
 /** Compute the ZIP integrity checksum without a packaging dependency. */
 function crc32(bytes) {
