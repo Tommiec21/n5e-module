@@ -1,3 +1,4 @@
+import { generalPlan, eligibility, maximumRank } from "./integration/casting.mjs";
 import { registerConditionCompletion, finishConditionRest, processMovement } from "./conditions/completion-hooks.mjs";
 import { expireConditions, normalizeConditionCaps, removeConditionRanks } from "./conditions/completion.mjs";
 import { importTrialItems } from "./integration/content.mjs";
@@ -49,6 +50,7 @@ function initialize() {
     supported: supportsHost(game.system, game.version),
     gameplayEnabled: false,
     skills: Object.freeze({ definitions: skills, roll: rollSkill, setMasterySources, disciplineNumbers }),
+    casting: Object.freeze({ cast: castTrial, plan: generalPlan, eligibility, maximumRank }),
     trial: Object.freeze({ importItems: importTrialItems, cast: castTrial }),
     concentration: Object.freeze({ begin: beginCast, end: endCast, payUpkeep, cleanup, applyCheck, list: maintainedCasts, damageCheckPlan, upkeepPlan, chooseReplacement, chooseUpkeep, rollCheck }),
     saves: Object.freeze({ resolve: resolveSave, apply: applySaveOutcome, roll: rollSave }),

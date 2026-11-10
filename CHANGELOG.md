@@ -1,3 +1,7 @@
+## 0.1.0-alpha.10
+
+General reviewed casting profiles, rank and component eligibility, discipline grants, authored upcasts/costs and native payment with pre-payment concentration selection.
+
 # Changelog
 
 ## 0.1.0-alpha.9

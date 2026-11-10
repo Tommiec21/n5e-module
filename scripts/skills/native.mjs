@@ -88,13 +88,16 @@ export function skillActorClass(Base) {
 /** Supply source-default discipline numbers while later feature adapters own alternative abilities and bonuses. */
 export function disciplineNumbers(actor, discipline) {
   const key = { Ninjutsu: "nin", Genjutsu: "gen", Taijutsu: "tai", Bukijutsu: "tai" }[discipline] ?? discipline;
-  const ability = { nin: "int", gen: "wis", tai: "str" }[key];
+  const grant = actor.flags?.["n5e-module"]?.casting?.disciplines?.[key] ?? {};
+  const ability = grant.ability ?? { nin: "int", gen: "wis", tai: "str" }[key];
+  if (!["str", "dex", "con", "int", "wis", "cha"].includes(ability)) throw new Error("Invalid casting ability grant.");
   if (!ability) throw new Error("Unknown discipline.");
   const pb = proficiencyForLevel(actorLevel(actor.system));
   const mod = actor.system.abilities[ability].mod;
   const m = actor.n5eConditions;
   const mastery = masteryFor(masterySources(actor), `attack.${key}`, actorLevel(actor.system));
-  return { ability, attack: mod + pb + mastery.bonus + (m?.allDice ?? 0) + (m?.checksAndAttacks ?? 0), dc: 8 + mod + pb + (m?.saveDC ?? 0) };
+  if (![grant.attackBonus ?? 0, grant.dcBonus ?? 0].every(Number.isSafeInteger)) throw new Error("Casting bonuses must be whole numbers.");
+  return { ability, attack: mod + pb + mastery.bonus + (m?.allDice ?? 0) + (m?.checksAndAttacks ?? 0) + (grant.attackBonus ?? 0), dc: 8 + mod + pb + (m?.saveDC ?? 0) + (grant.dcBonus ?? 0) };
 }
 
 /** Expose native skill rolling with original N5e key aliases for old content references. */

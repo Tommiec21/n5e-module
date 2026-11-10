@@ -243,3 +243,7 @@ Private v0.1.0-alpha.9: module.json875bytes, ZIP171433bytes; no live verificatio
 Condition-specific rest behavior is complete for this batch; broader HP/Chakra/Hit-Die short/long/full rest resource conversion belongs13, and derived behavioral flags are owned by10/11.
 
 Next requested batch10 completes general casting/concentration integration, then stop as requested.
+
+## Batch10 active scope
+
+Codex branch batch/10-casting, slice18:22UTC; general reviewed casting descriptors, eligibility, native payment and pre-payment concentration choices. Stop after10; no live testing.

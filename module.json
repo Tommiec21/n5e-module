@@ -2,7 +2,7 @@
   "id": "n5e-module",
   "title": "N5e for dnd5e — Development",
   "description": "N5e condition movement, rest, capped source decay and world-time expiry lifecycle.",
-  "version": "0.1.0-alpha.9",
+  "version": "0.1.0-alpha.10",
   "authors": [
     {
       "name": "King"
@@ -28,6 +28,6 @@
     "scripts/module.mjs"
   ],
   "url": "https://github.com/Tommiec21/n5e-module",
-  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.9/module.json",
-  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.9/n5e-module.zip"
+  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.10/module.json",
+  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.10/n5e-module.zip"
 }
