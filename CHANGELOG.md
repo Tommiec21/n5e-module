@@ -1,3 +1,7 @@
+## 0.1.0-alpha.11
+
+Selected-content S01:377 native records, portable source snapshot, organized idempotent GM import and source-preserving actor import; mechanics review pending.
+
 ## 0.1.0-alpha.10
 
 General reviewed casting profiles, rank and component eligibility, discipline grants, authored upcasts/costs and native payment with pre-payment concentration selection.

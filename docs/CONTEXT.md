@@ -263,3 +263,9 @@ Physical facts unavailable in native data require confirmation; exceptional effe
 53 selected component/integration checks across00–10 plus one Batch07 package inspection are historical scoped evidence, not live/user acceptance. No tests bypassed, no live Foundry or local installation; user-led game testing remains pending.
 
 Do not duplicate Batch10 or begin11 automatically: user asked to stop at10. The repository context/profiles are authoritative; older OneDrive planning copies were not rewritten.
+
+## Selected testing content — user-authorized scope change
+
+November10, slice18:42UTC, branch content/selected-01. User authorized164 D-rank general jutsu in six specified groups, plus Aburame/Hyuga/Uchiha/Uzumaki/Senju/Ryu/Hebi/Kuru with features, choices, stances and all associated clan jutsu; Clan Feats remain excluded.
+
+This is an early selected subset of Batches13–15, not a resumption of all pending gameplay systems. S01 owns portable snapshots, native conversion, folders, import controls and coverage; S02 owns reviewed mechanics mapping across the selected data, S03 owns conversion checks, testing guide and final selected-content release. Do not duplicate the active converter or infer completed automation from successful structural import.

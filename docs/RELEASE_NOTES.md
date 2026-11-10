@@ -1,3 +1,13 @@
+# Selected test content S01 — Data Conversion System
+
+Goal: provide a portable native library from existing N5e records, without assuming their old custom fields are native automation.
+
+Includes164 D-rank general jutsu and213 records across Aburame/Hyuga/Uchiha/Uzumaki/Senju/Ryu/Hebi/Kuru:8 clan identities,87 clan jutsu,63 features,46 feature choices and9 stances. Clan Feats are excluded; feature choices are retained.
+
+Import is explicit from module settings; activation creates nothing. World folders use the native four-level limit, source identity prevents duplicates, and actor imports receive fresh embedded IDs.
+
+This S01 release is structural: all377 records currently declare manual mechanics; S02 reviews/migrates the supported casting and feature mechanics. No live verification or local installation; selected conversion gate pending.
+
 # Batch10 — Casting integration
 
 Goal: join reusable casting eligibility and authored modes to native spending, rolls, graded saves, damage and dual concentration.
