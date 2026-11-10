@@ -1,5 +1,7 @@
 # Batch 13: Character options, progression and resources
 
+Category: **Data Conversion System**.
+
 Read prompts/COMMON.md and docs/REMAINING_BATCHES.md before working.
 
 ## Objective

@@ -1,5 +1,7 @@
 # Batch 03: HP and Chakra damage
 
+Category: **Gameplay System**.
+
 ## Objective
 
 Adapt N5e damage planning and native application with one owner for each resource update.

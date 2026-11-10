@@ -1,5 +1,7 @@
 # Batch 18: Campaign and document migration
 
+Category: **Data Conversion System**.
+
 Read prompts/COMMON.md and docs/REMAINING_BATCHES.md before working.
 
 ## Objective

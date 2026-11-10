@@ -157,3 +157,9 @@ Former agent-deferred limitations now have explicit owners:08 skills,09 conditio
 Original06 representative integration and07 interim packaging remain in place; all future omissions require a numbered batch/sub-batch rather than an unowned boundary.
 
 Docs/prompts update only; no implementation or validation rerun.
+
+## Batch categories
+
+All00–20 prompts and the remaining schedule now carry the user-requested primary category; docs/BATCH_CATEGORIES.md is the complete categorized index.
+
+Documentation only, with no implementation changes or check reruns.

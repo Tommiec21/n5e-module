@@ -1,5 +1,7 @@
 # Batch 02: Ranked conditions
 
+Category: **Gameplay System**.
+
 ## Objective
 
 Adapt the existing condition registry, rank calculations and lifecycle to native ActiveEffects.

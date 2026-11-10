@@ -1,5 +1,7 @@
 # Batch 19: Integrated regression and performance closure
 
+Category: **Engine Set up**.
+
 Read prompts/COMMON.md and docs/REMAINING_BATCHES.md before working.
 
 ## Objective

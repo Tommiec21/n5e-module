@@ -1,5 +1,7 @@
 # Batch 00: Foundation
 
+Category: **Engine Set up**.
+
 ## Objective
 
 Create the smallest native dnd5e module shell and bounded developer tooling, without gameplay handlers.

@@ -1,5 +1,7 @@
 # Batch 16: Player-facing sheets and controls
 
+Category: **Front End User System**.
+
 Read prompts/COMMON.md and docs/REMAINING_BATCHES.md before working.
 
 ## Objective

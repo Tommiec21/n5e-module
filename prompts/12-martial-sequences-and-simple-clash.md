@@ -1,5 +1,7 @@
 # Batch 12: Martial sequences and simple Clash
 
+Category: **Gameplay System**.
+
 Read prompts/COMMON.md and docs/REMAINING_BATCHES.md before working.
 
 ## Objective

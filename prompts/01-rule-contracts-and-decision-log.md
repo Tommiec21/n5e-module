@@ -1,5 +1,7 @@
 # Batch 01: Rule contracts and decision log
 
+Category: **Engine Set up**.
+
 ## Objective
 
 Define shared snapshots, event payloads and source precedence before writing interdependent handlers.

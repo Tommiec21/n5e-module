@@ -1,5 +1,7 @@
 # Batch 07: Interim packaging and version milestone
 
+Category: **Engine Set up**.
+
 ## Objective
 
 Package completed functionality and documented limitations into the private repository version history.

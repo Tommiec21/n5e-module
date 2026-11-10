@@ -1,5 +1,7 @@
 # Batch 17: Selected module compatibility
 
+Category: **Gameplay System**.
+
 Read prompts/COMMON.md and docs/REMAINING_BATCHES.md before working.
 
 ## Objective

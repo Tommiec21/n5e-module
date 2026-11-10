@@ -1,5 +1,7 @@
 # Batch 08: Skills, abilities and Mastery
 
+Category: **Gameplay System**.
+
 Read prompts/COMMON.md and docs/REMAINING_BATCHES.md before working.
 
 ## Objective

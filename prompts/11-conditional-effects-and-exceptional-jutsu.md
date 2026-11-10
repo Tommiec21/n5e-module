@@ -1,5 +1,7 @@
 # Batch 11: Conditional effects and exceptional jutsu
 
+Category: **Gameplay System**.
+
 Read prompts/COMMON.md and docs/REMAINING_BATCHES.md before working.
 
 ## Objective

@@ -1,5 +1,7 @@
 # Batch 06: Representative jutsu integration
 
+Category: **Gameplay System**.
+
 ## Objective
 
 Prove shared handlers with a small content set without reimporting the full book.

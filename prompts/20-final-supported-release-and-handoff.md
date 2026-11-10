@@ -1,5 +1,7 @@
 # Batch 20: Final supported release and handoff
 
+Category: **Front End User System**.
+
 Read prompts/COMMON.md and docs/REMAINING_BATCHES.md before working.
 
 ## Objective

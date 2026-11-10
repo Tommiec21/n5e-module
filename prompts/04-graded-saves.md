@@ -1,5 +1,7 @@
 # Batch 04: Graded saves
 
+Category: **Gameplay System**.
+
 ## Objective
 
 Attach the approved N5e outcome resolver to native saving throws and shared consequence services.

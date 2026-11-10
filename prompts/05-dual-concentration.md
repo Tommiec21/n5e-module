@@ -1,5 +1,7 @@
 # Batch 05: Dual concentration
 
+Category: **Gameplay System**.
+
 ## Objective
 
 Implement two source-linked maintained casts, actual-cost upkeep and damage-triggered checks.
