@@ -2,7 +2,7 @@
 
 Updated November 10, 2026; repository owner Tommiec21, project n5e-module, visibility private.
 
-Current milestone: Batch01 published privately as v0.1.0-alpha.1; shared contracts and native adapter declarations exist, gameplay remains disabled.
+Current milestone: Batch02 ranked-condition services published privately as v0.1.0-alpha.2; casting and damage integration remain disabled.
 
 Current scope: reusable prompts, private repository, version history and bounded future implementation batches for ranked conditions, HP/Chakra damage, graded saves and dual concentration.
 
@@ -13,7 +13,7 @@ Current scope: reusable prompts, private repository, version history and bounded
 | Planning baseline | Published | 88e8193, annotated tag v0.0.0-plan.1 |
 | 00 Foundation | Published | v0.1.0-alpha.0; first CI attempt, 4 passed; no live verification |
 | 01 Contracts | Published | v0.1.0-alpha.1; 4 first-attempt contract checks passed; pending rulings remain explicit |
-| 02 Conditions | In progress | Codex, batch/02-conditions, slice started16:23UTC |
+| 02 Conditions | Published with disclosed manual paths | v0.1.0-alpha.2; 5 checks passed once, no live verification |
 | 03 Damage | Not started | HP/CP planning and application |
 | 04 Saves | Not started | Native rolls and graded outcomes |
 | 05 Concentration | Not started | Two casts, upkeep and damage checks |
@@ -75,3 +75,21 @@ Save tiers retain the existing five-point margins, meet-DC success and natural20
 One failed concentration check ends both non-Stable maintained jutsu; concentration damage combines final HP/Chakra damage after defenses including temporary pools.
 
 Docs-only update; no gameplay implementation or check rerun.
+
+## Batch02 completed checkpoint
+
+Codex slice16:23–16:32UTC, under ten minutes; runtime f7b0e9116f60ace6c423dae9549be20f08a58ba8, branch batch/02-conditions.
+
+Reused original registry/modifier code, added native ActiveEffect source storage, explicit rank controls/removal, additive capped aggregation, native Actor inheritance and active-GM combat processing.
+
+User confirmed different-source ranks add up to the cap; setCondition records that policy, while source-specific records remain independently removable.
+
+CI42855037496:5 passed,0 failed/skipped, first attempt; release42855267960 reused the same14-file artifact without retesting.
+
+Private prerelease v0.1.0-alpha.2: module.json884bytes and n5e-module.zip41045bytes; no local installation or live verification.
+
+Manual/deferred paths are explicit: multi-source decay allocation, movement/rest behavior and out-of-combat expiry cleanup; casting costs/DC/DR/behavior flags are exposed for later adapters, not fully integrated now.
+
+Native status picker entries are icons only unless applied through the ranked-condition API/dialog; documentation corrects this distinction without claiming rank-aware native status toggling.
+
+Next: Batch03 HP/Chakra damage and condition-damage request consumption; do not start it automatically.

@@ -53,6 +53,27 @@
       "status": "passed",
       "affectedBehavior": [],
       "nextAction": "Do not repeat without affected changes; pending gameplay rulings are not implemented."
+    },
+    {
+      "scenarioId": "ranked-condition-source-and-lifecycle",
+      "batch": "02",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "CI/windows-latest",
+          "commit": "f7b0e9116f60ace6c423dae9549be20f08a58ba8",
+          "startedAt": "2026-11-10T16:29:44Z",
+          "endedAt": "2026-11-10T16:29:45Z",
+          "result": "passed",
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/42855037496",
+          "tests": 5,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": [],
+      "nextAction": "No repeat unless affected code changes; user-led native acceptance remains outstanding."
     }
   ],
   "history": "Batch00 and Batch01 each executed their selected gate once in CI; no local or live test runs."
