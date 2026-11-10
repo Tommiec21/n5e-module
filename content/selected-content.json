@@ -2710,7 +2710,7 @@
       "system": {
         "identifier": "bless",
         "description": {
-          "value": "<p>You release a pulse of chakra targeting all allied creatures within 30 feet of you causing them feel deep seeded Pride or ambition. Whenever an allied creature makes an attack roll or saving throw during this jutsu’s duration, they can roll an additional 1d4 and add the number rolled to their Attack and Saving throws.</p>\n<p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and the radius by 10-feet.</p><p><em>Cost/concentration connected; effects manual. Higher-rank modes require manual resolution.</em></p>",
+          "value": "<p>You release a pulse of chakra targeting all allied creatures within 30 feet of you causing them feel deep seeded Pride or ambition. Whenever an allied creature makes an attack roll or saving throw during this jutsu’s duration, they can roll an additional 1d4 and add the number rolled to their Attack and Saving throws.</p>\n<p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and the radius by 10-feet.</p><p><em>Base-rank core connected. Higher-rank modes require manual resolution.</em></p>",
           "chat": ""
         },
         "source": {
@@ -2724,7 +2724,7 @@
           "n5eSelectedCast1": {
             "_id": "n5eSelectedCast1",
             "type": "utility",
-            "name": "Cast — manual effects",
+            "name": "Cast",
             "activation": {
               "type": "action",
               "value": 1
@@ -2767,16 +2767,15 @@
               "D-Rank"
             ],
             "automation": {
-              "status": "partial",
+              "status": "base-rank-core",
               "owner": "selected-content-02",
               "automated": [
                 "base-rank eligibility",
                 "Chakra cost",
-                "dual concentration/upkeep"
+                "dual concentration/upkeep",
+                "native rolls"
               ],
-              "reasons": [
-                "Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected."
-              ],
+              "reasons": [],
               "upcasting": "manual; source text retained, higher-rank automated modes not authored"
             },
             "sourceLine": 3061,
@@ -2810,7 +2809,42 @@
             "activities": {
               "n5eSelectedCast1": {
                 "kind": "maintain",
-                "parts": []
+                "parts": [],
+                "effects": {
+                  "attackFormula": "1d4",
+                  "changes": [
+                    {
+                      "key": "system.bonuses.abilities.save",
+                      "value": "+1d4",
+                      "mode": 2,
+                      "priority": 20
+                    },
+                    {
+                      "key": "system.bonuses.mwak.attack",
+                      "value": "+1d4",
+                      "mode": 2,
+                      "priority": 20
+                    },
+                    {
+                      "key": "system.bonuses.rwak.attack",
+                      "value": "+1d4",
+                      "mode": 2,
+                      "priority": 20
+                    },
+                    {
+                      "key": "system.bonuses.msak.attack",
+                      "value": "+1d4",
+                      "mode": 2,
+                      "priority": 20
+                    },
+                    {
+                      "key": "system.bonuses.rsak.attack",
+                      "value": "+1d4",
+                      "mode": 2,
+                      "priority": 20
+                    }
+                  ]
+                }
               }
             },
             "durationSeconds": 60
@@ -3058,7 +3092,7 @@
       "system": {
         "identifier": "confidence",
         "description": {
-          "value": "<p>You select up to 3 willing creatures in range, that you can see, other than yourself, reinforcing their confidence in themselves, allowing them to act with little to no hesitation. For the duration, whenever a target creature makes an Ability or Skill check, they add 1d4 to the result.</p>\n<p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3. If this jutsu is cast at B-Rank or higher, the duration of this jutsu becomes Concentration, up to 10 minutes. If this jutsu is cast at S-Rank, the duration of this jutsu becomes 10 minutes, no concentration needed.</p><p><em>Cost/concentration connected; effects manual. Higher-rank modes require manual resolution.</em></p>",
+          "value": "<p>You select up to 3 willing creatures in range, that you can see, other than yourself, reinforcing their confidence in themselves, allowing them to act with little to no hesitation. For the duration, whenever a target creature makes an Ability or Skill check, they add 1d4 to the result.</p>\n<p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3. If this jutsu is cast at B-Rank or higher, the duration of this jutsu becomes Concentration, up to 10 minutes. If this jutsu is cast at S-Rank, the duration of this jutsu becomes 10 minutes, no concentration needed.</p><p><em>Base-rank core connected. Higher-rank modes require manual resolution.</em></p>",
           "chat": ""
         },
         "source": {
@@ -3072,7 +3106,7 @@
           "n5eSelectedCast1": {
             "_id": "n5eSelectedCast1",
             "type": "utility",
-            "name": "Cast — manual effects",
+            "name": "Cast",
             "activation": {
               "type": "action",
               "value": 1
@@ -3115,16 +3149,15 @@
               "D-Rank"
             ],
             "automation": {
-              "status": "partial",
+              "status": "base-rank-core",
               "owner": "selected-content-02",
               "automated": [
                 "base-rank eligibility",
                 "Chakra cost",
-                "dual concentration/upkeep"
+                "dual concentration/upkeep",
+                "native rolls"
               ],
-              "reasons": [
-                "Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected."
-              ],
+              "reasons": [],
               "upcasting": "manual; source text retained, higher-rank automated modes not authored"
             },
             "sourceLine": 3079,
@@ -3158,7 +3191,49 @@
             "activities": {
               "n5eSelectedCast1": {
                 "kind": "maintain",
-                "parts": []
+                "parts": [],
+                "effects": {
+                  "changes": [
+                    {
+                      "key": "system.abilities.str.bonuses.check",
+                      "value": "+1d4",
+                      "mode": 2,
+                      "priority": 20
+                    },
+                    {
+                      "key": "system.abilities.dex.bonuses.check",
+                      "value": "+1d4",
+                      "mode": 2,
+                      "priority": 20
+                    },
+                    {
+                      "key": "system.abilities.con.bonuses.check",
+                      "value": "+1d4",
+                      "mode": 2,
+                      "priority": 20
+                    },
+                    {
+                      "key": "system.abilities.int.bonuses.check",
+                      "value": "+1d4",
+                      "mode": 2,
+                      "priority": 20
+                    },
+                    {
+                      "key": "system.abilities.wis.bonuses.check",
+                      "value": "+1d4",
+                      "mode": 2,
+                      "priority": 20
+                    },
+                    {
+                      "key": "system.abilities.cha.bonuses.check",
+                      "value": "+1d4",
+                      "mode": 2,
+                      "priority": 20
+                    }
+                  ]
+                },
+                "maxTargets": 3,
+                "excludeSelf": true
               }
             },
             "durationSeconds": 60
@@ -8408,7 +8483,7 @@
       "system": {
         "identifier": "body-camouflage",
         "description": {
-          "value": "<p>You coat the body of a creature you touch in chakra and begin to imitate the color and texture of the area around them blending in like a chameleon. For the duration, they gain a Rank of Mastery to Stealth checks.</p>\n<p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and you can target one additional creature for each rank and they gain the benefits of this jutsu as well. If this jutsu is cast at A-Rank, increase the bonus granted to each creature to two Ranks of Mastery.</p><p><em>Cost/concentration connected; effects manual. Higher-rank modes require manual resolution.</em></p>",
+          "value": "<p>You coat the body of a creature you touch in chakra and begin to imitate the color and texture of the area around them blending in like a chameleon. For the duration, they gain a Rank of Mastery to Stealth checks.</p>\n<p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and you can target one additional creature for each rank and they gain the benefits of this jutsu as well. If this jutsu is cast at A-Rank, increase the bonus granted to each creature to two Ranks of Mastery.</p><p><em>Base-rank core connected. Higher-rank modes require manual resolution.</em></p>",
           "chat": ""
         },
         "source": {
@@ -8422,7 +8497,7 @@
           "n5eSelectedCast1": {
             "_id": "n5eSelectedCast1",
             "type": "utility",
-            "name": "Cast — manual effects",
+            "name": "Cast",
             "activation": {
               "type": "action",
               "value": 1
@@ -8466,16 +8541,15 @@
               "D-Rank"
             ],
             "automation": {
-              "status": "partial",
+              "status": "base-rank-core",
               "owner": "selected-content-02",
               "automated": [
                 "base-rank eligibility",
                 "Chakra cost",
-                "dual concentration/upkeep"
+                "dual concentration/upkeep",
+                "native rolls"
               ],
-              "reasons": [
-                "Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected."
-              ],
+              "reasons": [],
               "upcasting": "manual; source text retained, higher-rank automated modes not authored"
             },
             "sourceLine": 799,
@@ -8502,7 +8576,14 @@
             "activities": {
               "n5eSelectedCast1": {
                 "kind": "maintain",
-                "parts": []
+                "parts": [],
+                "effects": {
+                  "changes": [],
+                  "masteryTargets": [
+                    "skill.ste"
+                  ]
+                },
+                "maxTargets": 1
               }
             },
             "durationSeconds": 60
@@ -8518,7 +8599,7 @@
       "system": {
         "identifier": "body-flicker",
         "description": {
-          "value": "<p>You gain a mastery of movement, allowing you to cover much greater distance in a shorter amount of time. Until the end of your turn, you gain a +20 bonus to your speed.</p>\n<p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and the bonus to speed by +10. If this jutsu is cast at B-Rank or higher, while moving you become invisible and only when ending your movement, declaring an attack or casting a jutsu do you become visible. Making an attack after ending invisibility from this jutsu does not grant advantage.</p><p><em>Cost/concentration connected; effects manual. Higher-rank modes require manual resolution.</em></p>",
+          "value": "<p>You gain a mastery of movement, allowing you to cover much greater distance in a shorter amount of time. Until the end of your turn, you gain a +20 bonus to your speed.</p>\n<p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3 and the bonus to speed by +10. If this jutsu is cast at B-Rank or higher, while moving you become invisible and only when ending your movement, declaring an attack or casting a jutsu do you become visible. Making an attack after ending invisibility from this jutsu does not grant advantage.</p><p><em>Base-rank core connected. Higher-rank modes require manual resolution.</em></p>",
           "chat": ""
         },
         "source": {
@@ -8532,7 +8613,7 @@
           "n5eSelectedCast1": {
             "_id": "n5eSelectedCast1",
             "type": "utility",
-            "name": "Cast — manual effects",
+            "name": "Cast",
             "activation": {
               "type": "bonus",
               "value": 1
@@ -8575,15 +8656,14 @@
               "D-Rank"
             ],
             "automation": {
-              "status": "partial",
+              "status": "base-rank-core",
               "owner": "selected-content-02",
               "automated": [
                 "base-rank eligibility",
-                "Chakra cost"
+                "Chakra cost",
+                "native rolls"
               ],
-              "reasons": [
-                "Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected."
-              ],
+              "reasons": [],
               "upcasting": "manual; source text retained, higher-rank automated modes not authored"
             },
             "sourceLine": 804,
@@ -8610,9 +8690,22 @@
             "activities": {
               "n5eSelectedCast1": {
                 "kind": "maintain",
-                "parts": []
+                "parts": [],
+                "effects": {
+                  "changes": [
+                    {
+                      "key": "system.attributes.movement.bonus",
+                      "value": "+20",
+                      "mode": 2,
+                      "priority": 20
+                    }
+                  ],
+                  "endsAt": "turnEnd"
+                },
+                "recipient": "self"
               }
-            }
+            },
+            "durationSeconds": 6
           }
         }
       }
@@ -9075,7 +9168,7 @@
       "system": {
         "identifier": "darkvision",
         "description": {
-          "value": "<p>You infuse chakra into your eyes, allowing you the ability to see in the dark. For the duration, you 60ft of Darkvision.</p>\n<p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3. If this jutsu is cast at C-Rank or higher, you can select +1 creature other than yourself to benefit from this jutsu’s effects. For every rank about C-Rank you cast this jutsu, increase the number of creatures you can bestow this jutsu’s effects by +2.</p><p><em>Cost/concentration connected; effects manual. Higher-rank modes require manual resolution.</em></p>",
+          "value": "<p>You infuse chakra into your eyes, allowing you the ability to see in the dark. For the duration, you 60ft of Darkvision.</p>\n<p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3. If this jutsu is cast at C-Rank or higher, you can select +1 creature other than yourself to benefit from this jutsu’s effects. For every rank about C-Rank you cast this jutsu, increase the number of creatures you can bestow this jutsu’s effects by +2.</p><p><em>Base-rank core connected. Higher-rank modes require manual resolution.</em></p>",
           "chat": ""
         },
         "source": {
@@ -9089,7 +9182,7 @@
           "n5eSelectedCast1": {
             "_id": "n5eSelectedCast1",
             "type": "utility",
-            "name": "Cast — manual effects",
+            "name": "Cast",
             "activation": {
               "type": "action",
               "value": 1
@@ -9133,15 +9226,14 @@
               "D-Rank"
             ],
             "automation": {
-              "status": "partial",
+              "status": "base-rank-core",
               "owner": "selected-content-02",
               "automated": [
                 "base-rank eligibility",
-                "Chakra cost"
+                "Chakra cost",
+                "native rolls"
               ],
-              "reasons": [
-                "Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected."
-              ],
+              "reasons": [],
               "upcasting": "manual; source text retained, higher-rank automated modes not authored"
             },
             "sourceLine": 842,
@@ -9168,7 +9260,18 @@
             "activities": {
               "n5eSelectedCast1": {
                 "kind": "maintain",
-                "parts": []
+                "parts": [],
+                "effects": {
+                  "changes": [
+                    {
+                      "key": "system.attributes.senses.ranges.darkvision",
+                      "value": "60",
+                      "mode": 4,
+                      "priority": 40
+                    }
+                  ]
+                },
+                "recipient": "self"
               }
             },
             "durationSeconds": 600
@@ -12101,7 +12204,7 @@
       "system": {
         "identifier": "wind-release-lions-roar",
         "description": {
-          "value": "<p>You weave Wind Release Chakra together, creating a thin veil of chakra in the shape of a Lion around you and other creatures of your choice in range. This chakra then collapses on the group granting all select creatures the listed benefits of the duration;</p>\n<p>Bonus +15 feet to speed.</p>\n<p>A rank of Mastery for Ninjutsu Attack Rolls.</p>\n<p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3. If this jutsu is cast at C-Rank or higher, increase the bonus to speed to +25. If this jutsu is cast at B-Rank or higher, all affected creatures deal a bonus +1d8 to damage they deal as a result of jutsu they cast, twice per turn. If this jutsu is cast at A-Rank or higher, Ninjutsu attack rolls instead gain 2 ranks of Mastery. If this jutsu is cast at S-Rank, all affected creatures gain Immunity to the Dazed and Weakened conditions.</p><p><em>Cost/concentration connected; effects manual. Higher-rank modes require manual resolution.</em></p>",
+          "value": "<p>You weave Wind Release Chakra together, creating a thin veil of chakra in the shape of a Lion around you and other creatures of your choice in range. This chakra then collapses on the group granting all select creatures the listed benefits of the duration;</p>\n<p>Bonus +15 feet to speed.</p>\n<p>A rank of Mastery for Ninjutsu Attack Rolls.</p>\n<p>At Higher Ranks: For each rank you cast this jutsu above D-Rank, increase the cost of this jutsu by 3. If this jutsu is cast at C-Rank or higher, increase the bonus to speed to +25. If this jutsu is cast at B-Rank or higher, all affected creatures deal a bonus +1d8 to damage they deal as a result of jutsu they cast, twice per turn. If this jutsu is cast at A-Rank or higher, Ninjutsu attack rolls instead gain 2 ranks of Mastery. If this jutsu is cast at S-Rank, all affected creatures gain Immunity to the Dazed and Weakened conditions.</p><p><em>Base-rank core connected. Higher-rank modes require manual resolution.</em></p>",
           "chat": ""
         },
         "source": {
@@ -12115,7 +12218,7 @@
           "n5eSelectedCast1": {
             "_id": "n5eSelectedCast1",
             "type": "utility",
-            "name": "Cast — manual effects",
+            "name": "Cast",
             "activation": {
               "type": "action",
               "value": 1
@@ -12159,16 +12262,15 @@
               "D-Rank"
             ],
             "automation": {
-              "status": "partial",
+              "status": "base-rank-core",
               "owner": "selected-content-02",
               "automated": [
                 "base-rank eligibility",
                 "Chakra cost",
-                "dual concentration/upkeep"
+                "dual concentration/upkeep",
+                "native rolls"
               ],
-              "reasons": [
-                "Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected."
-              ],
+              "reasons": [],
               "upcasting": "manual; source text retained, higher-rank automated modes not authored"
             },
             "sourceLine": 1976,
@@ -12202,7 +12304,20 @@
             "activities": {
               "n5eSelectedCast1": {
                 "kind": "maintain",
-                "parts": []
+                "parts": [],
+                "effects": {
+                  "changes": [
+                    {
+                      "key": "system.attributes.movement.bonus",
+                      "value": "+15",
+                      "mode": 2,
+                      "priority": 20
+                    }
+                  ],
+                  "masteryTargets": [
+                    "attack.nin"
+                  ]
+                }
               }
             },
             "durationSeconds": 60

@@ -4,9 +4,17 @@ const outcomes = (failure, success = row()) => ({ critSuccess: success, success,
 const condition = (key, ranks = 1) => ({ key, ranks });
 const save = (ability, formula, type, inflicted = [], success = "half", manual = []) => ({ kind: "save", saveAbility: ability, parts: formula ? [{ formula, type }] : [], outcomes: outcomes(row(formula ? "full" : "none", inflicted, manual), row(success)) });
 const attack = (formula, type) => ({ kind: "attack", parts: [{ formula, type }] });
+const change = (key, value, mode = 2) => ({ key, value, mode, priority: mode * 10 });
+const buff = (effects, extra = {}) => ({ mode: { kind: "maintain", parts: [], effects, ...extra }, manual: [] });
 
 // Reviewed from the preserved D-rank descriptions, not from the legacy parser's inferred effects.
 export const reviewedModes = {
+  "body-camouflage": buff({ changes: [], masteryTargets: ["skill.ste"] }, { maxTargets: 1 }),
+  "body-flicker": buff({ changes: [change("system.attributes.movement.bonus", "+20")], endsAt: "turnEnd" }, { recipient: "self" }),
+  "darkvision": buff({ changes: [change("system.attributes.senses.ranges.darkvision", "60", 4)] }, { recipient: "self" }),
+  "confidence": buff({ changes: ["str", "dex", "con", "int", "wis", "cha"].map(a => change(`system.abilities.${a}.bonuses.check`, "+1d4")) }, { maxTargets: 3, excludeSelf: true }),
+  "bless": buff({ attackFormula: "1d4", changes: [change("system.bonuses.abilities.save", "+1d4"), ...["mwak", "rwak", "msak", "rsak"].map(k => change(`system.bonuses.${k}.attack`, "+1d4"))] }),
+  "wind-release-lions-roar": buff({ changes: [change("system.attributes.movement.bonus", "+15")], masteryTargets: ["attack.nin"] }),
   "chakra-bolt": { mode: attack("4d6", "force"), manual: [] },
   "fire-release-devastating-blaze": { mode: save("dex", "3d6+3", "fire", [condition("shaken")]), manual: [] },
   "fire-release-erupting-flame": { mode: save("dex", "4d8+4", "fire", [condition("dazed")], "half"), manual: [] },
@@ -49,6 +57,7 @@ export function applySelectedMechanics(item, record) {
   const profile = { version: 1, baseRank: s.rank, baseCost: cost.value, costMode: cost.mode === "special" ? "special" : "chakra", discipline: s.discipline === "buki" ? "tai" : s.discipline, components, hijutsu: !!meta.clan, upcast: false, concentration: !!s.duration?.concentration, stable: s.keywords?.includes("stable") ?? false, efficient: s.keywords?.includes("efficient") ?? false, requiresCompletedCasting: longer, healingExcludedTypes: [], activities: { [id]: mode } };
   const seconds = durationSeconds(s.duration ?? {});
   if (seconds !== undefined) profile.durationSeconds = seconds;
+  if (s.identifier === "body-flicker") profile.durationSeconds = 6;
   item.flags["n5e-module"].casting = profile;
   item.system.activities[id] = { _id: id, type: mode.kind === "attack" ? "attack" : mode.kind === "save" ? "save" : mode.kind === "heal" ? "heal" : "utility", name: reviewed ? "Cast" : "Cast — manual effects", activation: { type: ["action", "bonus", "reaction", "special"].includes(s.activation?.type) ? s.activation.type : "action", value: s.activation?.value ?? 1 }, consumption: { targets: [], scaling: { allowed: false } } };
   meta.automation = { status: reviewed && !reviewed.manual.length ? "base-rank-core" : "partial", owner: "selected-content-02", automated: ["base-rank eligibility", "Chakra cost", ...(profile.concentration ? ["dual concentration/upkeep"] : []), ...(reviewed ? ["native rolls", ...(mode.saveAbility ? ["graded save outcomes"] : []), ...(mode.parts.length ? [mode.kind === "heal" ? "HP healing" : "typed damage"] : [])] : [])], reasons: reviewed?.manual ?? ["Resolve source effects, targeting, equipment and timing manually; only casting cost/concentration are connected."], upcasting: "manual; source text retained, higher-rank automated modes not authored" };

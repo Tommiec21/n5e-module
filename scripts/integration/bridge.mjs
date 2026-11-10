@@ -11,6 +11,7 @@ import { disciplineNumbers } from "../skills/native.mjs";
 import { castingProfile, generalPlan, eligibility, maximumRank, ranks } from "./casting.mjs";
 import { preparePayment, commitPayment } from "./payment.mjs";
 import { canMaintain } from "../concentration/planner.mjs";
+import { deliverCastEffect, attackEffectFormula } from "./effects.mjs";
 
 const busy = new WeakSet();
 const row = (damage, conditions = [], manual = []) => ({ damage, conditions, manual });
@@ -46,6 +47,10 @@ export async function castTrial(activity, options, targets = []) {
   options = { ...options, rank: options.rank ?? profile?.baseRank ?? trial?.baseRank, castingAbility: numbers.ability, attackBonus: options.attackBonus ?? numbers.attack, dc: options.dc ?? numbers.dc };
   if (!profile) eligibility(actor, { baseRank: trial.baseRank, discipline: trial.source.discipline, components: trial.source.components.split(",").map(c => c.trim().toLowerCase()) }, options);
   const plan = profile ? generalPlan(activity, options) : trialPlan(activity, options);
+  if (plan.effects) {
+    targets = plan.recipient === "self" ? [actor] : [...new Map(targets.map(t => [t.uuid, t])).values()];
+    if (!targets.length || plan.maxTargets && targets.length > plan.maxTargets || plan.excludeSelf && targets.some(t => t.uuid === actor.uuid)) throw new Error("Choose eligible effect recipients before casting.");
+  }
   if (plan.mode === "strike" && !maintainedCasts(actor).some(r => r.itemUuid === activity.item.uuid)) throw new Error("Maintain Arms of Buddha before using its strike.");
   for (const part of plan.parts) if (!Roll.validate(part.formula)) throw new Error("Invalid damage/healing formula.");
   if (plan.cost > actor.system.n5e.chakra.value) throw new Error("Not enough Chakra.");
@@ -67,7 +72,8 @@ export async function castTrial(activity, options, targets = []) {
     }
     let attack = null;
     if (["attack", "attackSave"].includes(plan.kind)) {
-      attack = await new CONFIG.Dice.D20Roll("1d20 + @bonus", { bonus: options.attackBonus }).evaluate();
+      const extra = attackEffectFormula(actor);
+      attack = await new CONFIG.Dice.D20Roll(`1d20 + @bonus${extra ? ` + ${extra}` : ""}`, { bonus: options.attackBonus }).evaluate();
       await attack.toMessage({ speaker: ChatMessage.getSpeaker({ actor }) });
     }
     const rolls = [];
@@ -88,10 +94,15 @@ export async function castTrial(activity, options, targets = []) {
       packet.rollUuid = message.uuid;
     }
     for (const target of targets) {
+      if (plan.effects) {
+        const concentration = Array.from(actor.effects ?? []).find(e => e.flags?.["n5e-module"]?.maintainedCast?.castId === castId);
+        if (plan.maintained && !concentration?.uuid) throw new Error("Concentration ended before the effect could be linked.");
+        await deliverCastEffect(target, { id: `${castId}:${target.uuid}`, source, targetUuid: target.uuid, name: activity.item.name, img: activity.item.img, changes: plan.effects.changes ?? [], masteryTargets: plan.effects.masteryTargets ?? [], attackFormula: plan.effects.attackFormula ?? null, stackKey: activity.item.flags["n5e-module"].selected?.sourceId ?? activity.item.system.identifier, potency: ranks.indexOf(plan.rank), expiresAt: plan.durationSeconds === null ? null : game.time.worldTime + plan.durationSeconds, endsAt: plan.effects.endsAt ?? null, gainedTurnId: game.combat ? `${game.combat.uuid}:${game.combat.round}:${game.combat.turn}` : null, dependentOn: concentration?.uuid ?? null });
+      }
       if (["attack", "attackSave"].includes(plan.kind) && packet) await postDamage(target, { ...packet, targetUuid: target.uuid });
       if (plan.saveAbility) await requestSave(target, saveDefinition(plan, source, castId, options.dc, packet));
     }
-    if (!rolls.length && plan.kind === "maintain") await ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor }), flavor: activity.item.name, content: "Cast — resolve source effects manually." });
+    if (!rolls.length && plan.kind === "maintain") await ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor }), flavor: activity.item.name, content: plan.effects ? "Effect applied or awaiting recipient." : "Cast — resolve source effects manually." });
     return { castId, cost: plan.cost, attack, packet, plan };
   } finally { busy.delete(actor); }
 }

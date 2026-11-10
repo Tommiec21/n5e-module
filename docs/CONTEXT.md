@@ -287,3 +287,5 @@ Slice18:59UTC, branch content/selected-04a. User requests stopping at a combined
 This slice owns native source-preserving clan proficiency/speed grants, Hijutsu ability selection, Wisdom of the Court, and source-specific condition turn expiry; additional mappings remain subsequent bounded slices toward100.
 
 S04a checkpoint19:07UTC:source409eb98dd50c279bf7ee33a550226b560ca5ad71, five focused checks passed once in CI42881714057, private alpha13 release dispatched. Qualifying count6/100 (5 jutsu,1 clan feature); partial grants to8 clan identities do not count. Next S04b reuses native dnd5e dependentOn effects for source-linked buffs and cleanup; do not build a parallel dependency/socket engine. Native source confirmed DependentDocumentMixin and ActiveEffect5e._onDelete use dnd5e.registry.dependents and activeGM cleanup.
+
+S04b active19:07UTC: native dependentOn source effects, most-potent same-source suppression per core chapter9, and six reviewed buffs; stop target100 remains active.

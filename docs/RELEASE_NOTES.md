@@ -1,3 +1,13 @@
+# S04b — Source-linked buffs
+
+Goal: reuse native dnd5e effect dependencies for concentration cleanup and source-preserving bonuses.
+
+Automates base-rank Body Camouflage, Body Flicker, Darkvision, Confidence, Bless and Wind Release:Lions Roar. Native effects supply skills/saves/weapon bonuses and senses; N5e attacks receive Bless dice once, and same-source overlap uses the strongest effect while retaining weaker sources.
+
+Owner-approved effect cards support recipients the caster cannot edit. Native dependentOn cleanup is reused; active-GM source expiry is actor-indexed. No new socket/dependency engine, live Foundry verification or local installation.
+
+The qualifying total is12/100 (11 jutsu,1 clan feature); all other partial/manual records remain excluded. Selected S04b check gate pending.
+
 # S04a — Clan grants and source condition automation
 
 Goal: connect native clan grants, approved Hijutsu ability choices and reusable source-specific condition expiration without overwriting source documents.

@@ -1,3 +1,7 @@
+## 0.1.0-alpha.14
+
+S04b:native dependent source effects, same-source strongest suppression, six buff automations and scoped expiry;12 complete items toward100.
+
 ## 0.1.0-alpha.13
 
 Selected S04a:source-owned native clan proficiency/speed effects, Hijutsu ability choices, Wisdom of the Court and source-specific condition expiration; six complete entries toward the user cap100.

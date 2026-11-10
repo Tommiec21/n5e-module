@@ -1,3 +1,4 @@
+import { registerCastEffects, sourceEffectClass, sourceEffectActorClass } from "./integration/effects.mjs";
 import { registerSelectedContent, loadSelectedContent, importSelectedWorld, importSelectedActor, prepareTestActor } from "./content/selected.mjs";
 import { generalPlan, eligibility, maximumRank } from "./integration/casting.mjs";
 import { registerConditionCompletion, finishConditionRest, processMovement } from "./conditions/completion-hooks.mjs";
@@ -38,11 +39,13 @@ function initialize() {
     registerDamageCards();
     registerSaveCards();
     registerTrialBridge();
+    registerCastEffects();
+    CONFIG.ActiveEffect.documentClass = sourceEffectClass(CONFIG.ActiveEffect.documentClass);
     registerSelectedContent();
     registerConcentrationCards();
     registerConcentrationLifecycle();
     registerConditionDamage();
-    CONFIG.Actor.documentClass = skillActorClass(conditionActorClass(CONFIG.Actor.documentClass));
+    CONFIG.Actor.documentClass = sourceEffectActorClass(skillActorClass(conditionActorClass(CONFIG.Actor.documentClass)));
     for (const [key, def] of Object.entries(conditions)) if (!CONFIG.statusEffects.some(e => e.id === `n5e.${key}`)) CONFIG.statusEffects.push({ id: `n5e.${key}`, name: def.label, img: def.icon });
     registerConditionLifecycle();
     registerConditionCompletion();
