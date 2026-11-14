@@ -33,4 +33,4 @@ Inspect Activity lifecycle/consumption, actor damage hooks, ActiveEffects and sp
 
 ## Shared rules core (SHARED1b)
 
-From alpha.16 the module vendors n5e-system's shared core into `scripts/core/` with `tools/sync-core.mjs <version|latest>` (never edit that folder). Replace copied planners with core imports one at a time, keeping the module's own result contracts in its service layer. Done: graded saves (degree), condition modifiers, damage calculation, costs/upkeep. Next, per n5e-system `docs/SHARED1_SPEC.md`: condition lifecycle, activity selection.
+From alpha.16 the module vendors n5e-system's shared core into `scripts/core/` with `tools/sync-core.mjs <version|latest>` (never edit that folder). Replace copied planners with core imports one at a time, keeping the module's own result contracts in its service layer. Done: graded saves (degree), condition modifiers, damage calculation, costs/upkeep, condition removal (lifecycle timing stays module-native). Next, per n5e-system `docs/SHARED1_SPEC.md`: activity selection.

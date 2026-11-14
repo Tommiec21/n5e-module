@@ -375,3 +375,15 @@ SHARED1b slice 4 checkpoint (Claude):
   - The ledger's casting entry has an `openIssue` note. The test was not edited here.
 - Version 0.1.0-alpha.19.
 - **Next:** condition lifecycle (`tests/condition-lifecycle.test.mjs`; compare against core `rules/condition-lifecycle.mjs`), then activity selection.
+
+SHARED1b slice 5 checkpoint (Claude):
+- **Condition lifecycle compared.** The core `rules/condition-lifecycle.mjs` reads System-shaped effects (`type: "condition"`, `system.key`) with Foundry duration checks. The module reads native `flags["n5e-module"].condition` records with stacking policies and world-time expiry (`completion.mjs`). They are different models, not copies.
+- **Swapped:** only `removalResult` in `scripts/conditions/planner.mjs`, as an adapter over the core:
+  - the core decides success, ranks removed and the DC raise;
+  - the module keeps `{ranks, removalDC}`.
+  - `dc: null` options can't reach it: `resolveRemoval` requires a finite DC.
+  - The parity test runs every registry option shape against the old formula.
+- **Kept native:** `turnStartRequests` (it aggregates stacking-policy records, and a 0-rank record would give `0d8` here but `1d8` in the core), durations, decay and expiry.
+- Gate `coreRemoval` (scenario `shared-core-condition-removal`): local attempt 1 passed 64/64.
+- Version 0.1.0-alpha.20.
+- **Next:** activity selection, the last M3 swap. Compare the module's activity selection with the core `activity-contract.mjs`, `activity-parse.mjs` and `cast-options.mjs`.

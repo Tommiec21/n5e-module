@@ -1,5 +1,6 @@
 import { conditions } from "./registry.mjs";
 import { aggregatePenalties, clampRanks } from "./modifiers.mjs";
+import { removalResult as coreRemovalResult } from "../core/module/rules/condition-lifecycle.mjs";
 
 /** Read only enabled N5e condition applications, keeping their native effect identity. */
 export function applications(actor, { includeExpired = false } = {}) {
@@ -46,10 +47,13 @@ export function turnStartRequests(actor, turnId) {
   });
 }
 
-/** Removal follows the original N5e check formula, including escalating Sealed DCs. */
+/**
+ * Removal from the N5e shared rules core (SHARED1b): the core decides success and ranks removed; this keeps the
+ * module's record shape, including escalating Sealed DCs stored on the application as removalDC.
+ */
 export function removalResult(record, option, total) {
-  const dc = option.dc + (record.removalDC ?? 0);
-  if (total < dc) return { ranks: record.ranks, removalDC: (record.removalDC ?? 0) + (option.onFail?.dcIncrease ?? 0) };
-  const removed = option.ranks === "all" ? record.ranks : (option.ranks ?? 1) + (option.perOver ? Math.floor((total - dc) / option.perOver.every) * option.perOver.ranks : 0);
-  return { ranks: Math.max(0, record.ranks - removed), removalDC: record.removalDC ?? 0 };
+  const removalDC = record.removalDC ?? 0;
+  const result = coreRemovalResult({ ...option, dc: option.dc + removalDC }, total, record.ranks);
+  if (!result.success) return { ranks: record.ranks, removalDC: removalDC + result.raiseDC };
+  return { ranks: result.ranks === "all" ? 0 : Math.max(0, record.ranks - result.ranks), removalDC };
 }

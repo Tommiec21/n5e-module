@@ -1,3 +1,9 @@
+## 0.1.0-alpha.20: Condition removal from the shared core (SHARED1b)
+
+- `removalResult` in `scripts/conditions/planner.mjs` now uses the shared core's removal check, keeping the module's record shape (ranks left, escalating Sealed `removalDC`). A parity test checks every registry removal option against the previous formula.
+- Turn-start damage, durations and turn-end decay stay module-native: they work on native effects, stacking policies and world-time expiry, which the System-shaped core functions don't model.
+- New `coreRemoval` gate. No live Foundry verification.
+
 ## 0.1.0-alpha.19: Chakra cost and upkeep from the shared core (SHARED1b)
 
 - `scripts/integration/cost.mjs` and `scripts/concentration/calculation.mjs` now re-export the shared core's `computeJutsuCost`, `upkeepCost` and `concentrationDC`. The function bodies were identical, so results don't change.

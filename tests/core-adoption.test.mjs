@@ -78,3 +78,18 @@ test("chakra cost, upkeep and concentration DC come from the core", async () => 
   assert.equal(cost.upkeepCost(9, { efficient: true }), 0);
   assert.equal(cost.concentrationDC({ rankValues: [2, 3], damage: 50 }), 25);
 });
+
+test("condition removal comes from the core with the module record shape", async () => {
+  const { removalResult } = await import("../scripts/conditions/planner.mjs");
+  const legacy = (record, option, total) => {
+    const dc = option.dc + (record.removalDC ?? 0);
+    if (total < dc) return { ranks: record.ranks, removalDC: (record.removalDC ?? 0) + (option.onFail?.dcIncrease ?? 0) };
+    const removed = option.ranks === "all" ? record.ranks : (option.ranks ?? 1) + (option.perOver ? Math.floor((total - dc) / option.perOver.every) * option.perOver.ranks : 0);
+    return { ranks: Math.max(0, record.ranks - removed), removalDC: record.removalDC ?? 0 };
+  };
+  const options = [{ dc: 12, ranks: "all" }, { dc: 12, ranks: 1, perOver: { every: 2, ranks: 1 } }, { dc: 12, ranks: 1, onFail: { dcIncrease: 4 } }];
+  for (const option of options) for (const ranks of [1, 2, 5]) for (const removalDC of [0, 4]) for (let total = 5; total <= 25; total++) {
+    const record = { ranks, removalDC };
+    assert.deepEqual(removalResult(record, option, total), legacy(record, option, total), JSON.stringify({ option, record, total }));
+  }
+});
