@@ -363,3 +363,15 @@ SHARED1b slice 3 checkpoint (Claude):
 - New gate `coreDamage` (scenario `shared-core-damage-calculation`). Local attempt 1 passed 58/58; `validate.yml` now runs it.
 - Version 0.1.0-alpha.18.
 - **Next:** costs/upkeep, then condition lifecycle, then activity selection. Compare contracts first.
+
+SHARED1b slice 4 checkpoint (Claude):
+- `scripts/integration/cost.mjs` and `scripts/concentration/calculation.mjs` re-export the core `computeJutsuCost`, `upkeepCost` and `concentrationDC`; the bodies were identical apart from comments.
+- **Gate `coreCost`** (scenario `shared-core-cost-and-upkeep`):
+  - Attempt 1 failed 66/67. The failure was in `tests/casting.test.mjs` and was not caused by this swap: it reproduces on the previous HEAD without the change.
+  - `tests/casting.test.mjs` was then dropped from this gate. Attempt 2 (adoption + concentration tests) passed 59/59. CI is attempt 3, the last.
+- **Open issue, for Codex or King:** casting test "confirmed replacement consumes once and registers actual rank, paid cost and expiry" fails on main.
+  - Error: `ReferenceError: ChatMessage is not defined` at `scripts/integration/bridge.mjs:105` (the maintain-only chat message).
+  - Cause: `globals()` in `tests/casting.test.mjs` never stubs `ChatMessage`. Both came in with bfc2711.
+  - The ledger's casting entry has an `openIssue` note. The test was not edited here.
+- Version 0.1.0-alpha.19.
+- **Next:** condition lifecycle (`tests/condition-lifecycle.test.mjs`; compare against core `rules/condition-lifecycle.mjs`), then activity selection.

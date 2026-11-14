@@ -66,3 +66,15 @@ test("damage calculation comes from the core with unchanged module results", asy
   const plan = local.damagePlan(target, [{ amount: 7, type: "bludgeoning" }]);
   assert.equal(plan.update["system.hp.value"], 15);
 });
+
+test("chakra cost, upkeep and concentration DC come from the core", async () => {
+  const cost = await import("../scripts/integration/cost.mjs");
+  const conc = await import("../scripts/concentration/calculation.mjs");
+  const core = await import("../scripts/core/module/rules/cost.mjs");
+  for (const name of ["computeJutsuCost", "upkeepCost", "concentrationDC"]) assert.equal(cost[name], core[name]);
+  assert.equal(conc.upkeepCost, core.upkeepCost);
+  assert.equal(conc.concentrationDC, core.concentrationDC);
+  assert.equal(cost.upkeepCost(9), 4);
+  assert.equal(cost.upkeepCost(9, { efficient: true }), 0);
+  assert.equal(cost.concentrationDC({ rankValues: [2, 3], damage: 50 }), 25);
+});

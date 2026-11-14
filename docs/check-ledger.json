@@ -233,7 +233,8 @@
         }
       ],
       "status": "passed",
-      "affectedBehavior": []
+      "affectedBehavior": [],
+      "openIssue": "2026-11-14 Claude: test 'confirmed replacement consumes once and registers actual rank, paid cost and expiry' fails locally on main: ReferenceError ChatMessage is not defined (bridge.mjs:105 maintain message; globals() in tests/casting.test.mjs has no ChatMessage stub). Not rerun as this gate; for Codex or King to decide."
     },
     {
       "scenarioId": "selected-content-native-shape-scope-and-import",
@@ -419,7 +420,34 @@
       "status": "passed",
       "affectedBehavior": [],
       "nextAction": "One attempt remains; rerun only if damage calculation changes."
+    },
+    {
+      "scenarioId": "shared-core-cost-and-upkeep",
+      "batch": "shared1b",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "local",
+          "commit": null,
+          "startedAt": "2026-11-14T13:31:08.056Z",
+          "result": "failed",
+          "evidence": "work/check-result.json",
+          "endedAt": "2026-11-14T13:31:08.869Z",
+          "note": "66/67. The one failure is tests/casting.test.mjs 'confirmed replacement consumes once…': ReferenceError ChatMessage is not defined at scripts/integration/bridge.mjs:105. It reproduces on HEAD 8447b48 without this change and without the core preload; the test's globals() never stubs ChatMessage (both added in Codex bfc2711). Not caused by the cost swap; casting.test removed from this gate and the failure reported separately."
+        },
+        {
+          "number": 2,
+          "location": "local",
+          "commit": null,
+          "startedAt": "2026-11-14T13:31:46.628Z",
+          "result": "passed",
+          "evidence": "work/check-result.json",
+          "endedAt": "2026-11-14T13:31:47.345Z"
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": []
     }
   ],
-  "history": "Batches00\u201306:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08\u201310:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."
+  "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08–10:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."
 }

@@ -1,3 +1,9 @@
+## 0.1.0-alpha.19: Chakra cost and upkeep from the shared core (SHARED1b)
+
+- `scripts/integration/cost.mjs` and `scripts/concentration/calculation.mjs` now re-export the shared core's `computeJutsuCost`, `upkeepCost` and `concentrationDC`. The function bodies were identical, so results don't change.
+- New `coreCost` gate.
+- Known issue, not from this change: one test in `tests/casting.test.mjs` fails on main (`ChatMessage` is not stubbed); it is logged in `docs/CONTEXT.md`. No live Foundry verification.
+
 ## 0.1.0-alpha.18: Damage calculation from the shared core (SHARED1b)
 
 - `scripts/damage/calculation.mjs` now re-exports the shared core's `damagePlan`, `healPlan` and `deathSaveResult`. Results are unchanged: the module snapshot passes no condition penalties, so the core's Bruised, Petrified and source-penalty steps stay off.
