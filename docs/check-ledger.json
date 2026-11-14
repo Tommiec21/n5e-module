@@ -433,7 +433,7 @@
           "result": "failed",
           "evidence": "work/check-result.json",
           "endedAt": "2026-11-14T13:31:08.869Z",
-          "note": "66/67. The one failure is tests/casting.test.mjs 'confirmed replacement consumes once…': ReferenceError ChatMessage is not defined at scripts/integration/bridge.mjs:105. It reproduces on HEAD 8447b48 without this change and without the core preload; the test's globals() never stubs ChatMessage (both added in Codex bfc2711). Not caused by the cost swap; casting.test removed from this gate and the failure reported separately."
+          "note": "66/67. The one failure is tests/casting.test.mjs 'confirmed replacement consumes once\u2026': ReferenceError ChatMessage is not defined at scripts/integration/bridge.mjs:105. It reproduces on HEAD 8447b48 without this change and without the core preload; the test's globals() never stubs ChatMessage (both added in Codex bfc2711). Not caused by the cost swap; casting.test removed from this gate and the failure reported separately."
         },
         {
           "number": 2,
@@ -466,16 +466,27 @@
         {
           "number": 1,
           "location": "local",
-          "commit": null,
+          "commit": "04e75c4 (local, before commit)",
           "startedAt": "2026-11-14T13:34:09.325Z",
           "result": "passed",
           "evidence": "work/check-result.json",
           "endedAt": "2026-11-14T13:34:10.072Z"
+        },
+        {
+          "number": 2,
+          "location": "CI/windows-latest",
+          "commit": "04e75c4",
+          "result": "passed",
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/43600442333",
+          "tests": 64,
+          "failed": 0,
+          "skipped": 0
         }
       ],
       "status": "passed",
-      "affectedBehavior": []
+      "affectedBehavior": [],
+      "nextAction": "One attempt remains; rerun only if condition removal changes."
     }
   ],
-  "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08–10:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."
+  "history": "Batches00\u201306:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08\u201310:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."
 }
