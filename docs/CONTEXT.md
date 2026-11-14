@@ -352,3 +352,14 @@ SHARED1b slice 2 checkpoint (Claude):
 - New gate `coreConditions` (scenario `shared-core-condition-modifiers`: adoption + conditions + condition-lifecycle + core tests). Local attempt 1 passed 61/61; `validate.yml` now runs it.
 - Version 0.1.0-alpha.17.
 - **Next:** damage calculation (`scripts/damage/calculation.mjs` vs core `rules/damage.mjs`). Compare contracts first.
+
+SHARED1b slice 3 checkpoint (Claude):
+- `scripts/damage/calculation.mjs` re-exports the core `damagePlan`, `healPlan` and `deathSaveResult`.
+- **Contract compared:**
+  - The core adds Bruised (`conditionPenalties.damageTaken`), Petrified (`flags.resistAll`) and a `dealtPenalty` option. `scripts/damage/planner.mjs` `snapshot()` passes none of these, so results are unchanged.
+  - The health rules use the core defaults (`instantDeath` and `envenomedBlocksHealing` are true, matching the old hard-coded values).
+  - `concentrationOnDamage` was always off in the module (its local `rule()` returned false), so a module function still returns null. The module's concentration lifecycle owns those checks.
+- **Open for King:** the module registry already defines Bruised `flat.damageTaken` and Petrified `resistAll`, but the damage snapshot doesn't pass them. Wiring them in would turn those condition effects on in module damage. That is a behaviour change, so ask first.
+- New gate `coreDamage` (scenario `shared-core-damage-calculation`). Local attempt 1 passed 58/58; `validate.yml` now runs it.
+- Version 0.1.0-alpha.18.
+- **Next:** costs/upkeep, then condition lifecycle, then activity selection. Compare contracts first.

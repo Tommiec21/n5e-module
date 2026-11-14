@@ -1,3 +1,9 @@
+## 0.1.0-alpha.18: Damage calculation from the shared core (SHARED1b)
+
+- `scripts/damage/calculation.mjs` now re-exports the shared core's `damagePlan`, `healPlan` and `deathSaveResult`. Results are unchanged: the module snapshot passes no condition penalties, so the core's Bruised, Petrified and source-penalty steps stay off.
+- `concentrationOnDamage` stays off in the module, as before; the module's concentration lifecycle owns those checks.
+- New `coreDamage` gate. No live Foundry verification.
+
 ## 0.1.0-alpha.17 — Condition modifiers from the shared core (SHARED1b)
 
 - `scripts/conditions/modifiers.mjs` now uses the shared core's `emptyPenalties`, `clampRanks` and `aggregatePenalties` (it was an identical copy); the module's condition registry stays the default.

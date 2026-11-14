@@ -54,3 +54,15 @@ test("condition modifiers come from the core and default to the module registry"
   assert.deepEqual(moduleModifiers.aggregatePenalties(active), coreConditions.aggregatePenalties(active, moduleRegistry));
   assert.equal(moduleModifiers.aggregatePenalties(active).ac, -3);
 });
+
+test("damage calculation comes from the core with unchanged module results", async () => {
+  const local = await import("../scripts/damage/calculation.mjs");
+  const core = await import("../scripts/core/module/rules/damage.mjs");
+  assert.equal(local.damagePlan, core.damagePlan);
+  assert.equal(local.healPlan, core.healPlan);
+  assert.equal(local.deathSaveResult, core.deathSaveResult);
+  assert.equal(local.concentrationOnDamage({ system: {} }, 20), null);
+  const target = { system: { hp: { value: 20, max: 20, temp: 0 }, cp: { value: 10, max: 10, temp: 0 }, dr: 2, traits: { resist: [], immune: [], vuln: [] } }, effects: [] };
+  const plan = local.damagePlan(target, [{ amount: 7, type: "bludgeoning" }]);
+  assert.equal(plan.update["system.hp.value"], 15);
+});

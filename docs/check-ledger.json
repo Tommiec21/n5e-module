@@ -391,7 +391,24 @@
       "status": "passed",
       "affectedBehavior": [],
       "nextAction": "One attempt remains; rerun only if condition modifiers change."
+    },
+    {
+      "scenarioId": "shared-core-damage-calculation",
+      "batch": "shared1b",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "local",
+          "commit": null,
+          "startedAt": "2026-11-14T13:29:06.397Z",
+          "result": "passed",
+          "evidence": "work/check-result.json",
+          "endedAt": "2026-11-14T13:29:07.121Z"
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": []
     }
   ],
-  "history": "Batches00\u201306:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08\u201310:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."
+  "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08–10:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."
 }
