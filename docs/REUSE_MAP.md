@@ -13,7 +13,7 @@ Read the original implementation and relevant tests before extracting a function
 | Graded saves | rules/degree.mjs | **Shared core since alpha.16:** `scripts/saves/degree.mjs` re-exports `scripts/core/module/rules/degree.mjs` |
 | Costs and upkeep | rules/cost.mjs | Native consumption applies calculated amount |
 | Jutsu content | tools/content/sources/jiraiya-jutsu.json | Preserve source, IDs and variants; no bulk copy this batch |
-| Activity selection | rules/activity-parse.mjs | Prefer authored variants; never reparse full text as authority |
+| Activity selection | rules/activity-parse.mjs | **Not swapped (SHARED1b):** the module only uses authored dnd5e activities; the core's `effectiveActivities` falls back to parsing text, which this rule forbids |
 
 Original checkout: ../n5e-system; original commit: 6c17e1a8bb764911c743d5615aaaedbac657d5f6.
 
@@ -33,4 +33,4 @@ Inspect Activity lifecycle/consumption, actor damage hooks, ActiveEffects and sp
 
 ## Shared rules core (SHARED1b)
 
-From alpha.16 the module vendors n5e-system's shared core into `scripts/core/` with `tools/sync-core.mjs <version|latest>` (never edit that folder). Replace copied planners with core imports one at a time, keeping the module's own result contracts in its service layer. Done: graded saves (degree), condition modifiers, damage calculation, costs/upkeep, condition removal (lifecycle timing stays module-native). Next, per n5e-system `docs/SHARED1_SPEC.md`: activity selection.
+From alpha.16 the module vendors n5e-system's shared core into `scripts/core/` with `tools/sync-core.mjs <version|latest>` (never edit that folder). Replace copied planners with core imports one at a time, keeping the module's own result contracts in its service layer. Done: graded saves (degree), condition modifiers, damage calculation, costs/upkeep, condition removal (lifecycle timing stays module-native). Activity selection stays module-native (authored activities only). SHARED1b M3 is complete; new cores arrive through the daily `core-sync.yml` PR.

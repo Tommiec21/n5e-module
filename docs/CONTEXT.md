@@ -387,3 +387,13 @@ SHARED1b slice 5 checkpoint (Claude):
 - Gate `coreRemoval` (scenario `shared-core-condition-removal`): local attempt 1 passed 64/64.
 - Version 0.1.0-alpha.20.
 - **Next:** activity selection, the last M3 swap. Compare the module's activity selection with the core `activity-contract.mjs`, `activity-parse.mjs` and `cast-options.mjs`.
+
+SHARED1b complete (Claude):
+- **Activity selection compared; not swapped.** The module has no copied selector: it uses authored dnd5e activities only, and REUSE_MAP says "never reparse full text as authority". The core's `effectiveActivities` falls back to `parseActivities(description)`, so adopting it would add text parsing. That is a behaviour change, and it waits for King.
+- **M1–M4 and packaging are done.**
+  - Core functions in use: degree, condition modifiers, damage/heal/death saves, cost/upkeep/concentration DC, and condition removal.
+  - Module-native by design: condition timing (turn start, durations, decay), activity selection, and `concentrationOnDamage`.
+- **Open for King:**
+  - Bruised and Petrified are not applied in module damage.
+  - The casting test fails on main (`ChatMessage` stub).
+  - Turn on the Actions PR setting so `core-sync.yml` can open PRs.
