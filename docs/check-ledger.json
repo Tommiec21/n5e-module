@@ -371,16 +371,27 @@
         {
           "number": 1,
           "location": "local",
-          "commit": null,
+          "commit": "cc4c0a1 (local, before commit)",
           "startedAt": "2026-11-14T13:23:36.451Z",
           "result": "passed",
           "evidence": "work/check-result.json",
           "endedAt": "2026-11-14T13:23:37.231Z"
+        },
+        {
+          "number": 2,
+          "location": "CI/windows-latest",
+          "commit": "cc4c0a1",
+          "result": "passed",
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/43599554235",
+          "tests": 61,
+          "failed": 0,
+          "skipped": 0
         }
       ],
       "status": "passed",
-      "affectedBehavior": []
+      "affectedBehavior": [],
+      "nextAction": "One attempt remains; rerun only if condition modifiers change."
     }
   ],
-  "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08–10:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."
+  "history": "Batches00\u201306:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08\u201310:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."
 }
