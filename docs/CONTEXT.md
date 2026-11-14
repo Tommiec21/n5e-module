@@ -346,3 +346,9 @@ SHARED1b slice checkpoint 13:21 UTC (Claude), slice 13:19–13:22 under ten minu
 - Version 0.1.0-alpha.16.
 - **Next slice (Claude or Codex):** replace the next copied planner with the core (condition modifiers: `scripts/conditions/modifiers.mjs` vs core `rules/conditions.mjs`). Compare result contracts first, keep the module's service-layer contracts, extend `tests/core-adoption.test.mjs`, and use the `core` gate (attempt 2 is CI on this push).
 - 13:23 UTC: CI attempt 2 of the `core` gate passed 56/56 on windows-latest (run 43599395754), recorded in the ledger. Published prerelease v0.1.0-alpha.16 from that artifact (release run 43599454263: module.json, n5e-module.zip). Dispatch with `gh api -X POST repos/Tommiec21/n5e-module/actions/workflows/release.yml/dispatches -f ref=main -f "inputs[run_id]=<run>"` (GraphQL-based `gh workflow run` is unavailable from Claude sessions).
+
+SHARED1b slice 2 checkpoint (Claude):
+- `scripts/conditions/modifiers.mjs` re-exports the core `emptyPenalties` and `clampRanks`, and wraps `aggregatePenalties` so it defaults to the module registry (the bodies were identical; only the default registry differed).
+- New gate `coreConditions` (scenario `shared-core-condition-modifiers`: adoption + conditions + condition-lifecycle + core tests). Local attempt 1 passed 61/61; `validate.yml` now runs it.
+- Version 0.1.0-alpha.17.
+- **Next:** damage calculation (`scripts/damage/calculation.mjs` vs core `rules/damage.mjs`). Compare contracts first.

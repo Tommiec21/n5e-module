@@ -7,7 +7,7 @@ Read the original implementation and relevant tests before extracting a function
 | Responsibility | Existing source under module/ | Adaptation boundary |
 | --- | --- | --- |
 | Condition definitions | config/conditions.mjs | Keep registry, translate statuses/effect metadata |
-| Ranked modifiers | rules/conditions.mjs | Host snapshot in, modifier result out |
+| Ranked modifiers | rules/conditions.mjs | **Shared core since alpha.17:** `scripts/conditions/modifiers.mjs` uses the core functions with the module registry as default |
 | Condition timing/removal | rules/condition-lifecycle.mjs | Native ActiveEffect and combat event adapter |
 | Damage and healing | rules/damage.mjs | Native HP, extended Chakra, one application path |
 | Graded saves | rules/degree.mjs | **Shared core since alpha.16:** `scripts/saves/degree.mjs` re-exports `scripts/core/module/rules/degree.mjs` |
@@ -33,4 +33,4 @@ Inspect Activity lifecycle/consumption, actor damage hooks, ActiveEffects and sp
 
 ## Shared rules core (SHARED1b)
 
-From alpha.16 the module vendors n5e-system's shared core into `scripts/core/` with `tools/sync-core.mjs <version|latest>` (never edit that folder). Replace copied planners with core imports one at a time, keeping the module's own result contracts in its service layer. Done: graded saves (degree). Next, per n5e-system `docs/SHARED1_SPEC.md`: condition modifiers, damage calculation, costs/upkeep, condition lifecycle, activity selection.
+From alpha.16 the module vendors n5e-system's shared core into `scripts/core/` with `tools/sync-core.mjs <version|latest>` (never edit that folder). Replace copied planners with core imports one at a time, keeping the module's own result contracts in its service layer. Done: graded saves (degree), condition modifiers. Next, per n5e-system `docs/SHARED1_SPEC.md`: damage calculation, costs/upkeep, condition lifecycle, activity selection.

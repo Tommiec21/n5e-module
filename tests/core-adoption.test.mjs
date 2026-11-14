@@ -42,3 +42,15 @@ test("saves/degree.mjs is the core resolver", () => {
   assert.equal(moduleDegree.degreeOfSuccess, coreDegree.degreeOfSuccess);
   assert.deepEqual(moduleDegree.degreeOfSuccess(14, 15, { natural: 20 }), { degree: 2, key: "success" });
 });
+
+import * as moduleModifiers from "../scripts/conditions/modifiers.mjs";
+import * as coreConditions from "../scripts/core/module/rules/conditions.mjs";
+import { conditions as moduleRegistry } from "../scripts/conditions/registry.mjs";
+
+test("condition modifiers come from the core and default to the module registry", () => {
+  assert.equal(moduleModifiers.emptyPenalties, coreConditions.emptyPenalties);
+  assert.equal(moduleModifiers.clampRanks, coreConditions.clampRanks);
+  const active = [{ key: "exhaustion", ranks: 3 }];
+  assert.deepEqual(moduleModifiers.aggregatePenalties(active), coreConditions.aggregatePenalties(active, moduleRegistry));
+  assert.equal(moduleModifiers.aggregatePenalties(active).ac, -3);
+});

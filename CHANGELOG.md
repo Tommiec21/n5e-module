@@ -1,3 +1,8 @@
+## 0.1.0-alpha.17 — Condition modifiers from the shared core (SHARED1b)
+
+- `scripts/conditions/modifiers.mjs` now uses the shared core's `emptyPenalties`, `clampRanks` and `aggregatePenalties` (it was an identical copy); the module's condition registry stays the default.
+- New `coreConditions` gate: adoption, conditions and condition-lifecycle tests plus the core's own tests. No live Foundry verification.
+
 ## 0.1.0-alpha.16 — Shared rules core (SHARED1b, first slice)
 
 - Vendors the N5e shared rules core 0.26.0-alpha.1 from n5e-system into `scripts/core/` (`tools/sync-core.mjs`; version recorded in `module.json` flags) and ships it in the module package.
