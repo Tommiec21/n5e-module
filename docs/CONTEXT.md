@@ -327,3 +327,11 @@ User requested a plan for later, not implementation. CLAN_ADVANCEMENT_PLAN.md de
 Known audit cases are explicit:Hyuga Main/Side exclusivity, Senju Verdant Bloodline3rd-versus7th-level conflict, Hebi duplicate/upgrade stance records, Aburame/Uchiha option progression and clan resource prerequisites. Resolve from source first; ask the user only about remaining rule ambiguity.
 
 No gameplay/content implementation, live tests, packaging change or test rerun for this documentation-only request. Clan Feats remain excluded and the12/100 jutsu/clan-feature automation task remains paused.
+
+## SHARED1b — shared rules core adoption (claimed by Claude)
+
+User approval: King, November14 (Q-SH1 one repo, Q-SH2 Claude and Codex both work it from each other's logs, Q-SH3 the module checks daily). Plan of record: n5e-system `docs/SHARED1_SPEC.md` "Handoff"; this section is the module-side log.
+
+Scope: M1 sync tool vendoring `n5e-core.zip` into `scripts/core/`; packaging of that folder; M2 adapter at init; M3 replace copied planners one at a time (start with `saves/degree.mjs`, identical to core `rules/degree.mjs`); M4 daily `core-sync.yml`; a `core` gate in `tools/check.mjs`. Core v0.26.0-alpha.1 is the first published core.
+
+Owner Claude, slice start November14 (UTC time in each entry). No live Foundry, no installed module changes; three-attempt policy per scenario applies.
