@@ -343,16 +343,27 @@
         {
           "number": 1,
           "location": "local",
-          "commit": null,
+          "commit": "2e8d41c (local, before commit)",
           "startedAt": "2026-11-14T13:20:59.640Z",
           "result": "passed",
           "evidence": "work/check-result.json",
           "endedAt": "2026-11-14T13:21:00.322Z"
+        },
+        {
+          "number": 2,
+          "location": "CI/windows-latest",
+          "commit": "2e8d41c",
+          "result": "passed",
+          "evidence": "https://github.com/Tommiec21/n5e-module/actions/runs/43599395754",
+          "tests": 56,
+          "failed": 0,
+          "skipped": 0
         }
       ],
       "status": "passed",
-      "affectedBehavior": []
+      "affectedBehavior": [],
+      "nextAction": "Reuse for each further core planner replacement; one attempt remains under the policy, so extend the scenario only when behaviour changes."
     }
   ],
-  "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08–10:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."
+  "history": "Batches00\u201306:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08\u201310:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."
 }
