@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { readFile, readdir, writeFile, mkdir } from "node:fs/promises";
 
 // Only these runtime files may enter the archive, so local credentials and campaign data cannot leak in.
 const files = ["scripts/classes/import.mjs", "scripts/classes/progression.mjs", "content/class-content.json","scripts/integration/effects.mjs","scripts/content/selected.mjs", "content/selected-content.json","scripts/integration/casting.mjs", "scripts/integration/payment.mjs", "module.json", "scripts/module.mjs", "scripts/compatibility.mjs", "scripts/contracts.mjs", "scripts/conditions/registry.mjs", "scripts/conditions/modifiers.mjs", "scripts/conditions/planner.mjs", "scripts/conditions/service.mjs", "scripts/conditions/actor.mjs", "scripts/conditions/controls.mjs", "scripts/conditions/lifecycle.mjs", "scripts/damage/calculation.mjs", "scripts/damage/schema.mjs", "scripts/damage/planner.mjs", "scripts/damage/service.mjs", "scripts/damage/controls.mjs", "scripts/saves/degree.mjs", "scripts/saves/planner.mjs", "scripts/saves/service.mjs", "scripts/saves/native.mjs", "scripts/saves/examples.mjs", "scripts/concentration/calculation.mjs", "scripts/concentration/planner.mjs", "scripts/concentration/service.mjs", "scripts/concentration/controls.mjs", "scripts/concentration/lifecycle.mjs", "scripts/integration/cost.mjs", "scripts/integration/planner.mjs", "scripts/integration/bridge.mjs", "scripts/integration/content.mjs", "content/trial-jutsu.json", "scripts/skills/registry.mjs", "scripts/skills/calculation.mjs", "scripts/skills/native.mjs", "scripts/conditions/completion.mjs", "scripts/conditions/completion-hooks.mjs", "scripts/conditions/policy.mjs", "README.md", "LICENSE", "CHANGELOG.md"];
@@ -33,6 +33,18 @@ function archive(entries) {
   end.writeUInt32LE(0x06054b50); end.writeUInt16LE(entries.length, 8); end.writeUInt16LE(entries.length, 10); end.writeUInt32LE(directory.length, 12); end.writeUInt32LE(offset, 16);
   return Buffer.concat([...local, directory, end]);
 }
+
+/** The vendored shared rules core ships whole (SHARED1b); its tests and docs are excluded. */
+async function coreFiles(dir = "scripts/core") {
+  const out = [];
+  for (const entry of await readdir(dir, { withFileTypes: true }).catch(() => [])) {
+    const path = `${dir}/${entry.name}`;
+    if (entry.isDirectory()) { if (entry.name !== "tests") out.push(...await coreFiles(path)); }
+    else if (entry.name.endsWith(".mjs") || entry.name === "package.json" || entry.name === "LICENSE") out.push(path);
+  }
+  return out.sort();
+}
+files.push(...await coreFiles());
 
 const manifest = await readFile("module.json");
 const pkg = JSON.parse(await readFile("package.json", "utf8"));

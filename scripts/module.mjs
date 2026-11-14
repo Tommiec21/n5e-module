@@ -27,6 +27,7 @@ import { addRanks, setCondition, removeCondition, resolveRemoval, processTurnEnd
 import { openConditions } from "./conditions/controls.mjs";
 import { registerConditionLifecycle } from "./conditions/lifecycle.mjs";
 import { supportsHost } from "./compatibility.mjs";
+import { registerCoreAdapter } from "./integration/core-adapter.mjs";
 
 const MODULE_ID = "n5e-module";
 
@@ -36,6 +37,7 @@ function initialize() {
   if (!module) return;
   const supported = supportsHost(game.system, game.version);
   if (supported) {
+    registerCoreAdapter(game.settings);
     registerClassProficiencies(CONFIG);
     registerDamageFields(CONFIG, foundry.data.fields);
     registerSkills(CONFIG, foundry.data.fields);

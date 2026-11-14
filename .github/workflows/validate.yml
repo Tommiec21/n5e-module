@@ -15,8 +15,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Execute selected gate once
-        run: node tools/check.mjs classes
+      - name: Execute selected gate once (SHARED1b core)
+        run: node tools/check.mjs core
       - name: Package without repeating checks
         run: node tools/bounded.mjs 60000 node tools/package.mjs
       - name: Upload exact checked artifact

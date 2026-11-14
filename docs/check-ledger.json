@@ -335,6 +335,23 @@
       ],
       "status": "passed",
       "affectedBehavior": []
+    },
+    {
+      "scenarioId": "shared-core-adoption-sync-and-degree",
+      "batch": "shared1b",
+      "attempts": [
+        {
+          "number": 1,
+          "location": "local",
+          "commit": null,
+          "startedAt": "2026-11-14T13:20:59.640Z",
+          "result": "passed",
+          "evidence": "work/check-result.json",
+          "endedAt": "2026-11-14T13:21:00.322Z"
+        }
+      ],
+      "status": "passed",
+      "affectedBehavior": []
     }
   ],
   "history": "Batches00–06:34 prior selected component/integration checks passed, each gate once; Batch07:one packaging/provenance inspection passed without gameplay retesting; no failures/skips/bypasses or live tests. Batches08–10:19 further selected checks passed once each, bringing selected component/integration checks to53; no live verification."

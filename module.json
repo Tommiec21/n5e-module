@@ -2,7 +2,7 @@
   "id": "n5e-module",
   "title": "N5e for dnd5e — Development",
   "description": "Selected N5e test library:164 D-rank general jutsu and eight clan packages, with explicit automation coverage.",
-  "version": "0.1.0-alpha.15",
+  "version": "0.1.0-alpha.16",
   "authors": [
     {
       "name": "King"
@@ -28,6 +28,12 @@
     "scripts/module.mjs"
   ],
   "url": "https://github.com/Tommiec21/n5e-module",
-  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.15/module.json",
-  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.15/n5e-module.zip"
+  "manifest": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.16/module.json",
+  "download": "https://github.com/Tommiec21/n5e-module/releases/download/v0.1.0-alpha.16/n5e-module.zip",
+  "flags": {
+    "n5eCore": {
+      "version": "0.26.0-alpha.1",
+      "tag": "v0.26.0-alpha.1"
+    }
+  }
 }

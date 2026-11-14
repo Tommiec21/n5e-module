@@ -1,3 +1,11 @@
+## 0.1.0-alpha.16 — Shared rules core (SHARED1b, first slice)
+
+- Vendors the N5e shared rules core 0.26.0-alpha.1 from n5e-system into `scripts/core/` (`tools/sync-core.mjs`; version recorded in `module.json` flags) and ships it in the module package.
+- New `scripts/integration/core-adapter.mjs` registers at init: core rules read `n5e-module` settings, else the core defaults.
+- `scripts/saves/degree.mjs` now re-exports the core resolver (it was an identical copy).
+- Daily `Core sync` workflow opens a PR when a newer core is released. GitHub's "Allow GitHub Actions to create and approve pull requests" repository setting must be on for it to open the PR.
+- New `core` gate: the core's own tests, the adoption tests and the saves tests. No live Foundry verification.
+
 ## 0.1.0-alpha.15
 
 Three native N5e classes with20 subclasses,355 features/options and24 stances; native HP/proficiencies/grants/choices/scales, Scholar Mastery, affinity stages and Focus counter/recovery.

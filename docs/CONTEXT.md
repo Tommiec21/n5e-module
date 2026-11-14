@@ -335,3 +335,13 @@ User approval: King, November14 (Q-SH1 one repo, Q-SH2 Claude and Codex both wor
 Scope: M1 sync tool vendoring `n5e-core.zip` into `scripts/core/`; packaging of that folder; M2 adapter at init; M3 replace copied planners one at a time (start with `saves/degree.mjs`, identical to core `rules/degree.mjs`); M4 daily `core-sync.yml`; a `core` gate in `tools/check.mjs`. Core v0.26.0-alpha.1 is the first published core.
 
 Owner Claude, slice start November14 (UTC time in each entry). No live Foundry, no installed module changes; three-attempt policy per scenario applies.
+
+SHARED1b slice checkpoint 13:21 UTC (Claude), slice 13:19–13:22 under ten minutes.
+- Added `tools/sync-core.mjs` (dependency-free ZIP reader, `syncCore(version|latest)`) and vendored core 0.26.0-alpha.1 into `scripts/core/` (80 files; `module.json` flags.n5eCore).
+- `tools/package.mjs` adds `scripts/core` runtime files (69; core tests and docs excluded); local package: 117 files.
+- New `scripts/integration/core-adapter.mjs`, registered first in `initialize()`.
+- `scripts/saves/degree.mjs` re-exports the core resolver (it was identical).
+- New `core` gate in `tools/check.mjs` (scenario `shared-core-adoption-sync-and-degree`: `tests/core-adoption.test.mjs`, `tests/saves.test.mjs`, and the vendored core tests with their setup preloaded). Local attempt 1 passed 56/56, recorded in the ledger. `validate.yml` now runs the `core` gate.
+- New daily `.github/workflows/core-sync.yml` (06:17 UTC + manual): compares the latest n5e-system release with the vendored version, syncs, runs the tests, and opens a PR. **Needs the repository setting "Allow GitHub Actions to create and approve pull requests".**
+- Version 0.1.0-alpha.16.
+- **Next slice (Claude or Codex):** replace the next copied planner with the core (condition modifiers: `scripts/conditions/modifiers.mjs` vs core `rules/conditions.mjs`). Compare result contracts first, keep the module's service-layer contracts, extend `tests/core-adoption.test.mjs`, and use the `core` gate (attempt 2 is CI on this push).

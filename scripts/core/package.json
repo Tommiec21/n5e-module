@@ -1,0 +1,13 @@
+{
+  "name": "n5e-core",
+  "version": "0.26.0-alpha.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "description": "N5e shared rules core (SHARED1): pure rules and rule data used by the N5e System and the N5e Module through thin adapters.",
+  "scripts": {
+    "test": "node --import ./tests/core/setup.mjs --test \"tests/core/**/*.test.mjs\""
+  }
+}
